@@ -1,0 +1,8 @@
+{
+  "name": "ZeroNos Movie",
+  "description": "",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://github.com/h0dev/0cs3/raw/refs/heads/movie/plugins.json"
+  ]
+}
