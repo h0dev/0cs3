@@ -104,10 +104,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://animehay.bid&sz=256",
-        "jarFileSize": 86052,
+        "jarFileSize": 84625,
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 23331,
+        "fileSize": 24128,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -118,7 +118,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "Animehay",
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
