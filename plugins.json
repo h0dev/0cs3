@@ -1,27 +1,5 @@
 [
     {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/hung319/h4rs@main/avatar/six.webp",
-        "jarFileSize": 22,
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "status": 0,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA"
-        ],
-        "version": 1,
-        "internalName": "#Free Repo",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/#Free Repo.jar",
-        "description": "Free Repo From H4RS",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/#Free Repo.cs3",
-        "name": "#Free Repo"
-    },
-    {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -123,6 +101,26 @@
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
+    },
+    {
+        "iconUrl": "https://icons.duckduckgo.com/ip3/anikai.to.ico",
+        "jarFileSize": 163402,
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 31032,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "AnimeKai",
+        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.jar",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.cs3",
+        "name": "AnimeKai"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://anime6.site&sz=256",
