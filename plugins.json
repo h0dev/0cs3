@@ -89,11 +89,11 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://animehay.bid&sz=256",
-        "jarFileSize": 84625,
-        "fileHash": "sha256-daf167640fbce9f0bbabc7e767369e06507fdbef707ad429f7e19bacaa3aadef",
+        "jarFileSize": 91183,
+        "fileHash": "sha256-03fe517d0a9939dee4163c61ba50702df9cd2c6663ebbd1acf63bc6c1f1c4768",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24128,
+        "fileSize": 26467,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -104,12 +104,12 @@
             "Anime",
             "OVA"
         ],
-        "version": 10,
+        "version": 11,
         "internalName": "Animehay",
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay",
-        "jarHash": "sha256-d62d690f5fcc352846f9dfa804872e8fc139c43042c2c4fa18074dbfb0f7e4bc"
+        "jarHash": "sha256-236a66bba46dd04dd22635972767af3d378bfd5455355deed26f7a6140021783"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/anikai.to.ico",
