@@ -278,11 +278,11 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://HHDRagon.com&sz=256",
-        "jarFileSize": 86707,
-        "fileHash": "sha256-ddd50bc2b588fd72372d644ea735a42aa263f2d27cc0aa116e3fe2acabb0ebf2",
+        "jarFileSize": 88088,
+        "fileHash": "sha256-2d96b8705820d13fd1279ae32f3d1ee7fc881ddb497e7b829ccdcaaf457c77f3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 23221,
+        "fileSize": 23618,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -292,12 +292,12 @@
             "Anime",
             "Cartoon"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "HHDRagon",
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHDRagon.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHDRagon.cs3",
         "name": "HHDRagon",
-        "jarHash": "sha256-22bba5fda0e1e25a1562f53b73532e25b32a9e0ca6c2458a673d45ebc237742f"
+        "jarHash": "sha256-7fe74a082c8852af67490be3b9f7ce91b33fa9bf0923864bfd2ec8fc435c4f62"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://HHKungfu.ee&sz=256",
