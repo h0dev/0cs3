@@ -20,7 +20,7 @@
         "name": "1Sync"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikoto.tv&sz=256",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikoto.to&sz=256",
         "jarFileSize": 118913,
         "fileHash": "sha256-af61e5082832fd66d6462911b0689ead5aadaab7b18d7b8d4991d53521a24f5d",
         "apiVersion": 1,
@@ -394,7 +394,7 @@
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 14899,
-        "status": 1,
+        "status": 0,
         "language": "vi",
         "authors": [
             "SIX"
@@ -505,7 +505,7 @@
         "jarHash": "sha256-0e5fbc77786a94a69c259d9f6950779a9fbe0fd56563efb9a430532543e6a4ce"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://ophim16.cc&sz=256",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://ophim19.cc&sz=256",
         "jarFileSize": 103994,
         "fileHash": "sha256-587ee477e80fb15e60b9e3bae2e0c4a17f3c26d0bf2a8820da45a03b1b529012",
         "apiVersion": 1,
@@ -623,11 +623,11 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.tv.ico",
-        "jarFileSize": 115405,
-        "fileHash": "sha256-4f236c4d1712a76cdce55115dc08ff01802c6f4bf153345e45f2467a04ffaab3",
+        "jarFileSize": 88832,
+        "fileHash": "sha256-4e0a76fd91f0b6067609dbb086e3e71362202a00113ee4e0292590c3501cc7d2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27219,
+        "fileSize": 21979,
         "status": 1,
         "language": "en",
         "authors": [
@@ -637,12 +637,12 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "RidoMovies",
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
         "name": "RidoMovies",
-        "jarHash": "sha256-f403086f390d08e9b162367c55c3f945c1064b6a7e12004ff81f6dc929ee37db"
+        "jarHash": "sha256-71159879eaf1b9504a34f911c949d7e3040932ff644cb4bac9ad500c9b9216bd"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/TokuVN.com.ico",
