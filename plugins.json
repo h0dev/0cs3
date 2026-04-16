@@ -345,12 +345,12 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://HHTQ4K.top&sz=256",
-        "jarFileSize": 74756,
-        "fileHash": "sha256-cb3632a46ba813791d23249fdbc979ee54c2c2ba96824b427e9ac229a6091553",
+        "jarFileSize": 80016,
+        "fileHash": "sha256-80575498aa9f0150e1278dc91e11c9ecc4cf95e693671dfa7fa6084476fd4ff8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 17004,
-        "status": 1,
+        "fileSize": 18267,
+        "status": 0,
         "language": "vi",
         "authors": [
             "SIX"
@@ -358,12 +358,12 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "HHTQ4K",
         "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHTQ4K.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHTQ4K.cs3",
         "name": "HHTQ4K",
-        "jarHash": "sha256-714aeb78e73839343c1fb3ed25de2ab434e348159636ef39ad52011acba2dfab"
+        "jarHash": "sha256-ee7e31b190cce3b6e711336a0ebaf4a7fff2b1f45ba4883a59874e0cf4771116"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://hoathinh3d.name&sz=256",
