@@ -575,6 +575,31 @@
         "jarHash": "sha256-802c6ede5e5be9754401cf0a19072ab8a5c7bcbc7b37efd5919800680641f3fd"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://PhimHDCS.com&sz=256",
+        "jarFileSize": 168442,
+        "fileHash": "sha256-b90058bf91c744e2c99a05c4c0f4409a8cc9940da5a7d80b3ccf1fc98a090432",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 37145,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "PhimHDCS",
+        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.jar",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
+        "name": "PhimHDCS",
+        "jarHash": "sha256-9fb205a680dfffb89efc9e621eec6833f8d0bc8fa6b384e58aadb0474158030b"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://phimhhtq.com&sz=256",
         "jarFileSize": 45925,
         "fileHash": "sha256-f6bbc3e216b4a33d8cdde089789921ba6a5d2e21a4fa87f3c70112a0c171aac9",
