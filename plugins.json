@@ -21,7 +21,6 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikoto.to&sz=256",
-        "jarFileSize": 118913,
         "fileHash": "sha256-af61e5082832fd66d6462911b0689ead5aadaab7b18d7b8d4991d53521a24f5d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -38,14 +37,11 @@
         ],
         "version": 3,
         "internalName": "Anikoto",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikoto.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikoto.cs3",
-        "name": "Anikoto",
-        "jarHash": "sha256-90c822a60d42e0234a2b0eccc24f0beb408073ab2f9ee5f77677321e64fb0170"
+        "name": "Anikoto"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/anikuro.ru.ico",
-        "jarFileSize": 175127,
         "fileHash": "sha256-cfcf126093a2efc4ab20a6290d03b9661b29e01a6190545679e79223877da0f8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -60,14 +56,11 @@
         ],
         "version": 1,
         "internalName": "Anikuro",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikuro.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikuro.cs3",
-        "name": "Anikuro",
-        "jarHash": "sha256-1964f8c3ac7517413076d8ccc4f33967ffdb004ac5370216ce7188e98c0006b3"
+        "name": "Anikuro"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "jarFileSize": 205737,
         "fileHash": "sha256-a2bca7e2c37d5b1b3ddcd591eae1e0cd54fc5c11f45c3e38f76ae7f81f2f558a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -82,14 +75,11 @@
         ],
         "version": 11,
         "internalName": "Anime47",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anime47.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anime47.cs3",
-        "name": "Anime47",
-        "jarHash": "sha256-53c3ede31b6ed095c9cd089f3e40d8105e9f6b24789fcd5e39ff3c38322d13ed"
+        "name": "Anime47"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://animehay.bid&sz=256",
-        "jarFileSize": 91183,
         "fileHash": "sha256-03fe517d0a9939dee4163c61ba50702df9cd2c6663ebbd1acf63bc6c1f1c4768",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -106,14 +96,11 @@
         ],
         "version": 11,
         "internalName": "Animehay",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
-        "name": "Animehay",
-        "jarHash": "sha256-236a66bba46dd04dd22635972767af3d378bfd5455355deed26f7a6140021783"
+        "name": "Animehay"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/anikai.to.ico",
-        "jarFileSize": 163402,
         "fileHash": "sha256-0127fce49ce37648c1164ec52cb08ae36a83ad137d8092e53c4f2b107cfaeb8e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -128,14 +115,11 @@
         ],
         "version": 1,
         "internalName": "AnimeKai",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.cs3",
-        "name": "AnimeKai",
-        "jarHash": "sha256-c0dd2f0e00a13841738a3ce0a60869ab0f79fc6871e680c7a7b3a6295e9d1e4b"
+        "name": "AnimeKai"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://anime6.site&sz=256",
-        "jarFileSize": 118268,
         "fileHash": "sha256-c2821bbd98df392a5020af895567472e401dae1e495a41235039b33569c88ac8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -154,14 +138,11 @@
         ],
         "version": 10,
         "internalName": "Animet",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
-        "name": "Animet",
-        "jarHash": "sha256-78525e2440a1838d2e74987552990a8ab1b7c9b4b2ca9f3fa61743ca7c21fc8a"
+        "name": "Animet"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Animetm.tv&sz=256",
-        "jarFileSize": 61739,
         "fileHash": "sha256-99a38b82c96815f087edef7947e7c645a539a1f64db5ac9ffb35090882d53c88",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -176,14 +157,11 @@
         ],
         "version": 4,
         "internalName": "Animetm",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animetm.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animetm.cs3",
-        "name": "Animetm",
-        "jarHash": "sha256-3bfec6ea9cca5693e97154645141388fecd16443f63bf3147470b97cb791c133"
+        "name": "Animetm"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
-        "jarFileSize": 167867,
         "fileHash": "sha256-4e11f8fd513630795dcd4cb2261fe7605b54564ec5cb455b14cda159a3aab883",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -200,14 +178,11 @@
         ],
         "version": 18,
         "internalName": "Animevietsub",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.cs3",
-        "name": "Animevietsub",
-        "jarHash": "sha256-5c7df3b51983b5279406bba0151f7b0e7353f4761c055e6f6be2d859473ebd17"
+        "name": "Animevietsub"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/animex.one.ico",
-        "jarFileSize": 197536,
         "fileHash": "sha256-cac3261cb3dbe459425a92ffeada3fffe0d60a7f647e9feb6fcdf8ea5e369259",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -222,14 +197,11 @@
         ],
         "version": 3,
         "internalName": "AnimeX",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeX.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeX.cs3",
-        "name": "AnimeX",
-        "jarHash": "sha256-f6fb1d96d7ce7087f6c63f5614a4722718bfbbb68c164a48d55f3f1d02463ebb"
+        "name": "AnimeX"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/bluphim5.com.ico",
-        "jarFileSize": 118581,
         "fileHash": "sha256-a7f43e6a7264c9e8092162d149f1ad66ca224d0439ae9f7751a8306852a862a5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -246,14 +218,11 @@
         ],
         "version": 3,
         "internalName": "BluPhim",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/BluPhim.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/BluPhim.cs3",
-        "name": "BluPhim",
-        "jarHash": "sha256-8931c861715d667f4bf0c2e6beb34a00f5286c77efa89d8cb7f616ce92dbb061"
+        "name": "BluPhim"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://boctem.com&sz=256",
-        "jarFileSize": 87512,
         "fileHash": "sha256-8fe45297a88be003b1f0b223b8760a52879883caada10f527f4716f7437e0fc9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -271,14 +240,11 @@
         ],
         "version": 3,
         "internalName": "Boctem",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Boctem.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Boctem.cs3",
-        "name": "Boctem",
-        "jarHash": "sha256-537d9ea8c5f222712a5964169bf28e779290064e55313d30e7c05b0e71fdf9fc"
+        "name": "Boctem"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://HHDRagon.com&sz=256",
-        "jarFileSize": 88088,
         "fileHash": "sha256-2d96b8705820d13fd1279ae32f3d1ee7fc881ddb497e7b829ccdcaaf457c77f3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -294,14 +260,11 @@
         ],
         "version": 5,
         "internalName": "HHDRagon",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHDRagon.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHDRagon.cs3",
-        "name": "HHDRagon",
-        "jarHash": "sha256-7fe74a082c8852af67490be3b9f7ce91b33fa9bf0923864bfd2ec8fc435c4f62"
+        "name": "HHDRagon"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://HHKungfu.ee&sz=256",
-        "jarFileSize": 74318,
         "fileHash": "sha256-ac328a64fd08c7c5535f064a53ca2877ab280d717b57161f89926a7af96798bc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -316,14 +279,11 @@
         ],
         "version": 3,
         "internalName": "HHKungfu",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHKungfu.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHKungfu.cs3",
-        "name": "HHKungfu",
-        "jarHash": "sha256-21ad7e5a642348186833f3a025c614c2525d92f956cc9ebfce4dc1168000183b"
+        "name": "HHKungfu"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://hhninja.top&sz=256",
-        "jarFileSize": 97959,
         "fileHash": "sha256-5d74d3e0a09086663ef619cd26a6809c993880b811166d39fce96968a5d9b7d6",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -338,14 +298,11 @@
         ],
         "version": 6,
         "internalName": "Hhninja",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Hhninja.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Hhninja.cs3",
-        "name": "Hhninja",
-        "jarHash": "sha256-1bf0be8ff93c12ea31b7a2b381737eac8eef46f0191d33f8c18d832836ec9470"
+        "name": "Hhninja"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://HHTQ4K.top&sz=256",
-        "jarFileSize": 80016,
         "fileHash": "sha256-80575498aa9f0150e1278dc91e11c9ecc4cf95e693671dfa7fa6084476fd4ff8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -360,14 +317,11 @@
         ],
         "version": 3,
         "internalName": "HHTQ4K",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHTQ4K.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHTQ4K.cs3",
-        "name": "HHTQ4K",
-        "jarHash": "sha256-ee7e31b190cce3b6e711336a0ebaf4a7fff2b1f45ba4883a59874e0cf4771116"
+        "name": "HHTQ4K"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://hoathinh3d.name&sz=256",
-        "jarFileSize": 79307,
         "fileHash": "sha256-3c1df8bcd0ab1c007fa7ff4779c5d10338965e8555670d3ba6e925685738fc6a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -382,14 +336,11 @@
         ],
         "version": 5,
         "internalName": "HoatHinh3D",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinh3D.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinh3D.cs3",
-        "name": "HoatHinh3D",
-        "jarHash": "sha256-388ded07bed7d82e077f7c2ee708e2cee8577622a404b70f92272275151ecb3c"
+        "name": "HoatHinh3D"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://HHKungfu.click&sz=256",
-        "jarFileSize": 68013,
         "fileHash": "sha256-1b21c5d87c8fefc10acb3e950f9f414d372dc0c50855b2b4f271f4a6b866cadd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -404,18 +355,15 @@
         ],
         "version": 2,
         "internalName": "HoatHinhKungfu",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinhKungfu.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinhKungfu.cs3",
-        "name": "HoatHinhKungfu",
-        "jarHash": "sha256-87d6749a692511658f19f08d1fead8e502ff9eb391cd8bfd48cdbcdcf2966fc7"
+        "name": "HoatHinhKungfu"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
-        "jarFileSize": 152488,
-        "fileHash": "sha256-f4cf58d911fb5da514cc5685ed937c9baf6a2ae9709e2a90a309879c21519425",
+        "fileHash": "sha256-fbd5858c3d383f3b9e315c4289ab4ac1c85881e4d347048246a49b8058646c52",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 30233,
+        "fileSize": 27462,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -426,16 +374,13 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "KKPhim",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KKPhim.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KKPhim.cs3",
-        "name": "KKPhim",
-        "jarHash": "sha256-56d211800670ee35ac1fb6b6427b4751dc1d5d45524d53d845332f1060c42a86"
+        "name": "KKPhim"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://LongTiengPhim.com&sz=256",
-        "jarFileSize": 52509,
         "fileHash": "sha256-561ff1b3bfef1142ddcf70aecf12990ea1f672d2c3311fd3ece3f485c33be156",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -452,14 +397,11 @@
         ],
         "version": 3,
         "internalName": "LongTiengPhim",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LongTiengPhim.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LongTiengPhim.cs3",
-        "name": "LongTiengPhim",
-        "jarHash": "sha256-274711ad54148306a77a4f869e6331f1db1515e4b6ac77c84afd64a27e9d13f1"
+        "name": "LongTiengPhim"
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "jarFileSize": 143320,
         "fileHash": "sha256-87f648f8219e1e10b0d75655900840c9d0e0ae24124b81ba4257d5617b18327d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -476,14 +418,11 @@
         ],
         "version": 12,
         "internalName": "NguonC",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
-        "name": "NguonC",
-        "jarHash": "sha256-e4c70868409d4836864e0403f71390ae3f3425cd449ef996c12555da31321fed"
+        "name": "NguonC"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.pro&sz=256",
-        "jarFileSize": 91021,
         "fileHash": "sha256-5300e69d9004592a7b21d7cf4150715a04e72f8cb0f580760d46d1b8796000f9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -499,14 +438,11 @@
         ],
         "version": 3,
         "internalName": "Onflix",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Onflix.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Onflix.cs3",
-        "name": "Onflix",
-        "jarHash": "sha256-0e5fbc77786a94a69c259d9f6950779a9fbe0fd56563efb9a430532543e6a4ce"
+        "name": "Onflix"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://ophim19.cc&sz=256",
-        "jarFileSize": 103994,
         "fileHash": "sha256-587ee477e80fb15e60b9e3bae2e0c4a17f3c26d0bf2a8820da45a03b1b529012",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -523,14 +459,11 @@
         ],
         "version": 8,
         "internalName": "Ophim",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Ophim.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Ophim.cs3",
-        "name": "Ophim",
-        "jarHash": "sha256-e4bdb66ebd90bab0b8b2bcdcdbcb6f9d88eaeb2860391701e07d12f922cd5e79"
+        "name": "Ophim"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/phimchautinhtri.net.ico",
-        "jarFileSize": 44521,
         "fileHash": "sha256-1bed36c1a12db13e47b20f313e2f72470e581d0c1bb3b2cde8ccbb0b8b6f76f3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -546,14 +479,11 @@
         ],
         "version": 1,
         "internalName": "PhimChauTinhTri",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimChauTinhTri.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimChauTinhTri.cs3",
-        "name": "PhimChauTinhTri",
-        "jarHash": "sha256-ef5499f0e8af9fda35a13bc7c89d108c9ebc23616657bb5855b875f4ff25a26f"
+        "name": "PhimChauTinhTri"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/rupanh123-phap/PHAPFERRARI.github.io/refs/heads/main/phimdinhcao.png",
-        "jarFileSize": 118748,
         "fileHash": "sha256-c297a3e0657a4642285b206a3f8ec2d9babe10e64c5e7813e87a137e5532ef35",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -569,14 +499,11 @@
         ],
         "version": 6,
         "internalName": "PhimDinhCao",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
-        "name": "PhimDinhCao",
-        "jarHash": "sha256-802c6ede5e5be9754401cf0a19072ab8a5c7bcbc7b37efd5919800680641f3fd"
+        "name": "PhimDinhCao"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://PhimHDCS.com&sz=256",
-        "jarFileSize": 168442,
         "fileHash": "sha256-b90058bf91c744e2c99a05c4c0f4409a8cc9940da5a7d80b3ccf1fc98a090432",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -594,14 +521,11 @@
         ],
         "version": 1,
         "internalName": "PhimHDCS",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
-        "name": "PhimHDCS",
-        "jarHash": "sha256-9fb205a680dfffb89efc9e621eec6833f8d0bc8fa6b384e58aadb0474158030b"
+        "name": "PhimHDCS"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://phimhhtq.com&sz=256",
-        "jarFileSize": 45925,
         "fileHash": "sha256-f6bbc3e216b4a33d8cdde089789921ba6a5d2e21a4fa87f3c70112a0c171aac9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -616,14 +540,11 @@
         ],
         "version": 3,
         "internalName": "PhimHHTQ",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHHTQ.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHHTQ.cs3",
-        "name": "PhimHHTQ",
-        "jarHash": "sha256-c23c8f5d84d0f314d79b03dabe95f44fb852a9028cdef16ea1f8003957c3013f"
+        "name": "PhimHHTQ"
     },
     {
         "iconUrl": "https://favicone.com/phimmoichill.bz?s=256",
-        "jarFileSize": 82942,
         "fileHash": "sha256-f4bb99a5f3615c3da585f8da5e77c5c34372b30d46a9e20d1989abce5bc37477",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -641,14 +562,11 @@
         ],
         "version": 4,
         "internalName": "PhimMoiPlus",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimMoiPlus.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimMoiPlus.cs3",
-        "name": "PhimMoiPlus",
-        "jarHash": "sha256-b744773fa253ef73d0cd1a223d8ae0dd39b7d1333265ec5dd41c5e3ec9d07536"
+        "name": "PhimMoiPlus"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.tv.ico",
-        "jarFileSize": 88832,
         "fileHash": "sha256-4e0a76fd91f0b6067609dbb086e3e71362202a00113ee4e0292590c3501cc7d2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -664,14 +582,11 @@
         ],
         "version": 2,
         "internalName": "RidoMovies",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
-        "name": "RidoMovies",
-        "jarHash": "sha256-71159879eaf1b9504a34f911c949d7e3040932ff644cb4bac9ad500c9b9216bd"
+        "name": "RidoMovies"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/TokuVN.com.ico",
-        "jarFileSize": 85038,
         "fileHash": "sha256-ce38c343e14ce9767a97b53e3b640cc05991d6a76387471f40c79ab77e0ae290",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -689,10 +604,8 @@
         ],
         "version": 1,
         "internalName": "TokuVN",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TokuVN.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TokuVN.cs3",
-        "name": "TokuVN",
-        "jarHash": "sha256-24e7a8651bec69298b6b8600f56279905787f98cf9ca45f7646cd012a8c526ce"
+        "name": "TokuVN"
     },
     {
         "iconUrl": "https://torrentio.strem.fun/images/logo_v1.png",
@@ -721,7 +634,6 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://vietsubtv.run&sz=256",
-        "jarFileSize": 89269,
         "fileHash": "sha256-2f25a344083db03a4d91212d9fa0937b13c7e72844a5464ee39e518abef5b60c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -738,14 +650,11 @@
         ],
         "version": 4,
         "internalName": "VietsubTV",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VietsubTV.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VietsubTV.cs3",
-        "name": "VietsubTV",
-        "jarHash": "sha256-0ad7d727baaccc84a186b3f9185e2bdf2d2efa00f87a92bf4bc7591619dd5784"
+        "name": "VietsubTV"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "jarFileSize": 187819,
         "fileHash": "sha256-356f3a0ec3ad26d733c2ce79a47edf0f598571cf8511b4141739b6a713022fbd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -760,9 +669,7 @@
         ],
         "version": 7,
         "internalName": "Yanhh3d",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
-        "name": "Yanhh3d",
-        "jarHash": "sha256-8a4fdcd2dd87e3cffdf847c9213da5e79888ed7b63599767fbbf409bf1c981cb"
+        "name": "Yanhh3d"
     }
 ]
