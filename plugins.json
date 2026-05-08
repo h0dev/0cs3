@@ -1,29 +1,7 @@
 [
     {
-        "iconUrl": "https://cdn.jsdelivr.net/gh/hung319/h4rs@main/avatar/six.webp",
-        "jarFileSize": 22,
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "status": 0,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA"
-        ],
-        "version": 1,
-        "internalName": "#Free Repo",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/#Free Repo.jar",
-        "description": "Free Repo From H4RS",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/#Free Repo.cs3",
-        "name": "#Free Repo"
-    },
-    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://bokepindoh.monster&sz=256",
-        "jarFileSize": 49427,
+        "fileHash": "sha256-1eb3ff7552512b3a28af877c4ee05e8d2fd5cbc1952e806eb96718267be3e090",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 12747,
@@ -37,13 +15,12 @@
         ],
         "version": 4,
         "internalName": "BokepIndo",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/BokepIndo.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/BokepIndo.cs3",
         "name": "BokepIndo"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Eporner.com&sz=256",
-        "jarFileSize": 41433,
+        "fileHash": "sha256-aca5cc29e25285bf846cf298ef587fcb9e3e631196844f3e31cc4d59027cce26",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 11343,
@@ -57,13 +34,12 @@
         ],
         "version": 1,
         "internalName": "Eporner",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Eporner.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Eporner.cs3",
         "name": "Eporner"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://FapClub.vip&sz=256",
-        "jarFileSize": 37952,
+        "fileHash": "sha256-955f79ecda4cb0c06e2d22cd2cf18199e1c1f4f6926522cc3c90ad04cd60c348",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 11570,
@@ -77,13 +53,12 @@
         ],
         "version": 2,
         "internalName": "FapClub",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/FapClub.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/FapClub.cs3",
         "name": "FapClub"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Fullxcinema.com&sz=256",
-        "jarFileSize": 35717,
+        "fileHash": "sha256-2d814e1a532758b3c4192fdb37661e00bfb95358414a708973f0ebe0166fcdc9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9439,
@@ -97,13 +72,12 @@
         ],
         "version": 2,
         "internalName": "Fullxcinema",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Fullxcinema.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Fullxcinema.cs3",
         "name": "Fullxcinema"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.hentaicity.com&sz=256",
-        "jarFileSize": 56329,
+        "fileHash": "sha256-96802a03e41da3fe913850d04e63d9dec60275a3c256a53a8ee351a760316771",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 14954,
@@ -117,13 +91,12 @@
         ],
         "version": 2,
         "internalName": "HentaiCity",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiCity.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiCity.cs3",
         "name": "HentaiCity"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hentaihaven.xxx&sz=256",
-        "jarFileSize": 40070,
+        "fileHash": "sha256-48ac34230fc0e857adfb603092b5cd375647fc62147d1077b05e05bc305236e9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 11020,
@@ -137,13 +110,12 @@
         ],
         "version": 3,
         "internalName": "HentaiHaven",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiHaven.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiHaven.cs3",
         "name": "HentaiHaven"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://ihentai.to&sz=256",
-        "jarFileSize": 65052,
+        "fileHash": "sha256-0083805a049e340bede92a0dc5a321f253dceed806a4095fd666b1e4879cde77",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 21212,
@@ -157,13 +129,12 @@
         ],
         "version": 4,
         "internalName": "HentaiZ",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiZ.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiZ.cs3",
         "name": "HentaiZ"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://heovl.fit&sz=256",
-        "jarFileSize": 66818,
+        "fileHash": "sha256-8547557c06cee93d813878df15fc2e8666c10d4f6e4bfe1d7e6a2a00ee8fc6b8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 18507,
@@ -177,13 +148,12 @@
         ],
         "version": 1,
         "internalName": "Heovl",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Heovl.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Heovl.cs3",
         "name": "Heovl"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://JavHDz.baby&sz=256",
-        "jarFileSize": 35617,
+        "fileHash": "sha256-a892654e7b4832230e6e8f3699dbe984287c0c3402379a40b3ffa2c0f9f41c72",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9806,
@@ -197,13 +167,12 @@
         ],
         "version": 1,
         "internalName": "JavHDz",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavHDz.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavHDz.cs3",
         "name": "JavHDz"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Javmost.com&sz=256",
-        "jarFileSize": 52638,
+        "fileHash": "sha256-d90e71209d72d00b64d8b24e7fec82b4c1e87c4292ec4c17f9c76ef6dc88188e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 15840,
@@ -217,13 +186,12 @@
         ],
         "version": 1,
         "internalName": "Javmost",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Javmost.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Javmost.cs3",
         "name": "Javmost"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://javsubidn.vip&sz=256",
-        "jarFileSize": 30860,
+        "fileHash": "sha256-e7b72942bee7af1eade733f1cca12570f1ef0d6dcb4d8f05b0bb1fb2fa3315cb",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 8912,
@@ -237,13 +205,12 @@
         ],
         "version": 1,
         "internalName": "JavSubIdn",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavSubIdn.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavSubIdn.cs3",
         "name": "JavSubIdn"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://JAVtiful.com&sz=256",
-        "jarFileSize": 43900,
+        "fileHash": "sha256-b087e524be1bf793444c6b3cadba2f8906998e898643db4ec282d70d1d4a0e68",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 12244,
@@ -257,13 +224,12 @@
         ],
         "version": 1,
         "internalName": "JAVtiful",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JAVtiful.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JAVtiful.cs3",
         "name": "JAVtiful"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kingbokep.tv&sz=256",
-        "jarFileSize": 35419,
+        "fileHash": "sha256-bf382cfb8e2c7a3c4e47be0b24752dab1cb00e5b78b1d76980c69b932928fb3b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10334,
@@ -277,17 +243,16 @@
         ],
         "version": 1,
         "internalName": "KingBokep",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/KingBokep.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/KingBokep.cs3",
         "name": "KingBokep"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://KuraKura21.net&sz=256",
-        "jarFileSize": 60706,
+        "fileHash": "sha256-098913101218f7a8e4c6222c41e610604bb29a3114a9a0ce8581fca6eafd5a13",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 13225,
-        "status": 1,
+        "status": 0,
         "language": "en",
         "authors": [
             "SIX"
@@ -297,13 +262,12 @@
         ],
         "version": 7,
         "internalName": "KuraKura21",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/KuraKura21.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/KuraKura21.cs3",
         "name": "KuraKura21"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://missav.ws&sz=256",
-        "jarFileSize": 34267,
+        "fileHash": "sha256-b315fad03c82435e902ed91bde6a4584d06afc9e45b469680222fdcafa7875dd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10508,
@@ -317,13 +281,12 @@
         ],
         "version": 1,
         "internalName": "MissAV",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/MissAV.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/MissAV.cs3",
         "name": "MissAV"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://nangcuc.cc&sz=256",
-        "jarFileSize": 71606,
+        "fileHash": "sha256-e275826be66530310e698c2d591c3ebb5d731082f8c0c35f8f16abc9c2aa8858",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 20143,
@@ -337,13 +300,12 @@
         ],
         "version": 2,
         "internalName": "NangcucTV",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/NangcucTV.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/NangcucTV.cs3",
         "name": "NangcucTV"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://PerfectGirls.xxx&sz=256",
-        "jarFileSize": 36542,
+        "fileHash": "sha256-da6b8bccb4698584d10253b8b33416a3ea6e557fee1a272b50b97d51b3fc84d1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9738,
@@ -357,13 +319,12 @@
         ],
         "version": 1,
         "internalName": "PerfectGirls",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/PerfectGirls.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/PerfectGirls.cs3",
         "name": "PerfectGirls"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Phevkl.gg&sz=256",
-        "jarFileSize": 54953,
+        "fileHash": "sha256-3cd7ab1510fb0057e698ab14f31615260479f6608e054965065ffd931e1591ac",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 16002,
@@ -377,13 +338,12 @@
         ],
         "version": 3,
         "internalName": "Phevkl",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Phevkl.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Phevkl.cs3",
         "name": "Phevkl"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://PornDos.com&sz=256",
-        "jarFileSize": 46821,
+        "fileHash": "sha256-2d7565d84e348ce4a4234e2cd8f54534dd51f11c5b8e031eb6a851052a529710",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 11165,
@@ -397,13 +357,12 @@
         ],
         "version": 2,
         "internalName": "PornDos",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/PornDos.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/PornDos.cs3",
         "name": "PornDos"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.pornhub.com&sz=256",
-        "jarFileSize": 39128,
+        "fileHash": "sha256-3b73e5ad21d46161f8cbfe398f4c34ea5b28785954939aa6e3fb51d5015188e5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10706,
@@ -417,13 +376,12 @@
         ],
         "version": 1,
         "internalName": "Pornhub",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Pornhub.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Pornhub.cs3",
         "name": "Pornhub"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://rule34video.com&sz=256",
-        "jarFileSize": 38745,
+        "fileHash": "sha256-f96cab9014383beb3621b21a8fd984166f8c19a068d621f445a2c17927efad54",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10223,
@@ -437,13 +395,12 @@
         ],
         "version": 1,
         "internalName": "R34Video",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/R34Video.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/R34Video.cs3",
         "name": "R34Video"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Redtube.com&sz=256",
-        "jarFileSize": 62484,
+        "fileHash": "sha256-d4a0de7e6f5ff683bb2a8adb0f02c27b5a6772bbf1ddfa25767c07c53968cf2d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 14044,
@@ -457,13 +414,12 @@
         ],
         "version": 1,
         "internalName": "Redtube",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Redtube.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Redtube.cs3",
         "name": "Redtube"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Sextb.net&sz=256",
-        "jarFileSize": 51036,
+        "fileHash": "sha256-112cc9803e49ec0cecaa4daaf8171c0b119ed61b991a8328ec949db71a74dd67",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 15290,
@@ -477,13 +433,12 @@
         ],
         "version": 1,
         "internalName": "Sextb",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Sextb.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Sextb.cs3",
         "name": "Sextb"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://sextop1.la&sz=256",
-        "jarFileSize": 46165,
+        "fileHash": "sha256-028ee6dcd7c436a7856f7427030e87dc66bd93355e0a04de9775645105ee2e01",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 12240,
@@ -497,13 +452,12 @@
         ],
         "version": 2,
         "internalName": "Sextop1",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Sextop1.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Sextop1.cs3",
         "name": "Sextop1"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://sexxtrungquoc.vip&sz=256",
-        "jarFileSize": 36709,
+        "fileHash": "sha256-6938269e60284dcfdf682cf139dd9f301a102eddb30bb7ae90d4cbfb9b14d8be",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10225,
@@ -517,13 +471,12 @@
         ],
         "version": 1,
         "internalName": "SexxTrungQuoc",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/SexxTrungQuoc.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/SexxTrungQuoc.cs3",
         "name": "SexxTrungQuoc"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://spankbang.party&sz=256",
-        "jarFileSize": 55080,
+        "fileHash": "sha256-a1505340c601799b8774ac8446c73c199fdf5b157ec031f0260cf8299d296b95",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 12458,
@@ -537,13 +490,12 @@
         ],
         "version": 3,
         "internalName": "Spankbang",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Spankbang.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Spankbang.cs3",
         "name": "Spankbang"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://SupJav.com&sz=256",
-        "jarFileSize": 45213,
+        "fileHash": "sha256-6004df72120cb93d17067788f1cd1c186bd911590945843553c82b8d29eac84a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 11376,
@@ -557,13 +509,12 @@
         ],
         "version": 1,
         "internalName": "SupJav",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/SupJav.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/SupJav.cs3",
         "name": "SupJav"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://VeoHentai.com&sz=256",
-        "jarFileSize": 34370,
+        "fileHash": "sha256-982546f67a60716c9abfee0e1f995d937a5e98bd04925eb642b39bbd9bb0e184",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9435,
@@ -577,13 +528,12 @@
         ],
         "version": 1,
         "internalName": "VeoHentai",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/VeoHentai.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/VeoHentai.cs3",
         "name": "VeoHentai"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://vlxx.bz&sz=256",
-        "jarFileSize": 64466,
+        "fileHash": "sha256-dc6f97a06d861e53efbc0be327a110fbccd34a2a6eec2af29ebb9ab4b54ecb15",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 19532,
@@ -597,13 +547,12 @@
         ],
         "version": 2,
         "internalName": "Vlxx",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Vlxx.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Vlxx.cs3",
         "name": "Vlxx"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://WatchHentai.net&sz=256",
-        "jarFileSize": 50234,
+        "fileHash": "sha256-3c51c2384015d7d5c419271ca505df420912e5dd502d6137a109d3537b4201ba",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 13810,
@@ -617,13 +566,12 @@
         ],
         "version": 3,
         "internalName": "WatchHentai",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/WatchHentai.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/WatchHentai.cs3",
         "name": "WatchHentai"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Wow.XXX&sz=256",
-        "jarFileSize": 35875,
+        "fileHash": "sha256-2e148e658a1c4c941f3fb39f7b6ea1eb386927303db0070057d2c8497a4ef43f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9537,
@@ -637,13 +585,12 @@
         ],
         "version": 1,
         "internalName": "WowXXX",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/WowXXX.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/WowXXX.cs3",
         "name": "WowXXX"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://vi.xhspot.com&sz=256",
-        "jarFileSize": 128331,
+        "fileHash": "sha256-8f3972a73fd0540a4cfa50951bff3918c46b36975b1d09317c6ecb3fdc7ae0f7",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 26971,
@@ -657,13 +604,12 @@
         ],
         "version": 1,
         "internalName": "Xhamster",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xhamster.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xhamster.cs3",
         "name": "Xhamster"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://xnhau.im&sz=256",
-        "jarFileSize": 83870,
+        "fileHash": "sha256-6a25464b89a70495f736d95907bde656845828904461bf63cd6a0924f7ca7593",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 20985,
@@ -677,13 +623,12 @@
         ],
         "version": 1,
         "internalName": "Xnhau",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xnhau.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xnhau.cs3",
         "name": "Xnhau"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.xnxx.com&sz=256",
-        "jarFileSize": 87656,
+        "fileHash": "sha256-12a55d13e1b6f6e0280720b00f4f9d945f2292411ff97d83026e4ade70c2372e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 23090,
@@ -697,13 +642,12 @@
         ],
         "version": 1,
         "internalName": "Xnxx",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xnxx.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xnxx.cs3",
         "name": "Xnxx"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Xporn.to&sz=256",
-        "jarFileSize": 35426,
+        "fileHash": "sha256-08bd1d93acbc00f249cd1dba9b2427cddf2aca1c09a2d92bd1f3024a8d72ea9b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 9459,
@@ -717,13 +661,12 @@
         ],
         "version": 1,
         "internalName": "XpornTo",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/XpornTo.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/XpornTo.cs3",
         "name": "XpornTo"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Xporn.tv&sz=256",
-        "jarFileSize": 35773,
+        "fileHash": "sha256-28a9c4c1695881229dd65764d0c44b2c8f73ed4ad226b569feb55e5e05634e50",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 10202,
@@ -737,13 +680,12 @@
         ],
         "version": 2,
         "internalName": "XpornTV",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/XpornTV.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/XpornTV.cs3",
         "name": "XpornTV"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.xvideos.com&sz=256",
-        "jarFileSize": 54284,
+        "fileHash": "sha256-5ce5d7efe8469415bf706c97f69b9d633992963748fa6e5b8af5bfdfb65ed91f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 15638,
@@ -757,7 +699,6 @@
         ],
         "version": 1,
         "internalName": "Xvideos",
-        "jarUrl": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xvideos.jar",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xvideos.cs3",
         "name": "Xvideos"
     }
