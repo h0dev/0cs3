@@ -162,7 +162,7 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
-        "fileHash": "sha256-e6da6c77a4d13ff3c2e54a5ce9984cfd8332b518e83eb9fc60efb676e6eb03ef",
+        "fileHash": "sha256-0f33fd6dc8722d7a1d308bb8f6bcc4dbf3b7934f29a50c4830d85973d6754cea",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 37202,
@@ -176,7 +176,7 @@
             "Cartoon",
             "Movie"
         ],
-        "version": 19,
+        "version": 20,
         "internalName": "Animevietsub",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.cs3",
         "name": "Animevietsub"
@@ -564,6 +564,27 @@
         "internalName": "PhimMoiPlus",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimMoiPlus.cs3",
         "name": "PhimMoiPlus"
+    },
+    {
+        "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
+        "fileHash": "sha256-d908cae9900280112abca42bb507227e914fa942511ab3271e89213567384965",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 27108,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Anime",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "PhimSea",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimSea.cs3",
+        "name": "PhimSea"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.tv.ico",
