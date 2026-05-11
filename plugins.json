@@ -61,10 +61,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-03bd5aa8f62fe881d385f491d783886892e7320f1e77c8fefd76fa3addcecd99",
+        "fileHash": "sha256-70b63cc9910a4f84b566e6d52f6e4915ed7f0d5d844f0790b5529a257dcfe1ad",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40598,
+        "fileSize": 48348,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -73,7 +73,7 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 11,
+        "version": 12,
         "internalName": "Anime47",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anime47.cs3",
         "name": "Anime47"
