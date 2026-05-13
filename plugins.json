@@ -183,10 +183,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/animex.one.ico",
-        "fileHash": "sha256-43966e7376d94a48bee1badb72c1862506397a571264459ffd12d079c330ed06",
+        "fileHash": "sha256-10770f7ff815dbd453402476717bc20ae7a89310f1fe860fbe89745b24f64002",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42373,
+        "fileSize": 37515,
         "status": 1,
         "language": "en",
         "authors": [
@@ -195,7 +195,7 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "AnimeX",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeX.cs3",
         "name": "AnimeX"
