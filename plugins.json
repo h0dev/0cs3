@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://bokepindoh.monster&sz=256",
-        "fileHash": "sha256-1eb3ff7552512b3a28af877c4ee05e8d2fd5cbc1952e806eb96718267be3e090",
+        "fileHash": "sha256-19297622da7d2b747b26fbab286600740d0e3e0e55713863bb0932cc45955a2f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 12747,
+        "fileSize": 16543,
         "status": 1,
         "language": "id",
         "authors": [
@@ -13,7 +13,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "BokepIndo",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/BokepIndo.cs3",
         "name": "BokepIndo"
