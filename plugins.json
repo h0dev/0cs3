@@ -362,10 +362,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://sextop1.la&sz=256",
-        "fileHash": "sha256-028ee6dcd7c436a7856f7427030e87dc66bd93355e0a04de9775645105ee2e01",
+        "fileHash": "sha256-040dc8682fc1cdc082b623e977b434f7ed7a296c25efb838ce3f3b5be013b989",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 12240,
+        "fileSize": 14722,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -374,7 +374,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "Sextop1",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Sextop1.cs3",
         "name": "Sextop1"
