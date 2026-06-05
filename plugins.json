@@ -79,7 +79,7 @@
         "name": "Anime47"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://animehay.bid&sz=256",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
         "fileHash": "sha256-ce0ec215be2af35203f390c6438ae66b04fa54b2ac0a1d8cbedd2e89b0bcfb11",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
@@ -119,34 +119,11 @@
         "name": "AnimeKai"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://anime6.site&sz=256",
-        "fileHash": "sha256-536df0fb0978749de3fb57d7f614f9da919b236347729c2dbfe85c3535e1541b",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32253,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            "Cartoons",
-            "TvSeries"
-        ],
-        "version": 10,
-        "internalName": "Animet",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
-        "name": "Animet"
-    },
-    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
-        "fileHash": "sha256-b33559a3f3058035545e2339261f995ae2c8c93119b22cb37e131d6cf660eec0",
+        "fileHash": "sha256-294c0a22a970be8e869145fc5329fb9430f3f8c79134a927cdf3b95f33eb98e8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41858,
+        "fileSize": 44215,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -157,7 +134,7 @@
             "Cartoon",
             "Movie"
         ],
-        "version": 27,
+        "version": 28,
         "internalName": "Animevietsub",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.cs3",
         "name": "Animevietsub"
@@ -201,28 +178,6 @@
         "internalName": "BluPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/BluPhim.cs3",
         "name": "BluPhim"
-    },
-    {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://boctem.com&sz=256",
-        "fileHash": "sha256-f863983d8297f02fab3c141e37a2939c2967bf47f69290d7b1c511f2e17df0d6",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 26174,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "AnimeMovie",
-            "Anime",
-            "OVA",
-            "Cartoons"
-        ],
-        "version": 3,
-        "internalName": "Boctem",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Boctem.cs3",
-        "name": "Boctem"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://hoathinh3d.name&sz=256",
@@ -406,28 +361,6 @@
         "internalName": "PhimHHTQ",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHHTQ.cs3",
         "name": "PhimHHTQ"
-    },
-    {
-        "iconUrl": "https://favicone.com/phimmoichill.bz?s=256",
-        "fileHash": "sha256-7567b57589407b417d7e620bd06a7d1a81dc2dac1daa4bd6ea98871f7c5022d9",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 21542,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Movie",
-            "Anime",
-            "TvSeries",
-            "AnimeMovie"
-        ],
-        "version": 4,
-        "internalName": "PhimMoiPlus",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimMoiPlus.cs3",
-        "name": "PhimMoiPlus"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
