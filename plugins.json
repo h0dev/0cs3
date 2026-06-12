@@ -61,10 +61,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-f8dfe543efe33a06da8a4b302cecf8ecb2ed8337781585ce1392ef0d5174eddb",
+        "fileHash": "sha256-f8a97a03377165935f12fce7ca2dc60f2c75ed2342f6cf635cff327df185ec6b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 49340,
+        "fileSize": 49339,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-ce0ec215be2af35203f390c6438ae66b04fa54b2ac0a1d8cbedd2e89b0bcfb11",
+        "fileHash": "sha256-d0befdd3279479c5a14c226c494c728f15fa95a9780f96a58f2052c8d35fc0d9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27773,
+        "fileSize": 27774,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -120,10 +120,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
-        "fileHash": "sha256-294c0a22a970be8e869145fc5329fb9430f3f8c79134a927cdf3b95f33eb98e8",
+        "fileHash": "sha256-ea60336b28872c8135703253cefc42cfe83b1f358e604ccee30173c2bd9d4dde",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 44215,
+        "fileSize": 44216,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -221,10 +221,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-28c1785a62a4aaa0b77137e18dde16229f21c984fb94b35565f4199910ed2dae",
+        "fileHash": "sha256-5ce925b6e8e773ce4a3237c724e1f31704389021fc029a3cb7a717838cfeaf20",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32784,
+        "fileSize": 35494,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -235,7 +235,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 13,
+        "version": 14,
         "internalName": "NguonC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
         "name": "NguonC"
