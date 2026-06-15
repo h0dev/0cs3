@@ -61,10 +61,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-f8a97a03377165935f12fce7ca2dc60f2c75ed2342f6cf635cff327df185ec6b",
+        "fileHash": "sha256-4b69e5989e2481263120d69ecc98eadb3352518b6cdeac14b466ea3b2f9d7e16",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 49339,
+        "fileSize": 49240,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-d0befdd3279479c5a14c226c494c728f15fa95a9780f96a58f2052c8d35fc0d9",
+        "fileHash": "sha256-80f7fd995fed52cf462a014dc562cd2e8b05d465346f14e1e1fbf88f68618e47",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27774,
+        "fileSize": 27724,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -120,10 +120,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
-        "fileHash": "sha256-ea60336b28872c8135703253cefc42cfe83b1f358e604ccee30173c2bd9d4dde",
+        "fileHash": "sha256-612d2f49bb515bcc2caf4cdc5fc8e6f91684f1fad62f19052c363f217a1344bf",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 44216,
+        "fileSize": 44188,
         "status": 1,
         "language": "vi",
         "authors": [
