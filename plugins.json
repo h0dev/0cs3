@@ -262,10 +262,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://ophim19.cc&sz=256",
-        "fileHash": "sha256-cb080a4dc0d5037828978754862fe974b63bb4074656b27d44d1759b9ce150f1",
+        "fileHash": "sha256-86dc7094061a38ca80aa39b0e377662572e1f96e7d6bc70fc0ca5325e68f5972",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24946,
+        "fileSize": 25115,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -276,7 +276,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "Ophim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Ophim.cs3",
         "name": "Ophim"
