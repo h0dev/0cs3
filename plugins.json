@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-80f7fd995fed52cf462a014dc562cd2e8b05d465346f14e1e1fbf88f68618e47",
+        "fileHash": "sha256-85674d198d2717d2c5c593723863126c07bfa246cf8138ab3f860ed16b06ce67",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27724,
+        "fileSize": 27728,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -94,7 +94,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 12,
+        "version": 13,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
@@ -160,10 +160,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/bluphim5.com.ico",
-        "fileHash": "sha256-067b4a867f137ee643fb06481dc622983e0e6e11bc2342b46fbd75166b58a833",
+        "fileHash": "sha256-deb1ba90c0ee9890dc92d0134fea9b23dfec4e062ed19c557555ad7f7489b9a5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27749,
+        "fileSize": 27743,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -427,10 +427,10 @@
     },
     {
         "iconUrl": "https://torrentio.strem.fun/images/logo_v1.png",
-        "fileHash": "sha256-5463cb018a6d6eccc5cecfd722cf4b689a98953a6706345cd7bde86b8e0f3185",
+        "fileHash": "sha256-6b86a22d02e96387ab893c541fa3e52a031967d8f6bf830b52c2416ff41f9103",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 193583,
+        "fileSize": 193587,
         "status": 1,
         "language": "en",
         "authors": [
@@ -452,10 +452,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-ef698e9111f9a6e07bdf874817b45c85c88f72c5ade93a434ebccaad5f4bcb7f",
+        "fileHash": "sha256-d0eb17247f826bbeb36c0421698d4e26eae5e1560ff5b68f3ecfe6d4dba5543b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 19255,
+        "fileSize": 19235,
         "status": 1,
         "language": "vi",
         "authors": [
