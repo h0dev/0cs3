@@ -115,10 +115,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://ihentai.to&sz=256",
-        "fileHash": "sha256-0083805a049e340bede92a0dc5a321f253dceed806a4095fd666b1e4879cde77",
+        "fileHash": "sha256-27ad78bbe838d02ded9f360f1bad70e6c3022ee1a24ff842c8d734801475456f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 21212,
+        "fileSize": 23034,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -127,7 +127,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "HentaiZ",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/HentaiZ.cs3",
         "name": "HentaiZ"
@@ -324,10 +324,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Redtube.com&sz=256",
-        "fileHash": "sha256-71aad8225b40c233647583475f70b83dec7de730714c7761c0400572422ad9a0",
+        "fileHash": "sha256-b5c15b009dc28b189a04aeb5cf7858c845f378435655c69d10c1140d549aaa39",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 15192,
+        "fileSize": 15239,
         "status": 1,
         "language": "en",
         "authors": [
@@ -343,10 +343,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Sextb.net&sz=256",
-        "fileHash": "sha256-4746f20562621e2429dd3d9107598835e75644041a78f0d4ae9e04edb659f3b3",
+        "fileHash": "sha256-9cfb03f82b64d7540e323b2779fb27c90f42b6c6dedce25453b101a6c1722da3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 16140,
+        "fileSize": 16180,
         "status": 1,
         "language": "en",
         "authors": [
@@ -362,10 +362,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://sextop1.la&sz=256",
-        "fileHash": "sha256-923570985ebb32ac11af27d6c0caaac61edf0700b5c4c892c3ff80df8e5c402b",
+        "fileHash": "sha256-261a2957aeb99b0865668c30a224738891af0c72b5b944f703d198f655b4df84",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 15505,
+        "fileSize": 15546,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -457,10 +457,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://vlxx.bz&sz=256",
-        "fileHash": "sha256-11451a1c78c47b50b389e663f1450186586e412b4f88c12a9317661d5dd3bdb6",
+        "fileHash": "sha256-957c73da3a96d1961c6bf8ff30026ada51ab8999a69c2b28aa0ec25529cd7004",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 18940,
+        "fileSize": 19004,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -514,10 +514,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://vi.xhspot.com&sz=256",
-        "fileHash": "sha256-21bfff5bde02f895abfff58825e359fc5e8dfcc56b33a9c134f0f7421c8849b9",
+        "fileHash": "sha256-75569e0c7a4ac9989a436881be4805f2bd0b342fba29dffe298739c69b62633d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27732,
+        "fileSize": 27806,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -552,10 +552,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.xnxx.com&sz=256",
-        "fileHash": "sha256-94b589c2bf9d402bea21cfc5261bed096ca4112ae07ac2a60bc4a60899489615",
+        "fileHash": "sha256-1095130bc08d9d9151a8bf4e470369a329fef3452ec3eb5a94c2c6cc21e64b7c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24048,
+        "fileSize": 24119,
         "status": 1,
         "language": "en",
         "authors": [
