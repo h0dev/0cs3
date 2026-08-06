@@ -385,10 +385,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.tv.ico",
-        "fileHash": "sha256-946f003d6f89abf9c59771d4b5210e26c59357471542b109b7a70ca93a939f06",
+        "fileHash": "sha256-81487f7cdefe9c18985926d009f27bdc54138295dd50c7ec73c2d6afd9553b06",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 23891,
+        "fileSize": 24713,
         "status": 1,
         "language": "en",
         "authors": [
