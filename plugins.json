@@ -384,11 +384,11 @@
         "name": "PhimSea"
     },
     {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.tv.ico",
-        "fileHash": "sha256-46aa0141c7405a545c035d6b21b80befdd6ab34da47c09020a340197670738ba",
+        "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.su.ico",
+        "fileHash": "sha256-9ffbb44382016cadc53fd3e8a75eddb61637c7783327f3b5459c74a32deafb77",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24876,
+        "fileSize": 27288,
         "status": 1,
         "language": "en",
         "authors": [
@@ -398,7 +398,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "RidoMovies",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
         "name": "RidoMovies"
