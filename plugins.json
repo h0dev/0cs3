@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-85674d198d2717d2c5c593723863126c07bfa246cf8138ab3f860ed16b06ce67",
+        "fileHash": "sha256-53061c305ed8dad638e9adba02b0f62663ea36d94c153dc303a2a86b5f69cc01",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27728,
+        "fileSize": 27792,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -94,7 +94,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 13,
+        "version": 14,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
