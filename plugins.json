@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-b6df083582f1c467002b49edee52a9209a6f67b7272d6b94355dd13641b102e7",
+        "fileHash": "sha256-a42ba0e8c794dfde69879fc98c40ae60813e5f07aa3314d8bcf8ef9f6346a4d2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27721,
+        "fileSize": 27715,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -94,7 +94,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 14,
+        "version": 15,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
@@ -473,10 +473,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "fileHash": "sha256-181ce8303e80b1149e8d559c954d32fe90e63fb5b59f6c310f3be819c140263f",
+        "fileHash": "sha256-dfd4177a823e912413548682a2d7025367a3a8c2b010851997de94a511d9d703",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 34718,
+        "fileSize": 34820,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -485,7 +485,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 10,
+        "version": 12,
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
