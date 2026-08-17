@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-aea4cac9941c8c72b909efd6a1f342d03823fb437f8619c236baa3da412e4d8c",
+        "fileHash": "sha256-6fc253d95fbed64cf6258a1e1762cf19d149541b9d006801a41bcf089df6491d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27058,
+        "fileSize": 27427,
         "status": 1,
         "language": "vi",
         "authors": [
