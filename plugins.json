@@ -302,11 +302,11 @@
         "name": "PhimChauTinhTri"
     },
     {
-        "iconUrl": "https://raw.githubusercontent.com/rupanh123-phap/PHAPFERRARI.github.io/refs/heads/main/phimdinhcao.png",
-        "fileHash": "sha256-6dfb38ae1e326ff382d4b5c79e774a15598370282700cb501f578500ffce22ca",
+        "iconUrl": "https://www.1phim22.com/favicon.ico",
+        "fileHash": "sha256-1488110592e702378d9a6184db08c55209c02369ebd71f9afa29be11271e608d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33119,
+        "fileSize": 33089,
         "status": 1,
         "language": "vi",
         "authors": [
