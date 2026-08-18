@@ -303,10 +303,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/rupanh123-phap/PHAPFERRARI.github.io/refs/heads/main/phimdinhcao.png",
-        "fileHash": "sha256-65fcaa0fc0bc72932b1776104cf0bca9be420d9c073788cdb503caa7fc2be834",
+        "fileHash": "sha256-6dfb38ae1e326ff382d4b5c79e774a15598370282700cb501f578500ffce22ca",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33161,
+        "fileSize": 33119,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -316,7 +316,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "PhimDinhCao",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
         "name": "PhimDinhCao"
