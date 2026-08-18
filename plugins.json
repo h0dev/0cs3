@@ -159,11 +159,11 @@
         "name": "AnimeX"
     },
     {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/bluphim5.com.ico",
-        "fileHash": "sha256-b338ac1f1f1ee34b9e41e6623a6be94a0d1e1b981d196631ddbdd24787a44a51",
+        "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
+        "fileHash": "sha256-2e0122d1c236f43e283d53a60f39fbcbdd2fdf1dc2c3b7a4d544950c6f866ca0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 28635,
+        "fileSize": 27374,
         "status": 1,
         "language": "vi",
         "authors": [
