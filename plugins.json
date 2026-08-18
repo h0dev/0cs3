@@ -322,11 +322,11 @@
         "name": "PhimDinhCao"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://PhimHDCS.com&sz=256",
-        "fileHash": "sha256-33d3eeca3cc7db19743044e83cb2f0b93690477c295b99234b04b01423b8bdf7",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
+        "fileHash": "sha256-c5283881fa86490d0a2c23f5c19160638fc2106bfe95a3b084bebef4adb9affd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38080,
+        "fileSize": 38142,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -338,7 +338,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "PhimHDCS",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
         "name": "PhimHDCS"
