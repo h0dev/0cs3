@@ -364,10 +364,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-87eb985b2eaf0c53c5ad46ed8308a6856b73cf8c9ecd19919290d1bfb61a9652",
+        "fileHash": "sha256-f009d462dcb690a62e3f3a7e81e5bbf68a71618942954709e9c3a33ceb71cdde",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33568,
+        "fileSize": 42499,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -378,7 +378,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 5,
+        "version": 6,
         "internalName": "PhimSea",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimSea.cs3",
         "name": "PhimSea"
