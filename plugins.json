@@ -364,10 +364,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-2c1a82989cdf80c49962f0d5208f2c14ce5512ab7391e7bb02cb0046fb25d572",
+        "fileHash": "sha256-f874026eed9f85a458dbc1b3522c0da8a336672431bdeb708728e3d14bb62a2d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 43848,
+        "fileSize": 40678,
         "status": 1,
         "language": "vi",
         "authors": [
