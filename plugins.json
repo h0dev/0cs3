@@ -120,10 +120,10 @@
     },
     {
         "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-5b360cd747cc3849b2f984a3e97b991d0f7d1b6d88c7d5d93991411a0fca0fa4",
+        "fileHash": "sha256-e8b60dd848e76e0288e43e2f195c5ed3332058b6a5b0970c2a0d421838ff3f00",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 39208,
+        "fileSize": 39164,
         "status": 1,
         "language": "vi",
         "authors": [
