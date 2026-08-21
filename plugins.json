@@ -100,11 +100,11 @@
         "name": "Animehay"
     },
     {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/anikai.to.ico",
-        "fileHash": "sha256-192997a55d5998c8b224362cf853899b25033e68d88224e045add3e2eb4078b6",
+        "iconUrl": "https://icons.duckduckgo.com/ip3/animekai.be.ico",
+        "fileHash": "sha256-96528d35c2aef82ee04344f0927e3c66ef3b0fe94a10dff86b32eceb97393f7e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32326,
+        "fileSize": 28372,
         "status": 1,
         "language": "en",
         "authors": [
@@ -113,7 +113,7 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "AnimeKai",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.cs3",
         "name": "AnimeKai"
