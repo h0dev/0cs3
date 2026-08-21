@@ -119,6 +119,29 @@
         "name": "AnimeKai"
     },
     {
+        "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
+        "fileHash": "sha256-426e7765d8daae7ffab3253063dc9ed76af4d93e478435593c264daf6d53fc5d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 31190,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "OVA",
+            "Cartoons",
+            "TvSeries"
+        ],
+        "version": 10,
+        "internalName": "Animet",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
+        "name": "Animet"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.lol&sz=256",
         "fileHash": "sha256-24234d8e3d78d9b10e32a27701bb81a1b9a2048ca12df1623a0f7d6dd7ba0af5",
         "apiVersion": 1,
