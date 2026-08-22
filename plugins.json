@@ -203,11 +203,11 @@
         "name": "BluPhim"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://hoathinh3d.name&sz=256",
-        "fileHash": "sha256-71b8469fbcd33a529998c33c4a76e82377fe807af53243c19eee963e45e0afbc",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
+        "fileHash": "sha256-bd5f253aa3db7d705aa6e9d80179ce212baa4bf20975f343b82a446bb9c57c86",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24824,
+        "fileSize": 34414,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -216,7 +216,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "HoatHinh3D",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinh3D.cs3",
         "name": "HoatHinh3D"
