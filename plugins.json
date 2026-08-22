@@ -204,10 +204,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
-        "fileHash": "sha256-bd5f253aa3db7d705aa6e9d80179ce212baa4bf20975f343b82a446bb9c57c86",
+        "fileHash": "sha256-a193cbd389c7a45af3826166c8b53cd34facb481285f21e2a46179042aae74be",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 34414,
+        "fileSize": 35226,
         "status": 1,
         "language": "vi",
         "authors": [
