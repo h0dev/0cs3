@@ -265,10 +265,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.lat&sz=256",
-        "fileHash": "sha256-373166636aeccafeee2e2fd13a03f56d0298c2a52d569a12c047c3f1fcdf6903",
+        "fileHash": "sha256-4074f563ffa5e8ff644d36a1b664f9b1b0962e41f18a4014bc6b4b9ff119fb82",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 35918,
+        "fileSize": 37396,
         "status": 1,
         "language": "vi",
         "authors": [
