@@ -183,10 +183,10 @@
     },
     {
         "iconUrl": "https://www.asup.lol/favicon.ico",
-        "fileHash": "sha256-63eed740911c52b074af762a63c535a885dbc79019479072b2cf41843881310e",
+        "fileHash": "sha256-e67671be0a3d1407ebc6025c7a544bc0ec132f2d70c67afc38f1f9626594e31d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 34314,
+        "fileSize": 34441,
         "status": 1,
         "language": "vi",
         "authors": [
