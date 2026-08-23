@@ -120,10 +120,10 @@
     },
     {
         "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-e8b60dd848e76e0288e43e2f195c5ed3332058b6a5b0970c2a0d421838ff3f00",
+        "fileHash": "sha256-c035b3d2354cf1907200de1b4b14e5bb9884ccd708f1ad5b8daa65f270984fb2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 39164,
+        "fileSize": 48275,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -136,7 +136,7 @@
             "Cartoons",
             "TvSeries"
         ],
-        "version": 10,
+        "version": 11,
         "internalName": "Animet",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
         "name": "Animet"
@@ -183,7 +183,7 @@
     },
     {
         "iconUrl": "https://www.asup.lol/favicon.ico",
-        "fileHash": "sha256-605d90cabe094d29374e99f9b8e97d4dce817fa48725ce69724838c79d1916a3",
+        "fileHash": "sha256-8ae3dac878f668eb935c142b9d8b1bbd794938e75ec682a9d63b310fd1a9cab1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 36713,
@@ -197,7 +197,7 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "ASUPNIMER",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
         "name": "ASUPNIMER"
