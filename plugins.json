@@ -204,10 +204,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hhpanda.st&sz=256",
-        "fileHash": "sha256-25b1ae020600574fb12270afc9be15558def22f77706e58aef401035ed10b509",
+        "fileHash": "sha256-efc62b660e1048a3acb1152138176cdb271643d5e0e6c694e6233deaffa003da",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 21185,
+        "fileSize": 21992,
         "status": 1,
         "language": "vi",
         "authors": [
