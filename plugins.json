@@ -183,10 +183,10 @@
     },
     {
         "iconUrl": "https://www.asup.lol/favicon.ico",
-        "fileHash": "sha256-6a22cd952c642c2f24ddcf6d7786619d5135a3821c30b604a6dfab13e149376c",
+        "fileHash": "sha256-e0613f0d36b384f1806cf47e252f69e83c68e5e699437786e19bf895b8bba95a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27867,
+        "fileSize": 27743,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -197,10 +197,10 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 3,
-        "internalName": "AsupLoL",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AsupLoL.cs3",
-        "name": "AsupLoL"
+        "version": 1,
+        "internalName": "ASUPNIMER",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
+        "name": "ASUPNIMER"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
