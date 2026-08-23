@@ -203,25 +203,6 @@
         "name": "BluPhim"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://hhpanda.st&sz=256",
-        "fileHash": "sha256-a3fad13aefa716cc4331f1a22ce6f97234c225b8be5e7b098f4f86a99769958e",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 21801,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Cartoon"
-        ],
-        "version": 1,
-        "internalName": "HHPanda",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.cs3",
-        "name": "HHPanda"
-    },
-    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
         "fileHash": "sha256-9e27861fd08bf247aaf3d2baafb8c55fc8a0f3c7d75576d801447e3f525872a1",
         "apiVersion": 1,
