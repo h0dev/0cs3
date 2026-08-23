@@ -285,47 +285,6 @@
         "name": "Onflix"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://ophim19.cc&sz=256",
-        "fileHash": "sha256-a9c0703a4b66d8895e5e00cefa74fe550de09ff90249118c70bfeedaa001cab5",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24405,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Movie",
-            "Anime",
-            "TvSeries"
-        ],
-        "version": 10,
-        "internalName": "Ophim",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Ophim.cs3",
-        "name": "Ophim"
-    },
-    {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/phimchautinhtri.net.ico",
-        "fileHash": "sha256-9297b740c4a05f80c23e168b87b37f691a24e1614438882a9b3242b495756bc8",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 14001,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "TvSeries",
-            "Movie"
-        ],
-        "version": 1,
-        "internalName": "PhimChauTinhTri",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimChauTinhTri.cs3",
-        "name": "PhimChauTinhTri"
-    },
-    {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
         "fileHash": "sha256-1488110592e702378d9a6184db08c55209c02369ebd71f9afa29be11271e608d",
         "apiVersion": 1,
@@ -368,25 +327,6 @@
         "name": "PhimHDCS"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://phimhhtq.com&sz=256",
-        "fileHash": "sha256-dfc3bb4d86bbc90c27a0591ec130d9489393bfad9bb0595f012b351d24f3550a",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 13417,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Cartoon"
-        ],
-        "version": 4,
-        "internalName": "PhimHHTQ",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHHTQ.cs3",
-        "name": "PhimHHTQ"
-    },
-    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
         "fileHash": "sha256-229c061a5f53d37972d5d4bc1c20002fb4a9517684bada547fd2f3d37bcf1683",
         "apiVersion": 1,
@@ -426,28 +366,6 @@
         "internalName": "RidoMovies",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
         "name": "RidoMovies"
-    },
-    {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/TokuVN.com.ico",
-        "fileHash": "sha256-b2602e860b89838a2550ce5e4cec4f37ed7e9a23c5f687c2b0b25505d45ad1d5",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 22258,
-        "status": 1,
-        "language": "vi",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Anime",
-            "AsianDrama",
-            "TvSeries",
-            "Movie"
-        ],
-        "version": 1,
-        "internalName": "TokuVN",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TokuVN.cs3",
-        "name": "TokuVN"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
