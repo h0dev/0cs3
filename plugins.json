@@ -182,6 +182,27 @@
         "name": "AnimeX"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.asup.lol&sz=256",
+        "fileHash": "sha256-082f9af7317c0e07777bfdbc76c77361e7f129ff6a3a9e97164fc316815fdb56",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 20891,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Anime",
+            "Cartoon",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "AsupLoL",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AsupLoL.cs3",
+        "name": "AsupLoL"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
         "fileHash": "sha256-b3f975b1b5c7db70169581f36331b8410092773833ba3771841786d9832ceb83",
         "apiVersion": 1,
