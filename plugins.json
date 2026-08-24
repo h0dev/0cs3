@@ -473,10 +473,10 @@
     },
     {
         "iconUrl": "https://yumei-anime.com/favicon.ico",
-        "fileHash": "sha256-41f6d82b9b82a465a0b80d118bb9d306da976f91e9b6a24042c15cc52b2078a9",
+        "fileHash": "sha256-8bd98fdd6c4929b761d1b69a6770d8511f33b66bfd9e3611616c921ea577c73a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 28607,
+        "fileSize": 29073,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -489,7 +489,7 @@
             "Cartoon",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 1,
         "internalName": "YumeiAnime",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/YumeiAnime.cs3",
         "name": "YumeiAnime"
