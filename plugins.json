@@ -245,6 +245,28 @@
         "name": "CLBPhimXua"
     },
     {
+        "iconUrl": "https://hdvnn.xyz/assets/favico.png",
+        "fileHash": "sha256-3adfd5c4872e41a806ada1cc0d56c2d011d2092448ee189e599888f184f570a6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 23839,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "HDVNN",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HDVNN.cs3",
+        "name": "HDVNN"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
         "fileHash": "sha256-9e27861fd08bf247aaf3d2baafb8c55fc8a0f3c7d75576d801447e3f525872a1",
         "apiVersion": 1,
