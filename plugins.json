@@ -246,10 +246,10 @@
     },
     {
         "iconUrl": "https://hdvnn.xyz/assets/favico.png",
-        "fileHash": "sha256-8e982e4d97326bc26c05f51c36708f2b723126a6db3e519e2b72d3b42d8c4520",
+        "fileHash": "sha256-ff48615ec6cce9c4ea5c619e2fe3ffae12ad053c6485241a0bed25611329535a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40641,
+        "fileSize": 40640,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -261,7 +261,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": -1,
+        "version": 1,
         "internalName": "HDVNN",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HDVNN.cs3",
         "name": "HDVNN"
