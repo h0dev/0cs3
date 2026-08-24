@@ -224,11 +224,11 @@
         "name": "BluPhim"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.info&sz=256",
-        "fileHash": "sha256-7da0075efb080cae34caaf68bafc3e4262befac7799850bb23d26a2282970ec5",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
+        "fileHash": "sha256-9c3cfa9508aab6999ab2ec01c304ca35ac12205332425c58821e76761e138606",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 48429,
+        "fileSize": 34482,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -239,7 +239,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "CLBPhimXua",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CLBPhimXua.cs3",
         "name": "CLBPhimXua"
