@@ -246,10 +246,10 @@
     },
     {
         "iconUrl": "https://hdvnn.xyz/assets/favico.png",
-        "fileHash": "sha256-6a3abe26c1082f709cd01056f1a4fbe0fd6c0e8c10f7f53608406b11328f76df",
+        "fileHash": "sha256-4e55885fcf1cce44ffe33683ff57405f57ac7b4198e96f8ef5a03469fce875cd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 28023,
+        "fileSize": 37944,
         "status": 1,
         "language": "vi",
         "authors": [
