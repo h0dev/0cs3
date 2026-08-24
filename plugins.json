@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/anikuro.ru.ico",
-        "fileHash": "sha256-ecf3ac44edd8c2370606e6f3ad31585ab84e82243c1c9baace3aa872080c9559",
+        "fileHash": "sha256-6c9d0caa944245c46f56e5fe4dda695fb172e1f0246cafdee716e483c73754b2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37777,
+        "fileSize": 38532,
         "status": 1,
         "language": "en",
         "authors": [
