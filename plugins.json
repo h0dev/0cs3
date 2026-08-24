@@ -225,10 +225,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.info&sz=256",
-        "fileHash": "sha256-f6c8dd2caa9e2933e9f340252bcf95001e201e0f5ef478fabe64c72210175ef6",
+        "fileHash": "sha256-2eb0491c0b84d4c2839ba97ca95b3cbe65762b5d080b32d399c042cd836e39b0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41516,
+        "fileSize": 44357,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -239,7 +239,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": -1,
         "internalName": "CLBPhimXua",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CLBPhimXua.cs3",
         "name": "CLBPhimXua"
