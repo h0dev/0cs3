@@ -470,5 +470,28 @@
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
+    },
+    {
+        "iconUrl": "https://yumei-anime.com/favicon.ico",
+        "fileHash": "sha256-18a0a548274e21904c642a0be558f6386ebf64ed282042ff699178f026a4cb8e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 25078,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "AnimeMovie",
+            "Anime",
+            "OVA",
+            "Cartoon",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "YumeiAnime",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/YumeiAnime.cs3",
+        "name": "YumeiAnime"
     }
 ]
