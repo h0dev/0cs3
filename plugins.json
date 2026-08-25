@@ -473,10 +473,10 @@
     },
     {
         "iconUrl": "https://yumei-anime.com/favicon.ico",
-        "fileHash": "sha256-06f1a4128cf490e87286ad63f014f028f21262b382da386ddebeca4947b23299",
+        "fileHash": "sha256-454f23a2daa821c4887c79b5507809ae2d073a3ecc9c6817aa59f699f5a30dff",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 31253,
+        "fileSize": 31225,
         "status": 1,
         "language": "vi",
         "authors": [
