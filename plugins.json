@@ -453,11 +453,11 @@
         "name": "VSMOV"
     },
     {
-        "iconUrl": "https://xem20.net/favicon.ico",
-        "fileHash": "sha256-9174fcdfc98e100bafda99352b2d80f8819533537458eb03a70989047eab2573",
+        "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
+        "fileHash": "sha256-01f075f7af2287c42281ecd690d945ae758e1b566e97a5f17efbd35be7b4c43a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38887,
+        "fileSize": 39131,
         "status": 3,
         "language": "vi",
         "authors": [
