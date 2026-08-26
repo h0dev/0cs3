@@ -453,6 +453,27 @@
         "name": "VSMOV"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://xem20.net&sz=256",
+        "fileHash": "sha256-333deae52f087f9d746c1b61e047bc4c32b964fe0cb7f7f83c42f2e2c00e5baf",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 38371,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "Xem20",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
+        "name": "Xem20"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
         "fileHash": "sha256-39862d907b05b4a9e403597555f9b0950f12357fa9da85f5854f5b7f6a8fe955",
         "apiVersion": 1,
