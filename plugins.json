@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-a39136a1ed388672263ce0da7000f0fd9c41b4ad51ad37c1fc55e81d11d70ec7",
+        "fileHash": "sha256-45afbf444336c001897788fb59c146ec40f4f010290a48cc44d51415f0813a2a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42491,
+        "fileSize": 42463,
         "status": 1,
         "authors": [
             "anhdaden",
@@ -453,12 +453,12 @@
         "name": "VSMOV"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://xem20.net&sz=256",
-        "fileHash": "sha256-333deae52f087f9d746c1b61e047bc4c32b964fe0cb7f7f83c42f2e2c00e5baf",
+        "iconUrl": "https://xem20.net/favicon.ico",
+        "fileHash": "sha256-9174fcdfc98e100bafda99352b2d80f8819533537458eb03a70989047eab2573",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38371,
-        "status": 1,
+        "fileSize": 38887,
+        "status": 3,
         "language": "vi",
         "authors": [
             "SIX"
@@ -468,7 +468,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": -1,
         "internalName": "Xem20",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
         "name": "Xem20"
