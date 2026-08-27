@@ -433,11 +433,11 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.sieutamphim.pro&sz=256",
-        "fileHash": "sha256-4ece0a8df0b5a823a5a57111faca793e842f60cd719312ab3e88c6f38422f9ea",
+        "fileHash": "sha256-4f4ad04bac13dd3e3281bce0a88e71dcee579a16d0538b476eaef2a3f3ca92f0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 49911,
-        "status": 3,
+        "fileSize": 49914,
+        "status": 1,
         "language": "vi",
         "authors": [
             "SIX"
@@ -448,7 +448,7 @@
             "AsianDrama",
             "Cartoon"
         ],
-        "version": -1,
+        "version": 1,
         "internalName": "Sieutamphim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Sieutamphim.cs3",
         "name": "Sieutamphim"
