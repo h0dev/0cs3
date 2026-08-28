@@ -1,11 +1,11 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-db2d42adec0efa078e5fbb0c03308231482f6b39e2608233c33a9553d1f18128",
+        "fileHash": "sha256-f8840c7fe159ac5f75feb4c44d8cbb58f36618debdd2a877ed3ad27a5d132477",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 56915,
-        "status": 3,
+        "fileSize": 57252,
+        "status": 1,
         "authors": [
             "anhdaden",
             "SIX"
@@ -13,7 +13,7 @@
         "tvTypes": [
             "Others"
         ],
-        "version": -1,
+        "version": 1,
         "internalName": "1Sync",
         "description": "\u0110\u1ed3ng b\u1ed9 c\u00e0i \u0111\u1eb7t v\u00e0 l\u1ecbch s\u1eed xem gi\u1eefa c\u00e1c thi\u1ebft b\u1ecb (GitHub repo + branch)",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1Sync.cs3",
@@ -61,10 +61,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-0b44194c68fd6eea50dda6e4f4a369e721838c55071222ca564c5cb655cbea2c",
+        "fileHash": "sha256-310ad10da623b2ed77bad9b6569f01d382c8e6fe7039bc1eae1f9a17480f815a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 48689,
+        "fileSize": 48737,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -392,10 +392,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-229c061a5f53d37972d5d4bc1c20002fb4a9517684bada547fd2f3d37bcf1683",
+        "fileHash": "sha256-61860ea7fc4777348f5031c397b4ea9893dbb5bb942dccd94165d779929109d0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41207,
+        "fileSize": 41244,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -476,10 +476,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-3df3284c77afe2b436e5747a8a1a2ae5fa91c0d49eb57423a43a41725f657272",
+        "fileHash": "sha256-169cfc30cbe616ecbb53d1f5656b3a3dc0eea1e53d618569c7d1ee9c264ec3f5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 43179,
+        "fileSize": 43188,
         "status": 1,
         "language": "vi",
         "authors": [
