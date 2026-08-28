@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-0184496690bc144ae625cba9b366eee498ff76df96dee40dccdda3525ad9f490",
+        "fileHash": "sha256-77bedaea614497313fd4ccf78fe09d6f7a0a216df7ddf1fbc76b84c93edf6a7b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 52647,
+        "fileSize": 52724,
         "status": 1,
         "authors": [
             "anhdaden",
