@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-f8840c7fe159ac5f75feb4c44d8cbb58f36618debdd2a877ed3ad27a5d132477",
+        "fileHash": "sha256-57e908d096b74fbbc10e10c04766316ffa01b2ab005e4a8d479a88a512e255b3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 57252,
+        "fileSize": 56937,
         "status": 1,
         "authors": [
             "anhdaden",
@@ -61,10 +61,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-310ad10da623b2ed77bad9b6569f01d382c8e6fe7039bc1eae1f9a17480f815a",
+        "fileHash": "sha256-53de050e569e34f4c4f22a25ebc68a4557671081b5382ad5dc34ba62969d01b3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 48737,
+        "fileSize": 48374,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -392,10 +392,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-61860ea7fc4777348f5031c397b4ea9893dbb5bb942dccd94165d779929109d0",
+        "fileHash": "sha256-7023fc3cd6ae454ea2232429b103e0a5d81651b77c201f38a6c9b894a1ba7811",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41244,
+        "fileSize": 40881,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -476,10 +476,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-169cfc30cbe616ecbb53d1f5656b3a3dc0eea1e53d618569c7d1ee9c264ec3f5",
+        "fileHash": "sha256-68dd09270695addd4adcaa9861bbadf0ada3a3b2b553da08e60566c5cd1b021f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 43188,
+        "fileSize": 42840,
         "status": 1,
         "language": "vi",
         "authors": [
