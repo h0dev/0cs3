@@ -152,11 +152,11 @@
         "name": "Heovl"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://JavHDz.baby&sz=256",
-        "fileHash": "sha256-a892654e7b4832230e6e8f3699dbe984287c0c3402379a40b3ffa2c0f9f41c72",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://javhdz.pw&sz=256",
+        "fileHash": "sha256-43b87426322f39358e3fc5e06206828b82892b06d1b60fc8fcaafd0da351140c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 9806,
+        "fileSize": 12437,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -165,7 +165,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "JavHDz",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavHDz.cs3",
         "name": "JavHDz"
