@@ -133,11 +133,11 @@
         "name": "HentaiZ"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://heovl.fit&sz=256",
-        "fileHash": "sha256-61d29c0e69fceb818ae85e3a883ae55dd4b427d52db52568728d27c180fb908d",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=http://heovl.im&sz=256",
+        "fileHash": "sha256-dd9cbd1959eed33c69b6e986aec1604c8442756242cd77cf1cc735b8eda71f1e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 19779,
+        "fileSize": 22793,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -146,7 +146,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "Heovl",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Heovl.cs3",
         "name": "Heovl"
