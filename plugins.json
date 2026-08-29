@@ -532,11 +532,11 @@
         "name": "Xhamster"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://xnhau.cx&sz=256",
-        "fileHash": "sha256-2964a58cbe462c1c70cc96399e6fe4f5879768978062a7714de655b3604923cf",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://xnhau.show&sz=256",
+        "fileHash": "sha256-62cfbd0cb554d477bea076f6fc7e6cf15cf7ac8ef1216288e07b9a2353834888",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 20985,
+        "fileSize": 23167,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -545,7 +545,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "Xnhau",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Xnhau.cs3",
         "name": "Xnhau"
