@@ -247,20 +247,20 @@
         "name": "PerfectGirls"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://Phevkl.gg&sz=256",
-        "fileHash": "sha256-3cd7ab1510fb0057e698ab14f31615260479f6608e054965065ffd931e1591ac",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://phevkl.bond&sz=256",
+        "fileHash": "sha256-f8e9a5e5c0254e0e0d51f4c59e839c5dcc2bf1f844ef3a33bdad5152d6d77ad9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 16002,
-        "status": 0,
-        "language": "en",
+        "fileSize": 15742,
+        "status": 1,
+        "language": "vi",
         "authors": [
             "SIX"
         ],
         "tvTypes": [
             "NSFW"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "Phevkl",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/Phevkl.cs3",
         "name": "Phevkl"
