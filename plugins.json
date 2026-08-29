@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-793382e176b85dd27029959d6a0e76728fb4ef14e5c6f8defcbad771187c7ce0",
+        "fileHash": "sha256-5c63deafb3ee01334e17587ea568f3b7558f30b4cef58415bba260589d7e7ef7",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 57024,
+        "fileSize": 57020,
         "status": 1,
         "authors": [
             "anhdaden",
@@ -13,7 +13,7 @@
         "tvTypes": [
             "Others"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "1Sync",
         "description": "\u0110\u1ed3ng b\u1ed9 c\u00e0i \u0111\u1eb7t v\u00e0 l\u1ecbch s\u1eed xem gi\u1eefa c\u00e1c thi\u1ebft b\u1ecb (GitHub repo + branch)",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1Sync.cs3",
@@ -143,10 +143,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.vc&sz=256",
-        "fileHash": "sha256-f0a5a625c39689395cb69fa6ddea81254bc52cfaf2ba888234f6669c1deadd71",
+        "fileHash": "sha256-47288c96115c53cb91d676b1390b4f5231cdb9c0c1ef8432936cc5a7541193ac",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 50259,
+        "fileSize": 50170,
         "status": 1,
         "language": "vi",
         "authors": [
