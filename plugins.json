@@ -143,10 +143,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.vc&sz=256",
-        "fileHash": "sha256-4892d240a71c6f909d911ead3e0745035a841da5d9340ea58d31f43702e1e1d3",
+        "fileHash": "sha256-57344e8fe11d620b1c574d9725307a56c4b57759016106520f6781d59926bfc5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 47188,
+        "fileSize": 49335,
         "status": 1,
         "language": "vi",
         "authors": [
