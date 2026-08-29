@@ -153,10 +153,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://javhdz.pw&sz=256",
-        "fileHash": "sha256-43b87426322f39358e3fc5e06206828b82892b06d1b60fc8fcaafd0da351140c",
+        "fileHash": "sha256-59b1eb65f0baa320e9ecbff7459f528f3f0fc0764c4fd3592f4461840a08217f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 12437,
+        "fileSize": 12485,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -165,7 +165,7 @@
         "tvTypes": [
             "NSFW"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "JavHDz",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/nsfw/JavHDz.cs3",
         "name": "JavHDz"
