@@ -248,10 +248,10 @@
     },
     {
         "iconUrl": "https://phevkl.bond/wp-content/uploads/2023/10/tai-xuong.png",
-        "fileHash": "sha256-cd0511422d2900a94845dd248b1714497c1af5d214d3b15811aea9e65bcf649f",
+        "fileHash": "sha256-8e3ce072dae901ef1cfd2d616cf359d6eb265770e0642da9351010c22fa21ffb",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 16848,
+        "fileSize": 16836,
         "status": 1,
         "language": "vi",
         "authors": [
