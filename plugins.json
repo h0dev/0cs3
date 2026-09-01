@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-bcf11370f3ff1abec5a1c76052fc1b193a3e2f4f6770947461bbf0724131a073",
+        "fileHash": "sha256-453bd38c6aee62afad9513378c59a166327e33efbc0900091be4c3bdb133f713",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 57531,
+        "fileSize": 65794,
         "status": 1,
         "authors": [
             "anhdaden",
@@ -13,7 +13,7 @@
         "tvTypes": [
             "Others"
         ],
-        "version": 4,
+        "version": 6,
         "internalName": "1Sync",
         "description": "\u0110\u1ed3ng b\u1ed9 c\u00e0i \u0111\u1eb7t v\u00e0 l\u1ecbch s\u1eed xem gi\u1eefa c\u00e1c thi\u1ebft b\u1ecb (GitHub repo + branch)",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1Sync.cs3",
