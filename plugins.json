@@ -182,11 +182,11 @@
         "name": "AnimeX"
     },
     {
-        "iconUrl": "https://www.asup.lol/favicon.ico",
-        "fileHash": "sha256-0bcf8dfbf24846e2a081e09e2bfb42ace0b01f2d2ee182f4b3efa9b5167f009b",
+        "iconUrl": "https://www.asu.baby/favicon.ico",
+        "fileHash": "sha256-f55430bea4e910f03573fad4b249cb5345400e31ff4fc0a0870011defe16b1dc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40182,
+        "fileSize": 41685,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -197,7 +197,7 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "ASUPNIMER",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
         "name": "ASUPNIMER"
