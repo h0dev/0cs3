@@ -204,10 +204,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
-        "fileHash": "sha256-c2020ba467bb265ea267edffb0ceb9050c879b04d88015ec916d99c30c7fe43a",
+        "fileHash": "sha256-fe5b9b4a058b5a1b17c6e25e4aaa65f04b915eb16d7b339c9d3745c33d2920b3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32320,
+        "fileSize": 33411,
         "status": 1,
         "language": "vi",
         "authors": [
