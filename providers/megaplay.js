@@ -1,6 +1,6 @@
 /**
  * megaplay - Built from src/megaplay/
- * Generated: 2026-09-02T13:52:29.631Z
+ * Generated: 2026-09-02T13:58:11.212Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -85,7 +85,7 @@ function fetchFileId(prefix, id, episode, audio) {
     return m && m[1] ? m[1] : null;
   });
 }
-function getMasterUrl(dataId) {
+function getSourcesData(dataId) {
   return __async(this, null, function* () {
     const url = `${MEGA}/stream/getSources?id=${encodeURIComponent(dataId)}`;
     const headers = {
@@ -98,7 +98,8 @@ function getMasterUrl(dataId) {
     const file = json && json.sources && json.sources.file;
     if (!file)
       throw new Error("getSources returned no sources.file");
-    return file;
+    const tracks = Array.isArray(json == null ? void 0 : json.tracks) ? json.tracks.filter((t) => t && t.file) : [];
+    return { file, tracks };
   });
 }
 var MAPPING_RE = /"externalSite"\s*:\s*"anilist\/anime"[\s\S]*?"externalId"\s*:\s*"(\d+)"/;
@@ -216,6 +217,15 @@ function resolveToTargets(parsed, mediaType, season, episode) {
     ];
   });
 }
+function toSubtitle(track) {
+  const lang = track && track.label || "Undetermined";
+  return {
+    url: track.file,
+    language: lang,
+    name: track.label || null,
+    headers: __spreadValues({}, PLAYBACK_HEADERS)
+  };
+}
 function masterFor(target, audio, logRaw) {
   return __async(this, null, function* () {
     const { prefix, id, episode } = target;
@@ -231,9 +241,9 @@ function masterFor(target, audio, logRaw) {
       return null;
     }
     try {
-      const master = yield getMasterUrl(fileId);
-      console.log(`[MegaPlay] ${where} ep${episode} ${audio}: file ${fileId} -> ${master.slice(0, 70)}`);
-      return master;
+      const { file, tracks } = yield getSourcesData(fileId);
+      console.log(`[MegaPlay] ${where} ep${episode} ${audio}: file ${fileId} -> ${file.slice(0, 70)} (${tracks.length} subs)`);
+      return { url: file, subtitles: tracks.map(toSubtitle) };
     } catch (e) {
       console.warn(`[MegaPlay] getSources(${fileId}) failed: ${e.message}`);
       return null;
@@ -248,21 +258,22 @@ function extractStreams(meta) {
     const streams = [];
     const usedEp = targets[0].episode;
     for (const audio of ["sub", "dub"]) {
-      let masterUrl = null;
+      let resolved = null;
       for (const target of targets) {
-        masterUrl = yield masterFor(target, audio, raw);
-        if (masterUrl)
+        resolved = yield masterFor(target, audio, raw);
+        if (resolved)
           break;
       }
-      if (!masterUrl)
+      if (!resolved)
         continue;
       const track = audio === "dub" ? "DUB" : "SUB";
       streams.push({
         name: label,
         title: `MegaPlay (${track}) ep.${usedEp}`,
         quality: "auto",
-        url: masterUrl,
-        headers: __spreadValues({}, PLAYBACK_HEADERS)
+        url: resolved.url,
+        headers: __spreadValues({}, PLAYBACK_HEADERS),
+        subtitles: resolved.subtitles
       });
     }
     return streams;
