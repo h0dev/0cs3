@@ -204,10 +204,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
-        "fileHash": "sha256-92add24fed8f1b3395c06fe10a709e27e2180c3ba5e0828a494df918b642ab05",
+        "fileHash": "sha256-52b3b4396ddbd41744b26f3d630e387cb815e3a4038589a36dac50057f357bb1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 30749,
+        "fileSize": 30697,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -218,7 +218,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "BluPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/BluPhim.cs3",
         "name": "BluPhim"
