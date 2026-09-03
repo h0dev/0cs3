@@ -349,6 +349,28 @@
         "name": "Onflix"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimbom.us&sz=256",
+        "fileHash": "sha256-b1d069f57fe79a59f649a8e3ea9f8e001ad2b78173071af221727d3ed735c829",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 23039,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "Anime",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "PhimBom",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimBom.cs3",
+        "name": "PhimBom"
+    },
+    {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
         "fileHash": "sha256-5350010585f34625f94e043da0463ddf05f695d54fd17bffc4e299808834fe61",
         "apiVersion": 1,
