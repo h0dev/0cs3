@@ -1,6 +1,6 @@
 /**
  * anistream - Built from src/anistream/
- * Generated: 2026-09-03T00:11:21.040Z
+ * Generated: 2026-09-03T00:17:45.775Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -64,6 +64,26 @@ var NODE_FIELDS = `
     titleRomaji titleEnglish format type episodeCount status
     subCount dubCount seasonYear season source
 `;
+function malFromImdb(imdbId, season, episode) {
+  return __async(this, null, function* () {
+    const url = `https://id-mapping-api-malid.hf.space/api/resolve?id=${encodeURIComponent("tt" + imdbId)}&s=${Number(season) || 1}&e=${Number(episode) || 1}`;
+    const res = yield fetch(url, { method: "GET", headers: { "User-Agent": BROWSER_UA } });
+    if (!res.ok)
+      return null;
+    let json;
+    try {
+      json = JSON.parse(yield res.text());
+    } catch (e) {
+      return null;
+    }
+    if (!json || json.error || !json.mal_id)
+      return null;
+    return {
+      malId: String(json.mal_id),
+      malEpisode: Number(json.mal_episode) || Number(episode) || 1
+    };
+  });
+}
 function fetchAnimeNode(args) {
   return __async(this, null, function* () {
     if (!args || Object.keys(args).length === 0)
@@ -99,8 +119,6 @@ function classifyRawId(raw) {
 }
 function argsFor(kind, number) {
   switch (kind) {
-    case "imdb":
-      return { imdbId: "tt" + number };
     case "myanimelist":
     case "mal":
       return { malId: Number(number) };
@@ -123,10 +141,31 @@ var BARE_AXES = (num) => [
   { kitsuId: num },
   { tmdbId: String(num) }
 ];
-function resolveOpaque(parsed, mediaType) {
+function resolveOpaque(parsed, season, episode) {
   return __async(this, null, function* () {
     if (!parsed || parsed.kind === "unknown")
       return null;
+    const num = Number(episode || season || 1) || 1;
+    if (parsed.kind === "imdb") {
+      try {
+        const m = yield malFromImdb(parsed.number, season || 1, num);
+        if (m && m.malId) {
+          const node = yield fetchAnimeNode({ malId: Number(m.malId) });
+          if (node && node.id) {
+            return { node, episode: Number(m.malEpisode) || num };
+          }
+        }
+      } catch (e) {
+        console.warn(`[anistream] imdb->mal resolve failed: ${e.message}`);
+      }
+      try {
+        const node = yield fetchAnimeNode({ imdbId: "tt" + parsed.number });
+        if (node && node.id)
+          return { node, episode: num };
+      } catch (e) {
+      }
+      return null;
+    }
     if (parsed.kind === "bare") {
       for (const cand of BARE_AXES(Number(parsed.number))) {
         let node = null;
@@ -137,7 +176,7 @@ function resolveOpaque(parsed, mediaType) {
         }
         if (!node || !node.id)
           continue;
-        return node;
+        return { node, episode: num };
       }
       return null;
     }
@@ -145,7 +184,10 @@ function resolveOpaque(parsed, mediaType) {
     if (!args)
       return null;
     try {
-      return yield fetchAnimeNode(args);
+      const node = yield fetchAnimeNode(args);
+      if (node && node.id)
+        return { node, episode: num };
+      return null;
     } catch (e) {
       console.warn(`[anistream] lookup(${parsed.kind}) failed: ${e.message}`);
       return null;
@@ -261,18 +303,20 @@ function getStreams(tmdbId, mediaType, season, episode) {
       return [];
     }
     try {
-      const node = yield resolveOpaque(parsed, String(mediaType || "tv").toLowerCase());
-      if (!node || !node.id) {
+      const isMovie = String(mediaType || "tv").toLowerCase() === "movie";
+      const seasonNum = isMovie ? 1 : Number(season) || void 0;
+      const episodeNum = isMovie ? 1 : Number(episode || season || 1) || 1;
+      const res = yield resolveOpaque(parsed, seasonNum, episodeNum);
+      if (!res || !res.node || !res.node.id) {
         console.log(`[Anistream] no resolvable anime for "${tmdbId}"`);
         return [];
       }
-      const isMovie = String(mediaType || "tv").toLowerCase() === "movie";
-      const episodeNum = isMovie ? 1 : Number(episode || season || 1) || 1;
+      const { node, episode: finalEp } = res;
       const streams = yield extractStreams({
         node,
         label: LABEL,
         raw: String(tmdbId),
-        episode: episodeNum,
+        episode: finalEp,
         mediaType: isMovie ? "movie" : (node.format || "tv").toLowerCase()
       });
       console.log(`[Anistream] resolved ${streams.length} stream(s) for "${tmdbId}"`);
