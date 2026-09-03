@@ -1,6 +1,6 @@
 /**
  * anistream - Built from src/anistream/
- * Generated: 2026-09-03T00:41:31.078Z
+ * Generated: 2026-09-03T00:47:44.882Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -207,7 +207,7 @@ function fetchSources(opaqueId, episode, type, providerId) {
 function tracksToSubtitles(tracks, streamHeaders) {
   if (!Array.isArray(tracks))
     return [];
-  return tracks.filter((t) => t && t.url).map((t) => ({
+  return tracks.filter((t) => t && t.url && (t.lang || t.label)).map((t) => ({
     url: t.url,
     language: t.lang || t.label || "Undetermined",
     name: t.label || t.lang || null,
@@ -250,7 +250,7 @@ function extractStreams(meta) {
           );
           const tip = (prov.tip || "").replace(/^Soft sub,?\s*/i, "").trim();
           streams.push({
-            name: label,
+            name: `${tag} \xB7 ${prov.id}`,
             title: `${tag} \xB7 ${prov.id}${tip ? " \xB7 " + tip : ""}`,
             quality: "auto",
             url,
