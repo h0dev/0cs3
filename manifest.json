@@ -34,6 +34,7 @@
         "movie"
       ],
       "filename": "providers/anistream.js",
+      "logo": "https://anistream.one/favicon.svg",
       "enabled": true,
       "hasSettings": false,
       "formats": [

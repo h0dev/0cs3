@@ -1,6 +1,6 @@
 /**
  * anistream - Built from src/anistream/
- * Generated: 2026-09-03T00:17:45.775Z
+ * Generated: 2026-09-03T00:41:31.078Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -26,7 +26,8 @@ var __async = (__this, __arguments, generator) => {
 // src/anistream/http.js
 var GRAPHQL = "https://graphql.animex.one/graphql";
 var REST = "https://api.anistream.one/rest/api";
-var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+var BROWSER_UA = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36";
+var SITE_REFERER = "https://anistream.one/home";
 function getJson(_0) {
   return __async(this, arguments, function* (url, headers = {}) {
     let lastErr = null;
@@ -199,18 +200,18 @@ function fetchSources(opaqueId, episode, type, providerId) {
     const q = `id=${encodeURIComponent(opaqueId)}&epNum=${episode}&type=${type}` + (providerId ? `&providerId=${encodeURIComponent(providerId)}` : "");
     return getJson(`${REST}/sources?${q}`, {
       "User-Agent": BROWSER_UA,
-      Referer: "https://anistream.one/" + q
+      Referer: SITE_REFERER
     });
   });
 }
-function tracksToSubtitles(tracks) {
+function tracksToSubtitles(tracks, streamHeaders) {
   if (!Array.isArray(tracks))
     return [];
   return tracks.filter((t) => t && t.url).map((t) => ({
     url: t.url,
     language: t.lang || t.label || "Undetermined",
     name: t.label || t.lang || null,
-    default: !!t.default
+    headers: streamHeaders || void 0
   }));
 }
 function extractStreams(meta) {
@@ -220,71 +221,53 @@ function extractStreams(meta) {
       return [];
     const opaque = node.id;
     const streams = [];
-    const serverQ = `${REST}/servers?id=${encodeURIComponent(opaque)}&epNum=${episode}`;
-    let subProv = null;
-    let dubProv = null;
+    let subProviders = [];
+    let dubProviders = [];
     try {
+      const serverQ = `${REST}/servers?id=${encodeURIComponent(opaque)}&epNum=${episode}`;
       const servers = yield getJson(serverQ, {
         "User-Agent": BROWSER_UA,
-        Referer: "https://anistream.one/" + serverQ
+        Referer: SITE_REFERER
       });
-      const pick = (list) => {
-        if (!Array.isArray(list) || list.length === 0)
-          return null;
-        const d = list.find((p) => p && p.default);
-        return d || list[0];
-      };
-      subProv = pick(servers && servers.subProviders);
-      dubProv = pick(servers && servers.dubProviders);
+      subProviders = Array.isArray(servers && servers.subProviders) ? servers.subProviders : [];
+      dubProviders = Array.isArray(servers && servers.dubProviders) ? servers.dubProviders : [];
     } catch (e) {
       console.warn(`[anistream] servers() failed: ${e.message}`);
     }
-    if (subProv && subProv.id) {
-      try {
-        const src = yield fetchSources(opaque, episode, "sub", subProv.id);
-        const url = src && src.sources && src.sources[0] && src.sources[0].url;
-        if (url) {
+    const pushAudio = (provList, audio) => __async(this, null, function* () {
+      const tag = audio === "dub" ? "DUB" : "SUB";
+      for (const prov of provList) {
+        if (!prov || !prov.id)
+          continue;
+        try {
+          const src = yield fetchSources(opaque, episode, audio, prov.id);
+          const url = src && src.sources && src.sources[0] && src.sources[0].url;
+          if (!url)
+            continue;
           const headers = Object.assign(
             { "User-Agent": BROWSER_UA },
             src.headers || {}
           );
+          const tip = (prov.tip || "").replace(/^Soft sub,?\s*/i, "").trim();
           streams.push({
             name: label,
-            title: `Anistream (SUB) ep.${episode}`,
+            title: `${tag} \xB7 ${prov.id}${tip ? " \xB7 " + tip : ""}`,
             quality: "auto",
             url,
             headers,
-            subtitles: tracksToSubtitles(src.tracks)
+            subtitles: tracksToSubtitles(src.tracks, headers)
           });
-          console.log(`[anistream] ${raw} sub(${subProv.id}) ep${episode} -> ${url.slice(0, 80)}`, "subs", tracksToSubtitles(src.tracks).length);
+          console.log(`[anistream] ${raw} ${audio}(${prov.id}) ep${episode} -> ${url.slice(0, 80)} (${(src.tracks || []).length} subs)`);
+        } catch (e) {
+          console.warn(`[anistream] ${audio}(${prov.id}) sources failed: ${e.message}`);
         }
-      } catch (e) {
-        console.warn(`[anistream] sub sources failed: ${e.message}`);
       }
+    });
+    yield pushAudio(subProviders, "sub");
+    if (dubProviders.length === 0) {
+      console.log(`[anistream] ${raw} ep${episode}: no dub server for this anime/episode`);
     } else {
-      console.log(`[anistream] ${raw} ep${episode}: no sub provider (maybe not aired)`);
-    }
-    if (dubProv && dubProv.id) {
-      try {
-        const src = yield fetchSources(opaque, episode, "dub", dubProv.id);
-        const url = src && src.sources && src.sources[0] && src.sources[0].url;
-        if (url) {
-          streams.push({
-            name: label,
-            title: `Anistream (DUB) ep.${episode}`,
-            quality: "auto",
-            url,
-            headers: Object.assign(
-              { "User-Agent": BROWSER_UA },
-              src.headers || {}
-            ),
-            subtitles: tracksToSubtitles(src.tracks)
-          });
-          console.log(`[anistream] ${raw} dub(${dubProv.id}) ep${episode} -> ${url.slice(0, 80)}`);
-        }
-      } catch (e) {
-        console.warn(`[anistream] dub sources failed: ${e.message}`);
-      }
+      yield pushAudio(dubProviders, "dub");
     }
     return streams;
   });
