@@ -1,8 +1,10 @@
 /**
  * vicdn - Built from src/vicdn/
- * Generated: 2026-09-04T13:04:18.010Z
+ * Generated: 2026-09-04T13:12:20.425Z
  */
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -18,6 +20,7 @@ var __spreadValues = (a, b) => {
     }
   return a;
 };
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -273,12 +276,12 @@ function extractAudioSources(decoded) {
   return map;
 }
 var SLUG_FROM_URL = /([^\/]+)\/?$/;
-function subtitleFor(epSlug, lang, label) {
+var SUB_NAMES = { vi: "Ti\u1EBFng Vi\u1EC7t", en: "English" };
+function subtitleFor(epSlug, lang) {
   return {
     url: `${BASE}vtt/${epSlug}-${lang}.vtt`,
-    language: label,
-    name: label,
-    // .vtt served keyless from the site; no special header needed.
+    language: lang,
+    name: SUB_NAMES[lang] || lang,
     headers: {}
   };
 }
@@ -308,8 +311,8 @@ function unpackAudioStreams(playUrl) {
     }
     console.log(`[ViCDN][debug] AUDIO_SOURCES resolved: ${Object.keys(sources).join(", ")}`);
     const epSlug = (SLUG_FROM_URL.exec(playUrl.replace(/\/+$/, "")) || [])[1] || "";
-    const viSub = subtitleFor(epSlug, "vi", "Ti\u1EBFng Vi\u1EC7t");
-    const enSub = subtitleFor(epSlug, "en", "English");
+    const viSub = subtitleFor(epSlug, "vi");
+    const enSub = subtitleFor(epSlug, "en");
     const subs = [viSub, enSub];
     const out = [];
     for (const [key, htmlSrc] of Object.entries(sources)) {
@@ -328,7 +331,6 @@ function unpackAudioStreams(playUrl) {
 }
 
 // src/vicdn/index.js
-var LABEL = "ViCDN";
 function toEpisodes(info) {
   if (!info || !Array.isArray(info.episodes))
     return [];
@@ -400,13 +402,13 @@ function getStreams(tmdbId, mediaType, season, episode) {
       console.log(`[ViCDN] play ${playUrl || slug} returned no HLS`);
       return [];
     }
-    const out = streams.map((s) => __spreadValues({
-      name: LABEL,
-      title: `${s.name}${isMovie ? "" : pickEpisodeTag(playUrl)}`,
-      quality: "auto",
+    const episodeTag = isMovie ? "" : pickEpisodeTag(playUrl);
+    const out = streams.map((s) => __spreadValues(__spreadProps(__spreadValues({
+      name: s.name
+    }, episodeTag ? { title: `${s.name}${episodeTag}` } : {}), {
       url: s.url,
       headers: s.headers
-    }, s.subtitles && s.subtitles.length ? { subtitles: s.subtitles } : {}));
+    }), s.subtitles && s.subtitles.length ? { subtitles: s.subtitles } : {}));
     console.log(`[ViCDN] resolved ${out.length} stream(s) for ${playUrl}`);
     return out;
   });
