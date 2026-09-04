@@ -350,10 +350,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimbom.us&sz=256",
-        "fileHash": "sha256-575b8a35ae781ba86c3a9fbc479ffeaede36307c80eb8c5751c630fda250d72c",
+        "fileHash": "sha256-3db947f5ce8ef12eca2d2311742f5d8801bd08f11d76a8ed8ba44ce26ce92edb",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 25032,
+        "fileSize": 24212,
         "status": 1,
         "language": "vi",
         "authors": [
