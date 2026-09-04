@@ -476,6 +476,27 @@
         "name": "Sieutamphim"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://vicdn.cc&sz=256",
+        "fileHash": "sha256-bbf5900c2f1a3a854cf7a797288b989d365ccf0bc66b0cae85bd4aa8100f9884",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 21169,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "ViCDN",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ViCDN.cs3",
+        "name": "ViCDN"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
         "fileHash": "sha256-81f2d2c9c3c6108e84129d7111f44583deee333a82f63df267f9c0d32cae6d6c",
         "apiVersion": 1,
