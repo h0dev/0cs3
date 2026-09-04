@@ -1,6 +1,6 @@
 /**
  * vicdn - Built from src/vicdn/
- * Generated: 2026-09-04T12:43:57.462Z
+ * Generated: 2026-09-04T12:53:30.766Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
@@ -89,12 +89,33 @@ function resolveIdToSlug(raw, isMovie, season) {
 }
 function infoSlug(slug) {
   return __async(this, null, function* () {
-    const text = yield safeGetJson(`${BASE}api/info/${encodeURIComponent(slug)}`, slug);
-    if (!text)
-      return null;
-    const d = text && text.data;
-    if (!d || !d.type)
-      return null;
+    const url = `${BASE}api/info/${encodeURIComponent(slug)}`;
+    let txt = null;
+    let httpStatus = null;
+    try {
+      const headers = siteHeaders(BASE);
+      const res = yield fetch(url, { method: "GET", headers });
+      httpStatus = res.status;
+      txt = yield res.text();
+    } catch (e) {
+      console.warn(`[ViCDN][debug] /api/info request error for ${slug}: ${e.message}`);
+      return { found: false, reason: `network_error: ${e.message}` };
+    }
+    if (txt == null || !txt.length) {
+      console.warn(`[ViCDN][debug] /api/info ${slug} -> HTTP ${httpStatus} empty body`);
+      return { found: false, reason: `http_${httpStatus}_empty` };
+    }
+    let parsed = null;
+    try {
+      parsed = JSON.parse(txt);
+    } catch (e) {
+    }
+    if (!parsed || parsed.status === "error" || !parsed.data || !parsed.data.type) {
+      const msg = parsed && parsed.message ? parsed.message : "no-data";
+      console.log(`[ViCDN][debug] /api/info ${slug} -> HTTP ${httpStatus} found=false (${msg})`);
+      return { found: false, reason: msg };
+    }
+    const d = parsed.data;
     const list = Array.isArray(d.list_episodes) ? d.list_episodes : [];
     const episodes = list.map((line) => {
       if (typeof line !== "string")
@@ -107,30 +128,16 @@ function infoSlug(slug) {
         url: line.slice(i + 1).trim()
       };
     }).filter(Boolean);
+    console.log(
+      `[ViCDN][debug] /api/info ${slug} -> found=true type=${String(d.type).toLowerCase()} name=${JSON.stringify(d.vname || d.ename || "")} episodes=${episodes.length}`
+    );
     return {
+      found: true,
+      reason: "ok",
       type: String(d.type).toLowerCase(),
       name: d.vname || d.ename || "",
       episodes
     };
-  });
-}
-function safeGetJson(url, refSlug) {
-  return __async(this, null, function* () {
-    try {
-      const headers = siteHeaders(refSlug ? `${BASE}${refSlug}` : BASE);
-      const txt = yield fetchText(url, headers);
-      let parsed = null;
-      try {
-        parsed = JSON.parse(txt);
-      } catch (e) {
-      }
-      if (parsed && parsed.status === "error")
-        return null;
-      return parsed;
-    } catch (e) {
-      console.warn(`[ViCDN] info fetch failed for ${url}: ${e.message}`);
-      return null;
-    }
   });
 }
 
@@ -260,12 +267,20 @@ function unpackAudioStreams(playUrl) {
       console.warn(`[ViCDN] play page fetch failed ${playUrl}: ${e.message}`);
       return null;
     }
+    console.log(`[ViCDN][debug] play page ${playUrl} -> ${html.length} bytes`);
     const packed = decodePackerBlocks(html);
+    const hasPacker = html.indexOf("eval(function(p,a,c,k,e,d){") >= 0;
+    console.log(
+      `[ViCDN][debug] packer-blocks present=${hasPacker} decodedChars=${packed ? packed.length : 0}`
+    );
     const sources = extractAudioSources(packed || "");
     if (Object.keys(sources).length === 0) {
-      console.log("[ViCDN] no AUDIO_SOURCES found on play page");
+      console.warn(
+        `[ViCDN] no AUDIO_SOURCES resolvable on play page ${playUrl} (packer${hasPacker ? "" : " NOT"} found). Could be shell page instead of real episode page, geo/captcha, or layout change.`
+      );
       return null;
     }
+    console.log(`[ViCDN][debug] AUDIO_SOURCES resolved: ${Object.keys(sources).join(", ")}`);
     const epSlug = (SLUG_FROM_URL.exec(playUrl.replace(/\/+$/, "")) || [])[1] || "";
     const viSub = subtitleFor(epSlug, "vi", "Ti\u1EBFng Vi\u1EC7t");
     const enSub = subtitleFor(epSlug, "en", "English");
@@ -303,18 +318,22 @@ function getStreams(tmdbId, mediaType, season, episode) {
     const wantedSeason = isMovie ? 1 : Number(season || episode) || 1;
     const slug = resolveIdToSlug(String(tmdbId == null ? "" : tmdbId), isMovie, wantedSeason);
     console.log(`[ViCDN] slug candidates: ${slug || "(none)"} (movie=${isMovie})`);
-    if (!slug)
-      return [];
-    let info = null;
-    try {
-      info = yield infoSlug(slug);
-    } catch (e) {
-      console.warn(`[ViCDN] infoSlug failed: ${e.message}`);
-    }
-    if (!info) {
-      console.log(`[ViCDN] nothing on vicdn for tmdb slug ${slug}`);
+    if (!slug) {
+      if (/^tt/i.test(String(tmdbId || ""))) {
+        console.error("[ViCDN] id is an IMDB tt\u2026 code; vicdn can only key by the TMDB numeric (slug tv/mv-{tmdbId}). Nothing to probe => no streams.");
+      } else {
+        console.warn("[ViCDN] unsupported non-TMDB identifier; no slug can be built.");
+      }
       return [];
     }
+    const infoRes = yield infoSlug(slug);
+    if (!infoRes.found) {
+      console.log(
+        `[ViCDN] vicdn has no entry under ${slug} (reason=${infoRes.reason}). This typically means the title is NOT in vicdn's VN-sub/bilingual catalogue (sparsely Western titles, mostly CN/Asian content). Returning no streams so other sources stay available.`
+      );
+      return [];
+    }
+    const info = infoRes;
     const eps = toEpisodes(info);
     let playUrl = null;
     if (eps.length) {
