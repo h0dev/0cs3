@@ -1,6 +1,6 @@
 /**
  * vicdn - Built from src/vicdn/
- * Generated: 2026-09-04T13:12:20.425Z
+ * Generated: 2026-09-04T13:15:15.954Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -331,6 +331,7 @@ function unpackAudioStreams(playUrl) {
 }
 
 // src/vicdn/index.js
+var LABEL = "ViCDN";
 function toEpisodes(info) {
   if (!info || !Array.isArray(info.episodes))
     return [];
@@ -404,7 +405,7 @@ function getStreams(tmdbId, mediaType, season, episode) {
     }
     const episodeTag = isMovie ? "" : pickEpisodeTag(playUrl);
     const out = streams.map((s) => __spreadValues(__spreadProps(__spreadValues({
-      name: s.name
+      name: `${LABEL} \u2022 ${s.name}`
     }, episodeTag ? { title: `${s.name}${episodeTag}` } : {}), {
       url: s.url,
       headers: s.headers
