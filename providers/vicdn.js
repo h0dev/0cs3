@@ -1,6 +1,6 @@
 /**
  * vicdn - Built from src/vicdn/
- * Generated: 2026-09-04T12:53:30.766Z
+ * Generated: 2026-09-04T13:04:18.010Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
@@ -83,9 +83,35 @@ function resolveIdToSlug(raw, isMovie, season) {
     console.log(`[ViCDN] unsupported content id "${raw}" (TMDB numeric expected)`);
     return null;
   }
-  if (num == null)
-    return null;
   return isMovie ? `mv-${num}-1` : `tv-${num}-${season || 1}`;
+}
+function imdbToTmdb(tt, mediaType) {
+  return __async(this, null, function* () {
+    const clean = String(tt || "").trim();
+    if (!/^tt\d+$/i.test(clean))
+      return null;
+    const kind = String(mediaType || "movie").toLowerCase() === "tv" ? "series" : "movie";
+    const url = `https://v3-cinemeta.strem.io/meta/${kind}/${clean}.json`;
+    try {
+      const res = yield fetch(url, {
+        method: "GET",
+        headers: { "User-Agent": BROWSER_UA, Accept: "application/json" }
+      });
+      if (!res.ok) {
+        console.log(`[ViCDN][debug] imdb->tmdb ${clean} cinemeta HTTP ${res.status}`);
+        return null;
+      }
+      const json = JSON.parse(yield res.text());
+      const mid = json && json.meta ? json.meta.moviedb_id : null;
+      console.log(
+        `[ViCDN][debug] imdb->tmdb ${clean} via cinemeta -> ${mid != null ? `moviedb_id=${mid}` : "absent"}`
+      );
+      return mid != null ? String(mid) : null;
+    } catch (e) {
+      console.warn(`[ViCDN][debug] imdb->tmdb ${clean} cinemeta error: ${e.message}`);
+      return null;
+    }
+  });
 }
 function infoSlug(slug) {
   return __async(this, null, function* () {
@@ -316,20 +342,36 @@ function getStreams(tmdbId, mediaType, season, episode) {
     const mt = (mediaType || "tv").toLowerCase();
     const isMovie = mt === "movie";
     const wantedSeason = isMovie ? 1 : Number(season || episode) || 1;
-    const slug = resolveIdToSlug(String(tmdbId == null ? "" : tmdbId), isMovie, wantedSeason);
-    console.log(`[ViCDN] slug candidates: ${slug || "(none)"} (movie=${isMovie})`);
-    if (!slug) {
-      if (/^tt/i.test(String(tmdbId || ""))) {
-        console.error("[ViCDN] id is an IMDB tt\u2026 code; vicdn can only key by the TMDB numeric (slug tv/mv-{tmdbId}). Nothing to probe => no streams.");
+    const inId = String(tmdbId == null ? "" : tmdbId).trim();
+    let slug = resolveIdToSlug(inId, isMovie, wantedSeason);
+    let slugOrigin = "tmdb-id";
+    if (!slug && /^tt/i.test(inId)) {
+      const tmdbNo = yield imdbToTmdb(inId, mt);
+      if (tmdbNo) {
+        const sub = resolveIdToSlug(tmdbNo, isMovie, wantedSeason);
+        if (sub) {
+          slug = sub;
+          slugOrigin = `imdb[${inId}]->cinemeta->tmdb[${tmdbNo}]`;
+        }
       } else {
-        console.warn("[ViCDN] unsupported non-TMDB identifier; no slug can be built.");
+        console.log(
+          `[ViCDN] imdb ${inId} has no moviedb_id in cinemeta meta; vicdn cannot build a slug. Returning no streams.`
+        );
+        return [];
+      }
+    }
+    console.log(`[ViCDN] slug: ${slug || "(none)"} (movie=${isMovie}, via=${slugOrigin})`);
+    if (!slug) {
+      if (!/^tt/i.test(inId)) {
+        console.warn("[ViCDN] unsupported content id, no TMDB slug can be built.");
       }
       return [];
     }
     const infoRes = yield infoSlug(slug);
     if (!infoRes.found) {
+      const tag = slugOrigin.startsWith("imdb") ? `mapped ${slugOrigin}; ` : "";
       console.log(
-        `[ViCDN] vicdn has no entry under ${slug} (reason=${infoRes.reason}). This typically means the title is NOT in vicdn's VN-sub/bilingual catalogue (sparsely Western titles, mostly CN/Asian content). Returning no streams so other sources stay available.`
+        `[ViCDN] vicdn has no entry under ${slug} (${tag}reason=${infoRes.reason}). Title is probably NOT in vicdn's VN-sub/bilingual catalogue (Western titles are sparse; mostly CN/Asian). Returning no streams so other sources stay available.`
       );
       return [];
     }
