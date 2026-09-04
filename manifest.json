@@ -46,6 +46,29 @@
       "limited": false,
       "disabledPlatforms": [],
       "supportsExternalPlayer": true
+    },
+    {
+      "id": "vicdn",
+      "name": "ViCDN",
+      "version": "1.0.0",
+      "author": "hung319",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/vicdn.js",
+      "logo": "https://vicdn.cc/vicdn.png",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": [
+        "m3u8"
+      ],
+      "contentLanguage": [
+        "vi"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true
     }
   ]
 }
