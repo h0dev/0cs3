@@ -477,10 +477,10 @@
     },
     {
         "iconUrl": "https://vicdn.cc/vicdn.png",
-        "fileHash": "sha256-147d932fbe5d5ac1d8be24bf092b1b060eff5bad224b50e9c0e8a296de04ff8f",
+        "fileHash": "sha256-1900f1ef775f0989383c4932d28c45161ce8a75ea6e0a3b8703aa39940d25aef",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 25393,
+        "fileSize": 25965,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -491,7 +491,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "ViCDN",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ViCDN.cs3",
         "name": "ViCDN"
