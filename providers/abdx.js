@@ -1,6 +1,6 @@
 /**
  * abdx - Built from src/abdx/
- * Generated: 2026-09-06T00:48:27.144Z
+ * Generated: 2026-09-06T01:23:04.854Z
  */
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
@@ -162,6 +162,9 @@ var require_sha256 = __commonJS({
       }
       return bits;
     }
+    function hasPowLoopBridge() {
+      return typeof globalThis !== "undefined" && typeof globalThis.__crypto_pow_find_nonce === "function";
+    }
     function nativeDigestFn() {
       if (typeof globalThis !== "undefined" && typeof globalThis.__crypto_digest_hex_raw === "function") {
         return function(asciiMsg) {
@@ -270,6 +273,14 @@ var require_sha256 = __commonJS({
     function solvePow(challenge, difficulty) {
       const need = difficulty | 0 || 18;
       const cap = 1 << 24;
+      if (hasPowLoopBridge()) {
+        const nonce = globalThis.__crypto_pow_find_nonce(challenge, need);
+        if (typeof nonce === "string" && nonce !== "") {
+          console.log(`[ABDX] pow solved natively nonce=${nonce} difficulty=${need}`);
+          return nonce;
+        }
+        console.warn("[ABDX] native pow bridge returned empty; falling back");
+      }
       const choice = chooseSolver();
       if (choice === "native") {
         return solveNative(nativeDigestFn(), challenge, need, cap);
