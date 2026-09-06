@@ -1,6 +1,6 @@
 /**
  * abdx - Built from src/abdx/
- * Generated: 2026-09-06T01:23:04.854Z
+ * Generated: 2026-09-06T01:51:10.666Z
  */
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
@@ -436,10 +436,486 @@ var require_codec = __commonJS({
   }
 });
 
+// src/abdx/aesgcm.js
+var require_aesgcm = __commonJS({
+  "src/abdx/aesgcm.js"(exports2, module2) {
+    var SBOX = [
+      99,
+      124,
+      119,
+      123,
+      242,
+      107,
+      111,
+      197,
+      48,
+      1,
+      103,
+      43,
+      254,
+      215,
+      171,
+      118,
+      202,
+      130,
+      201,
+      125,
+      250,
+      89,
+      71,
+      240,
+      173,
+      212,
+      162,
+      175,
+      156,
+      164,
+      114,
+      192,
+      183,
+      253,
+      147,
+      38,
+      54,
+      63,
+      247,
+      204,
+      52,
+      165,
+      229,
+      241,
+      113,
+      216,
+      49,
+      21,
+      4,
+      199,
+      35,
+      195,
+      24,
+      150,
+      5,
+      154,
+      7,
+      18,
+      128,
+      226,
+      235,
+      39,
+      178,
+      117,
+      9,
+      131,
+      44,
+      26,
+      27,
+      110,
+      90,
+      160,
+      82,
+      59,
+      214,
+      179,
+      41,
+      227,
+      47,
+      132,
+      83,
+      209,
+      0,
+      237,
+      32,
+      252,
+      177,
+      91,
+      106,
+      203,
+      190,
+      57,
+      74,
+      76,
+      88,
+      207,
+      208,
+      239,
+      170,
+      251,
+      67,
+      77,
+      51,
+      133,
+      69,
+      249,
+      2,
+      127,
+      80,
+      60,
+      159,
+      168,
+      81,
+      163,
+      64,
+      143,
+      146,
+      157,
+      56,
+      245,
+      188,
+      182,
+      218,
+      33,
+      16,
+      255,
+      243,
+      210,
+      205,
+      12,
+      19,
+      236,
+      95,
+      151,
+      68,
+      23,
+      196,
+      167,
+      126,
+      61,
+      100,
+      93,
+      25,
+      115,
+      96,
+      129,
+      79,
+      220,
+      34,
+      42,
+      144,
+      136,
+      70,
+      238,
+      184,
+      20,
+      222,
+      94,
+      11,
+      219,
+      224,
+      50,
+      58,
+      10,
+      73,
+      6,
+      36,
+      92,
+      194,
+      211,
+      172,
+      98,
+      145,
+      149,
+      228,
+      121,
+      231,
+      200,
+      55,
+      109,
+      141,
+      213,
+      78,
+      169,
+      108,
+      86,
+      244,
+      234,
+      101,
+      122,
+      174,
+      8,
+      186,
+      120,
+      37,
+      46,
+      28,
+      166,
+      180,
+      198,
+      232,
+      221,
+      116,
+      31,
+      75,
+      189,
+      139,
+      138,
+      112,
+      62,
+      181,
+      102,
+      72,
+      3,
+      246,
+      14,
+      97,
+      53,
+      87,
+      185,
+      134,
+      193,
+      29,
+      158,
+      225,
+      248,
+      152,
+      17,
+      105,
+      217,
+      142,
+      148,
+      155,
+      30,
+      135,
+      233,
+      206,
+      85,
+      40,
+      223,
+      140,
+      161,
+      137,
+      13,
+      191,
+      230,
+      66,
+      104,
+      65,
+      153,
+      45,
+      15,
+      176,
+      84,
+      187,
+      22
+    ];
+    var RCON = [1, 2, 4, 8, 16, 32, 64, 128, 27, 54];
+    var REV_BYTE = (() => {
+      const t = new Array(256);
+      for (let i = 0; i < 256; i++) {
+        let v = i, r = 0;
+        for (let k = 0; k < 8; k++) {
+          r = r << 1 | v & 1;
+          v >>>= 1;
+        }
+        t[i] = r;
+      }
+      return t;
+    })();
+    function bitRevBytes(block) {
+      const out = new Array(16);
+      for (let i = 0; i < 16; i++)
+        out[i] = REV_BYTE[block[15 - i]];
+      return out;
+    }
+    function keyExpansion(key) {
+      const w = new Array(60);
+      for (let i = 0; i < 8; i++) {
+        w[i] = key[i * 4] << 24 | key[i * 4 + 1] << 16 | key[i * 4 + 2] << 8 | key[i * 4 + 3];
+      }
+      for (let i = 8; i < 60; i++) {
+        let t = w[i - 1];
+        if (i % 8 === 0) {
+          t = (t << 8 | t >>> 24) >>> 0;
+          const b0 = SBOX[t >>> 24 & 255], b1 = SBOX[t >>> 16 & 255], b2 = SBOX[t >>> 8 & 255], b3 = SBOX[t & 255];
+          t = (b0 << 24 | b1 << 16 | b2 << 8 | b3) ^ RCON[(i / 8 | 0) - 1] << 24;
+        } else if (i % 8 === 4) {
+          const b0 = SBOX[t >>> 24 & 255], b1 = SBOX[t >>> 16 & 255], b2 = SBOX[t >>> 8 & 255], b3 = SBOX[t & 255];
+          t = b0 << 24 | b1 << 16 | b2 << 8 | b3;
+        }
+        w[i] = (w[i - 8] ^ t) >>> 0;
+      }
+      return w;
+    }
+    function aesEncryptBlock(w, block) {
+      let s = new Array(16);
+      for (let i = 0; i < 16; i++)
+        s[i] = block[i];
+      const addRoundKey = (round) => {
+        for (let c = 0; c < 4; c++) {
+          const wk = w[round * 4 + c];
+          s[c * 4] ^= wk >>> 24 & 255;
+          s[c * 4 + 1] ^= wk >>> 16 & 255;
+          s[c * 4 + 2] ^= wk >>> 8 & 255;
+          s[c * 4 + 3] ^= wk & 255;
+        }
+      };
+      const subBytes = () => {
+        for (let i = 0; i < 16; i++)
+          s[i] = SBOX[s[i]];
+      };
+      const shiftRows = () => {
+        for (let r = 1; r < 4; r++) {
+          const row = [s[r], s[4 + r], s[8 + r], s[12 + r]];
+          for (let c = 0; c < 4; c++)
+            s[c * 4 + r] = row[(c + r) % 4];
+        }
+      };
+      const gmul = (a, b) => {
+        let r = 0, aa = a & 255, bb = b & 255;
+        for (let i = 0; i < 8; i++) {
+          if (bb & 1)
+            r ^= aa;
+          const hi = aa & 128;
+          aa = aa << 1 & 255;
+          if (hi)
+            aa ^= 27;
+          bb >>>= 1;
+        }
+        return r;
+      };
+      const mixColumns = () => {
+        for (let c = 0; c < 4; c++) {
+          const i = c * 4;
+          const a0 = s[i], a1 = s[i + 1], a2 = s[i + 2], a3 = s[i + 3];
+          s[i] = gmul(a0, 2) ^ gmul(a1, 3) ^ a2 ^ a3;
+          s[i + 1] = a0 ^ gmul(a1, 2) ^ gmul(a2, 3) ^ a3;
+          s[i + 2] = a0 ^ a1 ^ gmul(a2, 2) ^ gmul(a3, 3);
+          s[i + 3] = gmul(a0, 3) ^ a1 ^ a2 ^ gmul(a3, 2);
+        }
+      };
+      addRoundKey(0);
+      for (let round = 1; round < 14; round++) {
+        subBytes();
+        shiftRows();
+        mixColumns();
+        addRoundKey(round);
+      }
+      subBytes();
+      shiftRows();
+      addRoundKey(14);
+      return s;
+    }
+    function ghashMul(x, y) {
+      const X = bitRevBytes(x);
+      const Y = bitRevBytes(y);
+      const Z = new Array(16).fill(0);
+      const V = Y.slice();
+      for (let i = 0; i < 128; i++) {
+        const bit = X[15 - (i >>> 3)] >>> (i & 7) & 1;
+        if (bit)
+          for (let j = 0; j < 16; j++)
+            Z[j] ^= V[j];
+        const top = V[0] & 128;
+        for (let j = 0; j < 15; j++)
+          V[j] = (V[j] << 1 | V[j + 1] >>> 7) & 255;
+        V[15] = V[15] << 1 & 255;
+        if (top)
+          V[15] ^= 135;
+      }
+      return bitRevBytes(Z);
+    }
+    function ghash(h, blocks) {
+      let y = new Array(16).fill(0);
+      for (const blk of blocks) {
+        const x = blk.slice();
+        for (let i = 0; i < 16; i++)
+          y[i] ^= x[i];
+        y = ghashMul(y, h);
+      }
+      return y;
+    }
+    function inc32(block) {
+      const b = block.slice();
+      for (let i = 15; i >= 12; i--) {
+        b[i] = b[i] + 1 & 255;
+        if (b[i] !== 0)
+          break;
+      }
+      return b;
+    }
+    function xorBlocks(a, b) {
+      const out = new Array(a.length);
+      for (let i = 0; i < a.length; i++)
+        out[i] = a[i] ^ b[i];
+      return out;
+    }
+    function lenBlock(bytesLen) {
+      const bits = bytesLen * 8;
+      const out = new Array(16).fill(0);
+      out[8] = Math.floor(bits / Math.pow(2, 56)) & 255;
+      out[9] = Math.floor(bits / Math.pow(2, 48)) & 255;
+      out[10] = Math.floor(bits / Math.pow(2, 40)) & 255;
+      out[11] = Math.floor(bits / Math.pow(2, 32)) & 255;
+      out[12] = Math.floor(bits / Math.pow(2, 24)) & 255;
+      out[13] = Math.floor(bits / Math.pow(2, 16)) & 255;
+      out[14] = Math.floor(bits / Math.pow(2, 8)) & 255;
+      out[15] = bits & 255;
+      return out;
+    }
+    function gcmTag(w, H, j0, cipher) {
+      const blocks = [];
+      for (let off = 0; off < cipher.length; off += 16) {
+        const blk = new Array(16).fill(0);
+        for (let i = 0; i < 16 && off + i < cipher.length; i++)
+          blk[i] = cipher[off + i];
+        blocks.push(blk);
+      }
+      const lA = new Array(8).fill(0);
+      const lC = lenBlock(cipher.length).slice(8);
+      blocks.push(lA.concat(lC));
+      const g = ghash(H, blocks);
+      const s0 = aesEncryptBlock(w, j0);
+      return xorBlocks(g, s0);
+    }
+    function aes256GcmEncrypt(key, iv, plain) {
+      const w = keyExpansion(key);
+      const H = aesEncryptBlock(w, new Array(16).fill(0));
+      const j0 = iv.slice(0, 12).concat([0, 0, 0, 1]);
+      const cipher = new Array(plain.length);
+      let ctr = j0;
+      for (let off = 0; off < plain.length; off += 16) {
+        ctr = inc32(ctr);
+        const ks = aesEncryptBlock(w, ctr);
+        for (let i = 0; i < 16 && off + i < plain.length; i++) {
+          cipher[off + i] = plain[off + i] ^ ks[i];
+        }
+      }
+      const tag = gcmTag(w, H, j0, cipher);
+      return { cipher, tag };
+    }
+    function aes256GcmDecrypt(key, iv, data) {
+      if (data.length < 16)
+        throw new Error("abdx gcm: data too short");
+      const ct = data.slice(0, data.length - 16);
+      const tag = data.slice(data.length - 16);
+      const w = keyExpansion(key);
+      const H = aesEncryptBlock(w, new Array(16).fill(0));
+      const j0 = iv.slice(0, 12).concat([0, 0, 0, 1]);
+      const calc = gcmTag(w, H, j0, ct);
+      let diff = 0;
+      for (let i = 0; i < 16; i++)
+        diff |= tag[i] ^ calc[i];
+      if (diff !== 0)
+        throw new Error("abdx gcm: tag mismatch");
+      const plain = new Array(ct.length);
+      let ctr = j0;
+      for (let off = 0; off < ct.length; off += 16) {
+        ctr = inc32(ctr);
+        const ks = aesEncryptBlock(w, ctr);
+        for (let i = 0; i < 16 && off + i < ct.length; i++) {
+          plain[off + i] = ct[off + i] ^ ks[i];
+        }
+      }
+      return plain;
+    }
+    module2.exports = { aes256GcmEncrypt, aes256GcmDecrypt, aesEncryptBlock, keyExpansion, SBOX };
+  }
+});
+
 // src/abdx/crypto.js
 var require_crypto = __commonJS({
   "src/abdx/crypto.js"(exports2, module2) {
     var { utf8Encode, utf8Decode, bytesToHex, hexToBytes, bytesToBase64Url, base64UrlToBytes } = require_codec();
+    var { aes256GcmEncrypt, aes256GcmDecrypt } = require_aesgcm();
     var _nodeCrypto;
     function nodeCrypto() {
       if (_nodeCrypto === void 0) {
@@ -498,7 +974,8 @@ var require_crypto = __commonJS({
           );
           return Array.from(new Uint8Array(ctBuf));
         }
-        throw new Error("abdx: no AES-GCM backend available");
+        const g = aes256GcmEncrypt(hexToBytes(keyHex), ivBytes, plainBytes);
+        return g.cipher.concat(g.tag);
       });
     }
     function aesGcmDecryptBytes(keyHex, ivBytes, dataBytes) {
@@ -531,7 +1008,7 @@ var require_crypto = __commonJS({
           );
           return Array.from(new Uint8Array(ptBuf));
         }
-        throw new Error("abdx: no AES-GCM backend available");
+        return aes256GcmDecrypt(hexToBytes(keyHex), ivBytes, dataBytes);
       });
     }
     function encryptObjectToE(keyHex, obj) {
