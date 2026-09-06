@@ -1,6 +1,6 @@
 /**
  * abdx - Built from src/abdx/
- * Generated: 2026-09-05T23:58:16.290Z
+ * Generated: 2026-09-06T00:48:27.144Z
  */
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
@@ -96,107 +96,187 @@ var require_sha256 = __commonJS({
       3204031479,
       3329325298
     ];
-    var H0 = [
-      1779033703,
-      3144134277,
-      1013904242,
-      2773480762,
-      1359893119,
-      2600822924,
-      528734635,
-      1541459225
-    ];
+    var H0 = [1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225];
+    var HEX_NIB = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
     function rotr(x, n) {
       return x >>> n | x << 32 - n;
     }
-    function sha256BytesAscii(ascii) {
-      const w = new Array(64);
-      const H = H0.slice();
+    function sha256Compress(ascii, w, H) {
       const bytes = [];
       for (let i = 0; i < ascii.length; i++)
         bytes.push(ascii.charCodeAt(i) & 255);
-      const bitLen = bytes.length * 8;
       bytes.push(128);
+      const bitLen = ascii.length * 8;
       while (bytes.length % 64 !== 56)
         bytes.push(0);
-      for (let j = 7; j >= 0; j--)
-        bytes.push(Math.floor(bitLen / Math.pow(2, 8 * j)) & 255);
-      for (let off = 0; off < bytes.length; off += 64) {
-        for (let t = 0; t < 16; t++) {
-          w[t] = bytes[off + t * 4] << 24 | bytes[off + t * 4 + 1] << 16 | bytes[off + t * 4 + 2] << 8 | bytes[off + t * 4 + 3];
-        }
-        for (let t = 16; t < 64; t++) {
-          const s0 = rotr(w[t - 15], 7) ^ rotr(w[t - 15], 18) ^ w[t - 15] >>> 3;
-          const s1 = rotr(w[t - 2], 17) ^ rotr(w[t - 2], 19) ^ w[t - 2] >>> 10;
-          w[t] = w[t - 16] + s0 + w[t - 7] + s1 | 0;
-        }
-        let a = H[0], b = H[1], c = H[2], d = H[3], e = H[4], f = H[5], g = H[6], h = H[7];
-        for (let t = 0; t < 64; t++) {
-          const S1 = rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25);
-          const ch = e & f ^ ~e & g;
-          const t1 = h + S1 + ch + K[t] + w[t] | 0;
-          const S0 = rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22);
-          const maj = a & b ^ a & c ^ b & c;
-          const t2 = S0 + maj | 0;
-          h = g;
-          g = f;
-          f = e;
-          e = d + t1 | 0;
-          d = c;
-          c = b;
-          b = a;
-          a = t1 + t2 | 0;
-        }
-        H[0] = H[0] + a | 0;
-        H[1] = H[1] + b | 0;
-        H[2] = H[2] + c | 0;
-        H[3] = H[3] + d | 0;
-        H[4] = H[4] + e | 0;
-        H[5] = H[5] + f | 0;
-        H[6] = H[6] + g | 0;
-        H[7] = H[7] + h | 0;
+      bytes.push(0, 0, 0, 0, 0, 0, bitLen / 256 & 255, bitLen & 255);
+      for (let t = 0; t < 16; t++) {
+        w[t] = bytes[t * 4] << 24 | bytes[t * 4 + 1] << 16 | bytes[t * 4 + 2] << 8 | bytes[t * 4 + 3];
       }
-      const out = new Uint8Array(32);
-      for (let i = 0; i < 8; i++) {
-        out[i * 4] = H[i] >>> 24 & 255;
-        out[i * 4 + 1] = H[i] >>> 16 & 255;
-        out[i * 4 + 2] = H[i] >>> 8 & 255;
-        out[i * 4 + 3] = H[i] & 255;
+      for (let t = 16; t < 64; t++) {
+        const s0 = rotr(w[t - 15], 7) ^ rotr(w[t - 15], 18) ^ w[t - 15] >>> 3;
+        const s1 = rotr(w[t - 2], 17) ^ rotr(w[t - 2], 19) ^ w[t - 2] >>> 10;
+        w[t] = w[t - 16] + s0 + w[t - 7] + s1 | 0;
       }
-      return out;
+      let a = H[0], b = H[1], c = H[2], d = H[3], e = H[4], f = H[5], g = H[6], h = H[7];
+      for (let t = 0; t < 64; t++) {
+        const S1 = rotr(e, 6) ^ rotr(e, 11) ^ rotr(e, 25);
+        const ch = e & f ^ ~e & g;
+        const t1 = h + S1 + ch + K[t] + w[t] | 0;
+        const S0 = rotr(a, 2) ^ rotr(a, 13) ^ rotr(a, 22);
+        const maj = a & b ^ a & c ^ b & c;
+        const t2 = S0 + maj | 0;
+        h = g;
+        g = f;
+        f = e;
+        e = d + t1 | 0;
+        d = c;
+        c = b;
+        b = a;
+        a = t1 + t2 | 0;
+      }
+      H[0] = H[0] + a | 0;
+      H[1] = H[1] + b | 0;
+      H[2] = H[2] + c | 0;
+      H[3] = H[3] + d | 0;
+      H[4] = H[4] + e | 0;
+      H[5] = H[5] + f | 0;
+      H[6] = H[6] + g | 0;
+      H[7] = H[7] + h | 0;
     }
-    function leadingZeroBits(g) {
-      let bits = 0, i = 0;
-      while (i < g.length) {
-        const b = g[i];
-        if (b === 0) {
-          bits += 8;
-          i++;
-          continue;
-        }
-        let x = b;
-        while (x < 128) {
+    function sha256Words(ascii, w, H) {
+      for (let i = 0; i < 8; i++)
+        H[i] = H0[i];
+      sha256Compress(ascii, w, H);
+      return H;
+    }
+    function leadingZeroBitsFromWords(H) {
+      let bits = 0;
+      for (let i = 0; i < 8; i++) {
+        const word = H[i];
+        for (let bit = 31; bit >= 0; bit--) {
+          if (word >>> bit & 1)
+            return bits;
           bits++;
-          x <<= 1;
         }
-        break;
       }
       return bits;
     }
-    function solvePow(challenge, difficulty) {
-      const need = difficulty | 0 || 18;
-      const cap = 1 << 24;
+    function nativeDigestFn() {
+      if (typeof globalThis !== "undefined" && typeof globalThis.__crypto_digest_hex_raw === "function") {
+        return function(asciiMsg) {
+          let hex = "";
+          for (let i = 0; i < asciiMsg.length; i++) {
+            const c = asciiMsg.charCodeAt(i) & 255;
+            hex += HEX_NIB[c >> 4] + HEX_NIB[c & 15];
+          }
+          return globalThis.__crypto_digest_hex_raw("SHA256", hex);
+        };
+      }
+      if (typeof globalThis !== "undefined" && typeof globalThis.__crypto_digest_hex === "function") {
+        return function(asciiMsg) {
+          return globalThis.__crypto_digest_hex("SHA256", asciiMsg);
+        };
+      }
+      return null;
+    }
+    function leadingZeroBitsFromHex(hex) {
+      let bits = 0;
+      for (let i = 0; i < hex.length; i++) {
+        const c = hex.charCodeAt(i);
+        let nib;
+        if (c >= 48 && c <= 57)
+          nib = c - 48;
+        else if (c >= 97 && c <= 102)
+          nib = c - 87;
+        else if (c >= 65 && c <= 70)
+          nib = c - 55;
+        else
+          return bits;
+        if (nib === 0) {
+          bits += 4;
+          continue;
+        }
+        if (nib < 8) {
+          bits += 1;
+          if (nib < 4) {
+            bits += 1;
+            if (nib < 2)
+              bits += 1;
+          }
+        }
+        return bits;
+      }
+      return bits;
+    }
+    function solvePure(challenge, difficulty, cap) {
+      const w = new Array(64);
+      const H = new Array(8);
       let nonce = 0;
       for (; ; ) {
-        const g = sha256BytesAscii(challenge + ":" + nonce);
-        if (leadingZeroBits(g) >= need)
+        sha256Words(challenge + ":" + nonce, w, H);
+        if (leadingZeroBitsFromWords(H) >= difficulty)
           return String(nonce);
         nonce++;
         if (nonce > cap)
           throw new Error("abdx pow cap exceeded");
       }
     }
-    module2.exports = { sha256BytesAscii, leadingZeroBits, solvePow };
+    function solveNative(fn, challenge, difficulty, cap) {
+      let nonce = 0;
+      for (; ; ) {
+        const digestHex = fn(challenge + ":" + nonce);
+        if (leadingZeroBitsFromHex(digestHex) >= difficulty)
+          return String(nonce);
+        nonce++;
+        if (nonce > cap)
+          throw new Error("abdx pow cap exceeded");
+      }
+    }
+    var solverChoice = null;
+    function chooseSolver() {
+      if (solverChoice)
+        return solverChoice;
+      const fn = nativeDigestFn();
+      if (!fn) {
+        solverChoice = "pure";
+        return solverChoice;
+      }
+      const probe = "ac6bd21bee309ecd1cfd18e5cbc45cdf";
+      try {
+        const t0 = Date.now();
+        let acc = 0;
+        for (let i = 0; i < 240; i++) {
+          const h = fn(probe + ":" + i);
+          acc += h.length;
+        }
+        const nativeMs = Date.now() - t0 || 1;
+        const w = new Array(64);
+        const H = new Array(8);
+        const t1 = Date.now();
+        let acc2 = 0;
+        for (let i = 0; i < 240; i++) {
+          sha256Words(probe + ":" + i, w, H);
+          acc2 += H[0];
+        }
+        const pureMs = Date.now() - t1 || 1;
+        solverChoice = nativeMs <= pureMs ? "native" : "pure";
+        console.log(`[ABDX] pow backend=${solverChoice} (native ${nativeMs}ms / pure ${pureMs}ms @240)`);
+      } catch (e) {
+        solverChoice = "pure";
+      }
+      return solverChoice;
+    }
+    function solvePow(challenge, difficulty) {
+      const need = difficulty | 0 || 18;
+      const cap = 1 << 24;
+      const choice = chooseSolver();
+      if (choice === "native") {
+        return solveNative(nativeDigestFn(), challenge, need, cap);
+      }
+      return solvePure(challenge, need, cap);
+    }
+    module2.exports = { solvePow, sha256Words, leadingZeroBitsFromWords, chooseSolver, nativeDigestFn };
   }
 });
 
@@ -593,7 +673,72 @@ var require_api = __commonJS({
         }
       });
     }
-    module2.exports = { getSession: getSession2, fetchStream: fetchStream2, STREAM_URL, BROWSER_UA, base64UrlToBytes };
+    function fetchSubtitles2(sess, params) {
+      return __async(this, null, function* () {
+        const q = new URLSearchParams();
+        q.set("tmdb_id", String(params.tmdbId));
+        q.set("media_type", String(params.mediaType) === "tv" ? "tv" : "movie");
+        if (String(params.mediaType) === "tv") {
+          q.set("season", String(Number(params.season) || 1));
+          q.set("episode", String(Number(params.episode) || 1));
+        }
+        const url = BASE + "movies/subtitles?" + q.toString();
+        let res;
+        try {
+          res = yield fetch(url, {
+            headers: { "User-Agent": BROWSER_UA, Accept: "application/json", "X-ABDX-PoW": sess.token }
+          });
+        } catch (e) {
+          console.warn(`[ABDX] subtitles network error: ${e.message}`);
+          return [];
+        }
+        if (!res.ok) {
+          console.log(`[ABDX] subtitles HTTP ${res.status}`);
+          return [];
+        }
+        let j;
+        try {
+          j = JSON.parse(yield res.text());
+        } catch (e) {
+          return [];
+        }
+        const list = Array.isArray(j.subtitles) ? j.subtitles : [];
+        if (!list.length)
+          return [];
+        const PRIORITY = ["en", "vi", "es", "fr", "de", "pt", "zh", "ja", "ko", "ar", "ru", "id"];
+        const seen = /* @__PURE__ */ new Set();
+        const ordered = [];
+        for (const lang of PRIORITY) {
+          const hit = list.find((s) => String(s.language || "").toLowerCase() === lang);
+          if (hit && !seen.has(lang)) {
+            seen.add(lang);
+            ordered.push(hit);
+          }
+        }
+        for (const s of list) {
+          const lang = String(s.language || "").toLowerCase();
+          if (seen.has(lang))
+            continue;
+          seen.add(lang);
+          ordered.push(s);
+          if (ordered.length >= 12)
+            break;
+        }
+        const out = ordered.map((s) => {
+          const fid = String(s.file_id || "");
+          const lang = String(s.language || "und").toLowerCase().slice(0, 3);
+          const name = String(s.label || s.file_name || s.provider_label || lang);
+          if (/^https?:\/\//i.test(fid)) {
+            return { url: fid, language: lang, name, headers: {} };
+          }
+          const dl = s.url && String(s.url).startsWith("/") ? BASE + String(s.url).replace(/^\//, "") : BASE + "movies/subtitles/download?provider=" + encodeURIComponent(String(s.provider || "")) + "&file_id=" + encodeURIComponent(fid);
+          return { url: dl, language: lang, name, headers: { "X-ABDX-PoW": sess.token } };
+        });
+        console.log(`[ABDX] subtitles: ${out.length} track(s) for tmdb=${params.tmdbId} ${params.mediaType}${params.episode ? ` s${params.season}e${params.episode}` : ""}`);
+        return out;
+      });
+    }
+    module2.exports = { getSession: getSession2, fetchStream: fetchStream2, fetchSubtitles: fetchSubtitles2, STREAM_URL, BROWSER_UA, base64UrlToBytes };
   }
 });
 
@@ -650,7 +795,7 @@ var require_resolve = __commonJS({
 });
 
 // src/abdx/index.js
-var { getSession, fetchStream } = require_api();
+var { getSession, fetchStream, fetchSubtitles } = require_api();
 var { imdbToTmdb, resolveNumericId, siteHeaders } = require_resolve();
 var LABEL = "ABDX";
 var CINEMAOS_WATCH = "https://cinemaos.live/watch";
@@ -737,6 +882,26 @@ function getStreams(tmdbId, mediaType, season, episode) {
         quality: ""
       };
     });
+    if (rows.length) {
+      try {
+        const sess = yield getSession();
+        for (const r of rows) {
+          r.headers = Object.assign({}, r.headers, { "X-ABDX-PoW": sess.token });
+        }
+        const subs = yield fetchSubtitles(sess, {
+          tmdbId: num,
+          mediaType: isMovie ? "movie" : "tv",
+          season: seasonNo,
+          episode: episodeNo
+        });
+        if (subs && subs.length) {
+          for (const r of rows)
+            r.subtitles = subs;
+        }
+      } catch (e) {
+        console.warn(`[ABDX] subtitles skipped: ${e.message}`);
+      }
+    }
     console.log(`[ABDX] \u2192 ${rows.length} stream(s)`);
     return rows;
   });
