@@ -287,10 +287,10 @@
     },
     {
         "iconUrl": "https://khophim.top/favicon.ico",
-        "fileHash": "sha256-c217f0ed2a42b28dd65ba941406cd9bef3ff6d7bbfa81f149a6c6481e3530a46",
+        "fileHash": "sha256-916c8f421610b187a6489bb4955157494280f8226d4134016ca0a3811120d15a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 22592,
+        "fileSize": 22627,
         "status": 1,
         "language": "vi",
         "authors": [
