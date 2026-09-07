@@ -286,6 +286,28 @@
         "name": "HoatHinh3D"
     },
     {
+        "iconUrl": "https://khophim.top/favicon.ico",
+        "fileHash": "sha256-600f69ec80418e65888e857534d542c0a54d0c95c7843a9275e325d5815ad107",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 19721,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "KhoPhim",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KhoPhim.cs3",
+        "name": "KhoPhim"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
         "fileHash": "sha256-5e1d71b73f80ea482085546df7c5be49f052bbd0525c3ffbcb3db638b123919f",
         "apiVersion": 1,
