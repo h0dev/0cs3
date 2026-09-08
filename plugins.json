@@ -330,10 +330,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-77cecccf212b1f6a079c020a9539f9cd4193e31ee8b3a223836932ad6d4087e6",
+        "fileHash": "sha256-15fd15b882294b49364e4c0770c1fabb781389cbb6fc074f04b2c5bcc337a70e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37941,
+        "fileSize": 39951,
         "status": 1,
         "language": "vi",
         "authors": [
