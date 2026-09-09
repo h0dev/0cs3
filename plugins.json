@@ -414,10 +414,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
-        "fileHash": "sha256-2b3d2b85ad6c69fe8f5fdd09f5657da2b81517750c52b65ae9796571f41adaac",
+        "fileHash": "sha256-10d71138f20dc4942e501c420c8f3337e054ba40d498e3a5acdbda75eef9acf8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 82056,
+        "fileSize": 82024,
         "status": 1,
         "language": "vi",
         "authors": [
