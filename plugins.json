@@ -330,10 +330,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-5c42da934264bc9b13fb0db00613a716dab7952dd547d79c315f61124c006974",
+        "fileHash": "sha256-e96d3c9e3ab5fc7b1f56973b04756658e21355adef9d249951dd22a6fcccffb8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40557,
+        "fileSize": 44373,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -344,7 +344,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 17,
+        "version": 18,
         "internalName": "NguonC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
         "name": "NguonC"
@@ -414,10 +414,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
-        "fileHash": "sha256-f9857d36545139f00fc8c3a9faada5c17c79d341d553ebad305b2d4f5b1e09c7",
+        "fileHash": "sha256-ed8c8c6e27eec501dff5ae3098c7059fbab4bac6fb2cc1d1f5759986ea04fe3c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 82089,
+        "fileSize": 85533,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -429,7 +429,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "PhimHDCS",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
         "name": "PhimHDCS"
