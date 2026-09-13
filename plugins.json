@@ -562,10 +562,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-86f81ccb32b5cb59f36234330dce8232427c1bf3eff9698aff9195769f950a02",
+        "fileHash": "sha256-9f3da77c1ad2cc7f8291d6bccd960de8ab8da3a9041418c8e303580787714079",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 55328,
+        "fileSize": 55875,
         "status": 1,
         "language": "vi",
         "authors": [
