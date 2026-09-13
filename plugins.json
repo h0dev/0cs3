@@ -541,10 +541,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-f494f5c9f527586558199fc7af480a59594ee66c9ebe22e38765cad19cea7419",
+        "fileHash": "sha256-25b703206eb6b300583bec90f438f5c79e5b10e94e72fcf77965d7973bf311ee",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41360,
+        "fileSize": 41562,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -555,17 +555,17 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "VSMOV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VSMOV.cs3",
         "name": "VSMOV"
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-b282ba78c486f7e8ed53ace97ef38fa879b40eaf1a0f61a377500fef97414c63",
+        "fileHash": "sha256-0709de1b6481a7e6e051c01766faaa8f728becfc700e566993d0184ee4f79d54",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 52045,
+        "fileSize": 51538,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -576,7 +576,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "Xem20",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
         "name": "Xem20"
