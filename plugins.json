@@ -541,10 +541,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-b66c52914eca8b3533fa3a29dc41dded9ab2fc313a1841d1ab5a33b7f9699b21",
+        "fileHash": "sha256-a357235f26e4a17c50079409a439c5d972938245e5fa2fb78be80dd93672b116",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 44704,
+        "fileSize": 44774,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -555,7 +555,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "VSMOV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VSMOV.cs3",
         "name": "VSMOV"
