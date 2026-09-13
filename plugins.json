@@ -477,10 +477,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://rophim.bar&sz=256",
-        "fileHash": "sha256-131d2a9a3cdef3238da39e06455c44e82aebef068c906b90f6c97a0b1d81cab8",
+        "fileHash": "sha256-38f4ea5d712140f3dca02402d80e69d0654d2fe8ad191371c0600b02a3ee4099",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42337,
+        "fileSize": 42342,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -492,9 +492,9 @@
             "Anime"
         ],
         "version": 1,
-        "internalName": "Rophim",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Rophim.cs3",
-        "name": "Rophim"
+        "internalName": "RoPhim",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhim.cs3",
+        "name": "RoPhim"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.sieutamphim.pro&sz=256",
@@ -541,10 +541,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-81f2d2c9c3c6108e84129d7111f44583deee333a82f63df267f9c0d32cae6d6c",
+        "fileHash": "sha256-4e02e5e571211f2342631908aff902a3fcd02c1a5fd05b65741f9ff83600321a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 34790,
+        "fileSize": 37995,
         "status": 1,
         "language": "vi",
         "authors": [
