@@ -80,10 +80,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-d60e14aceaec7d292f41c803dca68d1f49fccb50c0b62a933df07f7d249e5a1c",
+        "fileHash": "sha256-141e2e43b246c3d46482052c6b8bf4a1ae1e7449cbf7db50a1a9fe48e3588dca",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 30993,
+        "fileSize": 32014,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -94,7 +94,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 16,
+        "version": 17,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
@@ -394,10 +394,10 @@
     },
     {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
-        "fileHash": "sha256-5350010585f34625f94e043da0463ddf05f695d54fd17bffc4e299808834fe61",
+        "fileHash": "sha256-bcc1f68c9365da8b703b98bb97a44894195889b87a6f6359f6f73b5fff661d68",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 36765,
+        "fileSize": 37286,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -407,7 +407,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "PhimDinhCao",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
         "name": "PhimDinhCao"
