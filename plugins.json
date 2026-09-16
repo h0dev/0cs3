@@ -541,10 +541,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-6a4bd418e14e4bd97b106be2a8c2bdf6cfba99373489968a6595afc529ef7d44",
+        "fileHash": "sha256-b9dd1ab8c9d8bd018b2c2d35aada136ef5d1b6a7aaca38ce1c39a40267f5f85b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 47311,
+        "fileSize": 47408,
         "status": 1,
         "language": "vi",
         "authors": [
