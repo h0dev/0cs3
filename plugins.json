@@ -348,6 +348,26 @@
         "name": "KKPhim"
     },
     {
+        "iconUrl": "https://icons.duckduckgo.com/ip3/narto-drama.com.ico",
+        "fileHash": "sha256-35981a6c7bdafac48223ba7fc31f051c6b9d9bdee527cf2c02e82d28fbc471fb",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 30775,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "NartoDrama",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NartoDrama.cs3",
+        "name": "NartoDrama"
+    },
+    {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
         "fileHash": "sha256-e96d3c9e3ab5fc7b1f56973b04756658e21355adef9d249951dd22a6fcccffb8",
         "apiVersion": 1,
