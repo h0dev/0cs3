@@ -559,6 +559,26 @@
         "name": "ViCDN"
     },
     {
+        "iconUrl": "https://icons.duckduckgo.com/ip3/vn2c.my.ico",
+        "fileHash": "sha256-6497f56cb5d5530bd42c6990bdcd4489bdd6b3bca24034e62d3f0cb1219a8c45",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 23130,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "Vn2c",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Vn2c.cs3",
+        "name": "Vn2c"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
         "fileHash": "sha256-41eb3b6a5e671319c3fddc89065693a4384a2874edf2d4351dbd0c54f8441153",
         "apiVersion": 1,
