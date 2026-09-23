@@ -245,6 +245,25 @@
         "name": "CLBPhimXua"
     },
     {
+        "iconUrl": "https://icons.duckduckgo.com/ip3/fsharetv.com.ico",
+        "fileHash": "sha256-6ea3528efb70da3e20339923cf5111a47c1bff26e3d59faa1d903bfe6443f157",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 24433,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "FshareTV",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/FshareTV.cs3",
+        "name": "FshareTV"
+    },
+    {
         "iconUrl": "https://hdvnn.xyz/assets/favico.png",
         "fileHash": "sha256-bfbcdbffe6446806f916fbbd8a19450cd8a2050a78f1dbbeff6452a1dbc243e8",
         "apiVersion": 1,
