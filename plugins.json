@@ -433,10 +433,10 @@
     },
     {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
-        "fileHash": "sha256-bcc1f68c9365da8b703b98bb97a44894195889b87a6f6359f6f73b5fff661d68",
+        "fileHash": "sha256-554aa7547a73570e9d67b14ae37bccbf340c432b90103c0ebcca3257fde47fef",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37286,
+        "fileSize": 38052,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -446,7 +446,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "PhimDinhCao",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
         "name": "PhimDinhCao"
