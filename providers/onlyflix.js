@@ -1,6 +1,6 @@
 /**
  * onlyflix - Built from src/onlyflix/
- * Generated: 2026-09-25T12:55:42.329Z
+ * Generated: 2026-09-25T14:07:26.486Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -476,6 +476,135 @@ var require_packer = __commonJS({
   }
 });
 
+// src/onlyflix/subtitles.js
+var require_subtitles = __commonJS({
+  "src/onlyflix/subtitles.js"(exports2, module2) {
+    var { BROWSER_UA } = require_http();
+    var OS_BASE = "https://opensubtitles-v3.strem.io/subtitles";
+    var MAX_OPENSUBS = 2;
+    var OS_LANG = {
+      vie: "vi",
+      eng: "en",
+      spa: "es",
+      por: "pt",
+      pob: "pt-br",
+      fra: "fr",
+      fre: "fr",
+      deu: "de",
+      ger: "de",
+      ita: "it",
+      rus: "ru",
+      ara: "ar",
+      zho: "zh",
+      chi: "zh",
+      jpn: "ja",
+      kor: "ko",
+      tha: "th",
+      ind: "id",
+      tur: "tr",
+      pol: "pl",
+      nld: "nl",
+      hun: "hu",
+      ces: "cs",
+      ron: "ro",
+      ukr: "uk",
+      swe: "sv",
+      dan: "da",
+      nor: "no",
+      fin: "fi",
+      ell: "el",
+      heb: "he",
+      hin: "hi",
+      tam: "ta",
+      tel: "te",
+      mal: "ml"
+    };
+    var LANG_LABEL = {
+      vi: "Ti\u1EBFng Vi\u1EC7t",
+      en: "English",
+      es: "Espa\xF1ol",
+      pt: "Portugu\xEAs",
+      fr: "Fran\xE7ais",
+      de: "Deutsch",
+      it: "Italiano",
+      ru: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439",
+      ar: "\u0627\u0644\u0639\u0631\u0628\u064A\u0629",
+      zh: "\u4E2D\u6587",
+      ja: "\u65E5\u672C\u8A9E",
+      ko: "\uD55C\uAD6D\uC5B4",
+      th: "\u0E44\u0E17\u0E22",
+      id: "Indonesia",
+      tr: "T\xFCrk\xE7e"
+    };
+    function hasLanguage(subtitles, code) {
+      return subtitles.some((s) => String(s.language || "").toLowerCase().split("-")[0] === code);
+    }
+    function openSubtitlesFallback(req, existing) {
+      return __async(this, null, function* () {
+        if (hasLanguage(existing, "vi"))
+          return [];
+        const { id, isMovie, season, episode } = req;
+        const path = isMovie ? `movie/${encodeURIComponent(id)}` : `series/${encodeURIComponent(id)}:${season || 1}:${episode || 1}`;
+        let payload;
+        try {
+          const res = yield fetch(`${OS_BASE}/${path}.json`, {
+            method: "GET",
+            headers: { "User-Agent": BROWSER_UA, Accept: "application/json" }
+          });
+          if (!res.ok) {
+            console.log(`[OnlyFlix] opensubtitles HTTP ${res.status} for ${path}`);
+            return [];
+          }
+          payload = JSON.parse(yield res.text());
+        } catch (e) {
+          console.warn(`[OnlyFlix] opensubtitles lookup failed for ${path}: ${e.message}`);
+          return [];
+        }
+        const entries = Array.isArray(payload && payload.subtitles) ? payload.subtitles : [];
+        if (!entries.length) {
+          console.log(`[OnlyFlix] opensubtitles has no track for ${path}`);
+          return [];
+        }
+        const wanted = ["vie", "eng"].filter((code) => {
+          if (existing.some((s) => String(s.language).toLowerCase().startsWith(OS_LANG[code] || code)))
+            return false;
+          return true;
+        });
+        const picked = [];
+        const seen = /* @__PURE__ */ new Set();
+        for (const code of wanted) {
+          for (const entry of entries) {
+            if (!entry || !entry.url)
+              continue;
+            if (String(entry.lang || "").toLowerCase() !== code)
+              continue;
+            if (seen.has(entry.url))
+              continue;
+            seen.add(entry.url);
+            const language = OS_LANG[code] || code;
+            picked.push({
+              url: entry.url,
+              language,
+              name: `${LANG_LABEL[language] || language} \xB7 OpenSubtitles`,
+              headers: { "User-Agent": BROWSER_UA }
+            });
+            break;
+          }
+          if (picked.length >= MAX_OPENSUBS)
+            break;
+        }
+        if (picked.length) {
+          console.log(
+            `[OnlyFlix]   +${picked.length} OpenSubtitles track(s): ${picked.map((p) => p.language).join(", ")}`
+          );
+        }
+        return picked;
+      });
+    }
+    module2.exports = { openSubtitlesFallback };
+  }
+});
+
 // src/onlyflix/extractor.js
 var require_extractor = __commonJS({
   "src/onlyflix/extractor.js"(exports2, module2) {
@@ -490,6 +619,7 @@ var require_extractor = __commonJS({
       decodeEntities
     } = require_http();
     var { extractStreamLinks, extractTracks } = require_packer();
+    var { openSubtitlesFallback } = require_subtitles();
     var LABEL2 = "OnlyFlix";
     var MAX_STREAMS = 2;
     function embedUrl(id, isMovie, season, episode) {
@@ -577,15 +707,17 @@ var require_extractor = __commonJS({
         if (!candidates.length)
           return [];
         const epTag = isMovie ? "" : ` S${season || 1}E${episode || 1}`;
-        const subtitles = extractTracks(page).map((t) => ({
+        const siteTracks = extractTracks(page).map((t) => ({
           url: t.url,
           language: t.language,
           name: t.name,
           headers: __spreadValues({}, PLAYBACK_HEADERS)
         }));
-        if (subtitles.length) {
-          console.log(`[${LABEL2}]   ${subtitles.length} subtitle track(s), default=${subtitles[0].language}`);
+        if (siteTracks.length) {
+          console.log(`[${LABEL2}]   ${siteTracks.length} subtitle track(s), default=${siteTracks[0].language}`);
         }
+        const extraTracks = yield openSubtitlesFallback({ id, isMovie, season, episode }, siteTracks);
+        const subtitles = siteTracks.concat(extraTracks);
         const seen = /* @__PURE__ */ new Set();
         const streams = [];
         let mirror = 0;
