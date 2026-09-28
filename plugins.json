@@ -683,11 +683,11 @@
         "name": "YumeiAnime"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=api-zophim.blogspot.com&sz=256",
-        "fileHash": "sha256-4be603819b78afc55674f1f5735d77231cda7b0fac24663a86acd9f520b83ffc",
+        "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Zophim.png",
+        "fileHash": "sha256-7c3797f5486174c99d73d4283ea2291299aa21626aa21bbf1198e509ded66c11",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33589,
+        "fileSize": 36122,
         "status": 1,
         "language": "vi",
         "authors": [
