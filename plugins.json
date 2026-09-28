@@ -681,5 +681,28 @@
         "internalName": "YumeiAnime",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/YumeiAnime.cs3",
         "name": "YumeiAnime"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=api-zophim.blogspot.com&sz=256",
+        "fileHash": "sha256-4be603819b78afc55674f1f5735d77231cda7b0fac24663a86acd9f520b83ffc",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 33589,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Anime",
+            "AnimeMovie",
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "Zophim",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Zophim.cs3",
+        "name": "Zophim"
     }
 ]
