@@ -79,11 +79,11 @@
         "name": "Anime47"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=http://ahay.in&sz=256",
-        "fileHash": "sha256-141e2e43b246c3d46482052c6b8bf4a1ae1e7449cbf7db50a1a9fe48e3588dca",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://animehay.tv&sz=256",
+        "fileHash": "sha256-f61f4e07f71a72b569d34e8860372dad4a5896ae7dc301bd02823bee1b8fee68",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32014,
+        "fileSize": 37833,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -94,7 +94,7 @@
             "Anime",
             "OVA"
         ],
-        "version": 17,
+        "version": 18,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
