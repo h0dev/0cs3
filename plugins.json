@@ -453,10 +453,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
-        "fileHash": "sha256-6a10927a8bb2325e5c94d4b60ddf2c77a022156b57ca13ea887ecad900d0f71a",
+        "fileHash": "sha256-d08a5950ec8e92ea2afa8a4337117d2e45d434230ed9c3af4e4ba3899871248a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 85521,
+        "fileSize": 85904,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -468,7 +468,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "PhimHDCS",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
         "name": "PhimHDCS"
