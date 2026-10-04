@@ -264,6 +264,27 @@
         "name": "FshareTV"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://gamomephim.com&sz=256",
+        "fileHash": "sha256-b9c72aab73ff3398b43758748fd5e38e231f061ea9dd7aacde208c6bf30aa608",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 22318,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "GamomePhim",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/GamomePhim.cs3",
+        "name": "GamomePhim"
+    },
+    {
         "iconUrl": "https://hdvnn.xyz/assets/favico.png",
         "fileHash": "sha256-bfbcdbffe6446806f916fbbd8a19450cd8a2050a78f1dbbeff6452a1dbc243e8",
         "apiVersion": 1,
