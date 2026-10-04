@@ -265,10 +265,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://gamomephim.com&sz=256",
-        "fileHash": "sha256-b9c72aab73ff3398b43758748fd5e38e231f061ea9dd7aacde208c6bf30aa608",
+        "fileHash": "sha256-b1b348c8b4a51510db8462b4a5ced3031446a33d7089f07debc32808ed5dc805",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 22318,
+        "fileSize": 23309,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -279,7 +279,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "GamomePhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/GamomePhim.cs3",
         "name": "GamomePhim"
