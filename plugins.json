@@ -370,10 +370,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/narto-drama.com.ico",
-        "fileHash": "sha256-b3a6a694978044ebc2820db8d7430c34cdfee825c1153d18c3c121b0bdc010e4",
+        "fileHash": "sha256-3b03bd7062b7ceb23d45860be5ed8f0c837c9dbf711f2e2f00091dac69dd1bab",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 47285,
+        "fileSize": 48324,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -383,7 +383,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "NartoDrama",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NartoDrama.cs3",
         "name": "NartoDrama"
