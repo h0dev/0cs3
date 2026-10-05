@@ -246,10 +246,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/fsharetv.com.ico",
-        "fileHash": "sha256-8e744573a037686aa07ba1d4373156bd112d4c892a44ac6c4f277b1a0f3f7c17",
+        "fileHash": "sha256-9126371f96578777ae558e53c4753dbef52e04372d64608659ad9b2daea59d33",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32230,
+        "fileSize": 34926,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -258,7 +258,7 @@
         "tvTypes": [
             "Movie"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "FshareTV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/FshareTV.cs3",
         "name": "FshareTV"
