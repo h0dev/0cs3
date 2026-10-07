@@ -225,10 +225,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://camuoivietsub.com&sz=256",
-        "fileHash": "sha256-559ce88a5b7877f410895356642dc8b646b5b1bc4bb81c9029b914c9e432225d",
+        "fileHash": "sha256-3a8296b96418c1f6d83ded6d1a5e9b877391bcf9ee84cb0af603814e81f5771a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32866,
+        "fileSize": 35984,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -239,7 +239,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "CamuoiVietsub",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CamuoiVietsub.cs3",
         "name": "CamuoiVietsub"
