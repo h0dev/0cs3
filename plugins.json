@@ -224,6 +224,27 @@
         "name": "BluPhim"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://camuoivietsub.com&sz=256",
+        "fileHash": "sha256-559ce88a5b7877f410895356642dc8b646b5b1bc4bb81c9029b914c9e432225d",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 32866,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "CamuoiVietsub",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CamuoiVietsub.cs3",
+        "name": "CamuoiVietsub"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
         "fileHash": "sha256-f32b6de500f7c8153164aede6680802c085a72b92f0f34be36373be47b8da366",
         "apiVersion": 1,
