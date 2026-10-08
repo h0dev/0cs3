@@ -1,5 +1,26 @@
 [
     {
+        "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
+        "fileHash": "sha256-077cdce9c4a02ebef2baf74fa6431903395150f3dfc8b2774afb95b8c887fb33",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 197688,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "dmin",
+            "SIX"
+        ],
+        "tvTypes": [
+            "Others"
+        ],
+        "version": 1,
+        "internalName": "1DPI",
+        "description": "1DPI (ByeDPI) \u2014 v\u01b0\u1ee3t DPI: ciadpi + c\u1ea7u HTTP\u2192SOCKS cho Cronet. C\u00e0i l\u00e0 t\u1ef1 B\u1eacT; b\u1ea5m n\u00fat c\u00e0i \u0111\u1eb7t c\u1ee7a plugin \u0111\u1ec3 B\u1eacT/T\u1eaeT.",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1DPI.cs3",
+        "name": "1DPI"
+    },
+    {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
         "fileHash": "sha256-be74f905ffadc963bc0a03e2a2b945673b2a3c80d08e653448f6ec1ea5669848",
         "apiVersion": 1,
