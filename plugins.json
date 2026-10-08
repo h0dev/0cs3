@@ -411,6 +411,28 @@
         "name": "KKPhim"
     },
     {
+        "iconUrl": "https://lauphimhay.com/favicon/icon-256.png?v=1",
+        "fileHash": "sha256-07ab9ab58634f38a15e35431612c7b679173745697f09baa8019090aed28bb2c",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 38392,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "LauPhimHay",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LauPhimHay.cs3",
+        "name": "LauPhimHay"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/narto-drama.com.ico",
         "fileHash": "sha256-3b03bd7062b7ceb23d45860be5ed8f0c837c9dbf711f2e2f00091dac69dd1bab",
         "apiVersion": 1,
