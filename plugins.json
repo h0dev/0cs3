@@ -581,10 +581,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.su.ico",
-        "fileHash": "sha256-70bdda76c84f9413b5a833e89e5da07adeabebacb2fc111fbc88ce5f0523614d",
+        "fileHash": "sha256-3d8acc2e2da405320464323989187c9d48ef8ff2239fbe6a00948959246afc41",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 39353,
+        "fileSize": 82302,
         "status": 1,
         "language": "en",
         "authors": [
@@ -594,7 +594,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "RidoMovies",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
         "name": "RidoMovies"
