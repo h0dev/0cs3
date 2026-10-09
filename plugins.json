@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-fc005000d6fec555899e52fcc08957b1a3e99b576681352d3faf0a2440248213",
+        "fileHash": "sha256-120f8ba92117e56c55eec8f1f21e7bc12021357d4368167a61617434290335bc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 196349,
+        "fileSize": 203778,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -14,9 +14,9 @@
         "tvTypes": [
             "Others"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "1DPI",
-        "description": "1DPI (ByeDPI) \u2014 v\u01b0\u1ee3t DPI: ciadpi + SOCKS cho baseClient + system proxy cho Cronet/video. C\u00e0i l\u00e0 t\u1ef1 B\u1eacT; b\u1ea5m n\u00fat c\u00e0i \u0111\u1eb7t c\u1ee7a plugin \u0111\u1ec3 B\u1eacT/T\u1eaeT.",
+        "description": "1DPI (ByeDPI) \u2014 v\u01b0\u1ee3t DPI: ciadpi + SOCKS cho baseClient + system proxy cho Cronet/video. C\u00e0i l\u00e0 t\u1ef1 B\u1eacT; b\u1ea5m n\u00fat c\u00e0i \u0111\u1eb7t c\u1ee7a plugin: ch\u01b0a b\u1eadt = B\u1eacT, \u0111ang b\u1eadt = xem b\u00e1o c\u00e1o ch\u1ea9n \u0111o\u00e1n (c\u00f3 n\u00fat T\u1eaeT).",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1DPI.cs3",
         "name": "1DPI"
     },
