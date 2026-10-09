@@ -62,25 +62,6 @@
         "name": "Anikoto"
     },
     {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/anikuro.ru.ico",
-        "fileHash": "sha256-a832ed0ef4019b6655268d8bfdd162eed0c0abcc0e024831f9875f3c254432bc",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42223,
-        "status": 1,
-        "language": "en",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Anime"
-        ],
-        "version": 3,
-        "internalName": "Anikuro",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikuro.cs3",
-        "name": "Anikuro"
-    },
-    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
         "fileHash": "sha256-bcd5fd1de5cd57c9835a554ebe44e92054650baaf6831e4bbc52bbd3ae493fc7",
         "apiVersion": 1,
@@ -119,25 +100,6 @@
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
-    },
-    {
-        "iconUrl": "https://icons.duckduckgo.com/ip3/animekai.be.ico",
-        "fileHash": "sha256-967fdc708f3214206ee832fe51fd6a7985197ce722c7e6b367e87596377ccb98",
-        "apiVersion": 1,
-        "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32319,
-        "status": 1,
-        "language": "en",
-        "authors": [
-            "SIX"
-        ],
-        "tvTypes": [
-            "Anime"
-        ],
-        "version": 4,
-        "internalName": "AnimeKai",
-        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeKai.cs3",
-        "name": "AnimeKai"
     },
     {
         "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
