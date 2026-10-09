@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikototv.to&sz=256",
-        "fileHash": "sha256-00c2d32705d6f757e4185dd8f770bd7ae8a91c68d2639acf8fcda4a15045219f",
+        "fileHash": "sha256-a7e969a56510f493f05c507c9d088cd394d64b211d39b607f7525f9a0da32a71",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37220,
+        "fileSize": 40504,
         "status": 1,
         "language": "en",
         "authors": [
@@ -56,7 +56,7 @@
             "Movie",
             "OVA"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "Anikoto",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikoto.cs3",
         "name": "Anikoto"
