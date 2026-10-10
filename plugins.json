@@ -415,6 +415,26 @@
         "name": "NartoDrama"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://netshort.com&sz=256",
+        "fileHash": "sha256-94a8e2193f8036c9165442e4c450c2df7b137739965bbb9feb118ceb4d0933b6",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 29383,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "NetShort",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NetShort.cs3",
+        "name": "NetShort"
+    },
+    {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
         "fileHash": "sha256-7d56477540979dda436ba658344be04f662c5042ab95e87bb4421036c114bec5",
         "apiVersion": 1,
