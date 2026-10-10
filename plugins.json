@@ -605,10 +605,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.shortflix.net&sz=256",
-        "fileHash": "sha256-2ceaf41eb0a4e3a788b3e5f57018221b3839f484056af88079ca491f12249f54",
+        "fileHash": "sha256-69606468f618bbeff927907c0446389178cd03bcb5b8dabc4863d77c0afccc82",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24652,
+        "fileSize": 26204,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -618,7 +618,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "ShortFlix",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ShortFlix.cs3",
         "name": "ShortFlix"
