@@ -542,10 +542,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimngan.net&sz=256",
-        "fileHash": "sha256-894f560944d1c86bdfd9bc89085a02acc95f4840a62c180b8bc29a0eba342317",
+        "fileHash": "sha256-cdc852ea763eba52d6990088fc1755a82e2534bd4abf5a91635769e1632d024e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33575,
+        "fileSize": 33947,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -556,7 +556,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "PhimNgan",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimNgan.cs3",
         "name": "PhimNgan"
