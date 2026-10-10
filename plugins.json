@@ -416,10 +416,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://netshort.com&sz=256",
-        "fileHash": "sha256-94a8e2193f8036c9165442e4c450c2df7b137739965bbb9feb118ceb4d0933b6",
+        "fileHash": "sha256-7c780d7ba797ad78e5e891bf90833cb7fdfee6e0403cf0fa65887c7bf8c56d6a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 29383,
+        "fileSize": 40236,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -429,7 +429,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "NetShort",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NetShort.cs3",
         "name": "NetShort"
