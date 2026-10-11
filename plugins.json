@@ -436,10 +436,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-2ebd092377af477c6fef8f7d486baa5727530b48abe5320b12254005aa3d35a9",
+        "fileHash": "sha256-04de6203d096602c12409e8b1c398c8247361b0ea54897b8b79712c02ddaf903",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 61123,
+        "fileSize": 53668,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -450,7 +450,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 21,
+        "version": 22,
         "internalName": "NguonC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
         "name": "NguonC"
