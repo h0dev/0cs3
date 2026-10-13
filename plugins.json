@@ -667,10 +667,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://truyenhh3d.com&sz=256",
-        "fileHash": "sha256-b53d9d6006a8bc06dee1dafa94669bcedc656b8e3a8186f3aacc7f64a04655bd",
+        "fileHash": "sha256-8bb1cf3dc9f21f8dbb704574caf4baac5307b4137d055f54a06689f96dae6882",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 28552,
+        "fileSize": 29365,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -682,7 +682,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "TruyenHH3D",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TruyenHH3D.cs3",
         "name": "TruyenHH3D"
