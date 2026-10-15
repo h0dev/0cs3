@@ -126,10 +126,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.vc&sz=256",
-        "fileHash": "sha256-426a6c788a1088499b221fe779247e3a53bdfc94c9af5d291dc08e5e4887cb11",
+        "fileHash": "sha256-1eb821d7369aed3cfbda271b73e345c6b41d4bc334a00233269ebcb0c870687d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 54869,
+        "fileSize": 56218,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -140,7 +140,7 @@
             "Cartoon",
             "Movie"
         ],
-        "version": 32,
+        "version": 33,
         "internalName": "Animevietsub",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.cs3",
         "name": "Animevietsub"
