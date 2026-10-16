@@ -413,6 +413,26 @@
         "name": "KKPhim"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://langlangson.xyz&sz=256",
+        "fileHash": "sha256-ab800c9dd2fa580dc166fa196d7e4c2bb87b87375120b375823cbbba67b951fe",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 36720,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "LangLangSon",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LangLangSon.cs3",
+        "name": "LangLangSon"
+    },
+    {
         "iconUrl": "https://lauphimhay.com/favicon/icon-256.png?v=1",
         "fileHash": "sha256-87ccfba692b713c884f84659b663fe068576ff96949101731710fd75c9e78dad",
         "apiVersion": 1,
