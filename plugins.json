@@ -249,6 +249,26 @@
         "name": "CLBPhimXua"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://dhmedia.top&sz=256",
+        "fileHash": "sha256-7cb644bbbb1ad1f033531e87bef9c362a1d63c24c06a69df251c1aefa84b62ae",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 31872,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "DHMedia",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/DHMedia.cs3",
+        "name": "DHMedia"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/fsharetv.com.ico",
         "fileHash": "sha256-9126371f96578777ae558e53c4753dbef52e04372d64608659ad9b2daea59d33",
         "apiVersion": 1,
