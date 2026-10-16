@@ -249,6 +249,26 @@
         "name": "CLBPhimXua"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.coigiday.xyz&sz=256",
+        "fileHash": "sha256-0d79cbca40f2e5ac5ae7e59be7ac46ea50a1ee442d14550b44a9b6071dbd5895",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 42310,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "CoigiDay",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CoigiDay.cs3",
+        "name": "CoigiDay"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://dhmedia.top&sz=256",
         "fileHash": "sha256-c5d9217785a023ea1c4099098dac31a0ba2a29d1e884fa47cc9c0b56d731932f",
         "apiVersion": 1,
