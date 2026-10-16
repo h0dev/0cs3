@@ -228,6 +228,26 @@
         "name": "CamuoiVietsub"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://tramphimnganchanchanluuphim.blogspot.com&sz=256",
+        "fileHash": "sha256-a7ddf52b3c8ee54e4d15f53396f626ab6f84ba23890c62dcf061a28d14cc2598",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 39585,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "ChanChan",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ChanChan.cs3",
+        "name": "ChanChan"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
         "fileHash": "sha256-f32b6de500f7c8153164aede6680802c085a72b92f0f34be36373be47b8da366",
         "apiVersion": 1,
