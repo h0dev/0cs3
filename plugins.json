@@ -791,10 +791,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://yini.tv&sz=256",
-        "fileHash": "sha256-5092b87729366d2236c716e38b9d7627c36fb8298ea112eff1de45ecdf2fc862",
+        "fileHash": "sha256-c85f3181c18c4470c4e85defc0715c4c85ab0b5d2af99770bb82fb61b1358a92",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 27637,
+        "fileSize": 33284,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -804,9 +804,8 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "YiniTV",
-        "description": "YiniTV (yini.tv) - phim ng\u1eafn / drama d\u1ecdc, API JSON m\u00e3 ho\u00e1 AES-256-CBC.",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/YiniTV.cs3",
         "name": "YiniTV"
     },
