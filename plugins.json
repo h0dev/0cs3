@@ -250,10 +250,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://dhmedia.top&sz=256",
-        "fileHash": "sha256-eb61a2fd2aa6bbdd25ff00795eaf90dab1e611f238423fa7c9ea301782b84b59",
+        "fileHash": "sha256-c5d9217785a023ea1c4099098dac31a0ba2a29d1e884fa47cc9c0b56d731932f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37933,
+        "fileSize": 37793,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -263,7 +263,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "DHMedia",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/DHMedia.cs3",
         "name": "DHMedia"
