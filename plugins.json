@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikototv.to&sz=256",
-        "fileHash": "sha256-a7e969a56510f493f05c507c9d088cd394d64b211d39b607f7525f9a0da32a71",
+        "fileHash": "sha256-2d5610a7309f3f3cac5904b81565ea3f1fece957f984f585fbfde307b1f5bf76",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40504,
+        "fileSize": 38801,
         "status": 1,
         "language": "en",
         "authors": [
@@ -56,17 +56,17 @@
             "Movie",
             "OVA"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "Anikoto",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikoto.cs3",
         "name": "Anikoto"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-22d2fa01cd6f17681a8e30aecd509d04c6849e97bdb85cf6dcc79a36228f21d9",
+        "fileHash": "sha256-105f3c27de57d8a44670f4d3f893110b3a782e02b805d9ee1739b7623af9af41",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 54750,
+        "fileSize": 53031,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -75,17 +75,17 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 16,
+        "version": 17,
         "internalName": "Anime47",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anime47.cs3",
         "name": "Anime47"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animehay.tv&sz=256",
-        "fileHash": "sha256-f61f4e07f71a72b569d34e8860372dad4a5896ae7dc301bd02823bee1b8fee68",
+        "fileHash": "sha256-a0571c2a6d9c414dc6b1cbda50a18e07a61e3f7ce97f56da5d7e18608e7433e9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 37833,
+        "fileSize": 36155,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -96,17 +96,17 @@
             "Anime",
             "OVA"
         ],
-        "version": 18,
+        "version": 19,
         "internalName": "Animehay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animehay.cs3",
         "name": "Animehay"
     },
     {
         "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-1d6a45954be7f044aeae8c48991b8acd7a2e16ead81d728ec50ea7b306e2798b",
+        "fileHash": "sha256-d6d4f71b16681165a5cc9025eba235e5e6c94ef176e8e6b265d1a8eb9fd7aaa1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 51629,
+        "fileSize": 50324,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -119,17 +119,17 @@
             "Cartoons",
             "TvSeries"
         ],
-        "version": 11,
+        "version": 12,
         "internalName": "Animet",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
         "name": "Animet"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.vc&sz=256",
-        "fileHash": "sha256-4fddc13d5598320c29b3d30d85140c0164e4b16b2d9f1cfc000d18350c51f051",
+        "fileHash": "sha256-af4ca55a2f5f8d782cca9a1bd8c5f447146ef7c6db2b7fb864237215e6a7f3b8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 64076,
+        "fileSize": 62483,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -140,17 +140,17 @@
             "Cartoon",
             "Movie"
         ],
-        "version": 42,
+        "version": 43,
         "internalName": "Animevietsub",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animevietsub.cs3",
         "name": "Animevietsub"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/animex.one.ico",
-        "fileHash": "sha256-af50fe831c671d9365a5a869f944691d6227cb9717ee38161b37a404c1f83661",
+        "fileHash": "sha256-76f515e3492c83abf4f3974ed4c4b7625f38291c57b4c4a96e16896a97c3b6f3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40413,
+        "fileSize": 38732,
         "status": 1,
         "language": "en",
         "authors": [
@@ -159,17 +159,17 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 5,
+        "version": 6,
         "internalName": "AnimeX",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeX.cs3",
         "name": "AnimeX"
     },
     {
         "iconUrl": "https://www.asu.baby/favicon.ico",
-        "fileHash": "sha256-f8986f5236e0d6c8d15fe215749aad4823c938cbcd678182fe994edd53f9c518",
+        "fileHash": "sha256-9c6c54fddb0db3bae898a44b1841717ab71722e6d505a23e6192413a37b704c4",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 44224,
+        "fileSize": 42974,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -180,17 +180,17 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "ASUPNIMER",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
         "name": "ASUPNIMER"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
-        "fileHash": "sha256-fe5b9b4a058b5a1b17c6e25e4aaa65f04b915eb16d7b339c9d3745c33d2920b3",
+        "fileHash": "sha256-4da9d561187f9ba4b70e9b241f847dee27ce66ba5479ea40230ba63d16dcab29",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 33411,
+        "fileSize": 32015,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -201,7 +201,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "BluPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/BluPhim.cs3",
         "name": "BluPhim"
@@ -269,10 +269,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
-        "fileHash": "sha256-f32b6de500f7c8153164aede6680802c085a72b92f0f34be36373be47b8da366",
+        "fileHash": "sha256-e962a25307c0248c74bf9f843a492ad243c4495fed41ba7d7663b0814349670f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41665,
+        "fileSize": 40279,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -283,7 +283,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "CLBPhimXua",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CLBPhimXua.cs3",
         "name": "CLBPhimXua"
@@ -392,10 +392,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
-        "fileHash": "sha256-b764da1cd93171fd66888be71b93dbaf5eba997de6ed1f58d62ac35b00b7fba7",
+        "fileHash": "sha256-341fa9d1b82356a708ca33472ebd57ee50edff601c0ca8774282e23a60f0f1c5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 46881,
+        "fileSize": 45286,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -404,7 +404,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "HoatHinh3D",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HoatHinh3D.cs3",
         "name": "HoatHinh3D"
@@ -433,10 +433,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
-        "fileHash": "sha256-5e1d71b73f80ea482085546df7c5be49f052bbd0525c3ffbcb3db638b123919f",
+        "fileHash": "sha256-89d77bdda367f9eda4a300a63a23f66ef23463f3853e0410f01ba1b877379d7d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32488,
+        "fileSize": 30925,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -447,7 +447,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 11,
+        "version": 12,
         "internalName": "KKPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KKPhim.cs3",
         "name": "KKPhim"
@@ -536,10 +536,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-7c7084e1ca5d95729c44f87451b18d5db9170301b27116133a9b10f67840f91a",
+        "fileHash": "sha256-47e98cc384468af20117e1ed0168f653192b312ff5eff1d583a29be99067636e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 57871,
+        "fileSize": 56315,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -550,17 +550,17 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 26,
+        "version": 27,
         "internalName": "NguonC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
         "name": "NguonC"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.lat&sz=256",
-        "fileHash": "sha256-64c179f483a4b263c7b0cbc5c50f2c070fd007cdea36110db21ceca5041b23ca",
+        "fileHash": "sha256-6052d94d5950a3d05d5854f16a54b2a962e2f10981f06adc3bc1c192d82be59d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 49995,
+        "fileSize": 48330,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -571,7 +571,7 @@
             "TvSeries",
             "Anime"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "Onflix",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Onflix.cs3",
         "name": "Onflix"
@@ -600,10 +600,10 @@
     },
     {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
-        "fileHash": "sha256-d0ef3ce8c45521c1c455c9c72a328717575ac7aa87747a6d083f8f96725e2596",
+        "fileHash": "sha256-6ab67dc81e13ccf950e6828a5b5a0e2fd5aa748592c0b4013840e5de7fe66ae1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 62549,
+        "fileSize": 61194,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -613,17 +613,17 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 14,
+        "version": 15,
         "internalName": "PhimDinhCao",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
         "name": "PhimDinhCao"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
-        "fileHash": "sha256-d08a5950ec8e92ea2afa8a4337117d2e45d434230ed9c3af4e4ba3899871248a",
+        "fileHash": "sha256-650a754a9bed5447a806e0b4a27f6fcc2f333cb8837278056f279e1c8c2e883f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 85904,
+        "fileSize": 84656,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -635,7 +635,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "PhimHDCS",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
         "name": "PhimHDCS"
@@ -663,10 +663,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-bdc129bf1554587d9cc40895b5e19f2e3a0736c58e7cc46898d1e7188402d6a9",
+        "fileHash": "sha256-c0d6a529839b46be6ef63791003d3dd371866d726af3a65b617ab9daeeeb5445",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 44191,
+        "fileSize": 42757,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -677,17 +677,17 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "PhimSea",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimSea.cs3",
         "name": "PhimSea"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.su.ico",
-        "fileHash": "sha256-e9bfe70062b2b1340857856a684cedecdd03488050c644a97f40b4bfe3cee7c2",
+        "fileHash": "sha256-fab6f75d3aec6ad60d36ba285da4bf74fc782e85fbd91c70d5a30624dee6b475",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 88044,
+        "fileSize": 86575,
         "status": 1,
         "language": "en",
         "authors": [
@@ -697,7 +697,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "RidoMovies",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RidoMovies.cs3",
         "name": "RidoMovies"
@@ -745,10 +745,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.sieutamphim.pro&sz=256",
-        "fileHash": "sha256-ad685167743888f149b162df6bede5ff52d066a0ea32aa36c04c85560c0ff144",
+        "fileHash": "sha256-2fda42fb42bdbb976af8f574dec45664feae8c21d2b620b4ed7d7ed01960459a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 53349,
+        "fileSize": 52089,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -760,7 +760,7 @@
             "AsianDrama",
             "Cartoon"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "Sieutamphim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Sieutamphim.cs3",
         "name": "Sieutamphim"
@@ -830,10 +830,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-41eb3b6a5e671319c3fddc89065693a4384a2874edf2d4351dbd0c54f8441153",
+        "fileHash": "sha256-46eff5f10a9a4ebc05652906b178b5208f018a36b5864803aeb9cad48c20e9fc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 47307,
+        "fileSize": 45722,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -844,7 +844,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 11,
+        "version": 12,
         "internalName": "VSMOV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VSMOV.cs3",
         "name": "VSMOV"
@@ -871,10 +871,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-7a51a5e0c8682b3d0070ec3810ceb9d08ba305397182a88fc53e9a4dffdc9f2c",
+        "fileHash": "sha256-87784ee6cbd574d15bff9c2a34d633c8e5bc1fee8918a6e93d1d292c08c2237c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 55597,
+        "fileSize": 54108,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -885,17 +885,17 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 21,
+        "version": 22,
         "internalName": "Xem20",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
         "name": "Xem20"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "fileHash": "sha256-a3792e55788a0ea725c22b4e789558a158a2948f4bacf1597cd991811a556064",
+        "fileHash": "sha256-26030d0a1b3566155501125e261168329eb1e97b5ff480dc4b31fd5c4b312f7e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 67782,
+        "fileSize": 66560,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -904,7 +904,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 26,
+        "version": 27,
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
@@ -931,10 +931,10 @@
     },
     {
         "iconUrl": "https://yumei-anime.com/favicon.ico",
-        "fileHash": "sha256-1533c6b073bf66c6992e8c3edc17ef7c4f040a8716aebcacc606fa5d07147bbb",
+        "fileHash": "sha256-c01cb779f47f7f13e028b889a4e958ab5c9212229ea54ba7032ff561dc1b7eb0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 34915,
+        "fileSize": 33213,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -947,17 +947,17 @@
             "Cartoon",
             "TvSeries"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "YumeiAnime",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/YumeiAnime.cs3",
         "name": "YumeiAnime"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Zophim.png",
-        "fileHash": "sha256-7c3797f5486174c99d73d4283ea2291299aa21626aa21bbf1198e509ded66c11",
+        "fileHash": "sha256-365c797f8c89bf6a8f95f623fbde39e388076daafc6ae3093ed4dee3be646055",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 36122,
+        "fileSize": 34456,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -970,7 +970,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "Zophim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Zophim.cs3",
         "name": "Zophim"
