@@ -330,10 +330,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Dramaora.png",
-        "fileHash": "sha256-845dc0daa4e15c0d3231f90bc3917c0de553609f1c475fde706e99d56dd6c6cf",
+        "fileHash": "sha256-a5183ddc07861ccd1544b7a688cf484613172a32e8645f81c8ec04809a49b37f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 20868,
+        "fileSize": 32986,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -343,7 +343,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 3,
         "internalName": "Dramaora",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Dramaora.cs3",
         "name": "Dramaora"
