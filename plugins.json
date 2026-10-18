@@ -872,10 +872,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VuTruPhim.png",
-        "fileHash": "sha256-e94d8ec36980e90fa8f533f45e41804d1ec0313ab6a2045f59a1019a8aad21fb",
+        "fileHash": "sha256-8eb7f00edb3abbdac48bf3ddd372a8acbc4b48d0405b2ed13435c0d6d1a7551b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40222,
+        "fileSize": 41638,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -885,7 +885,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "VuTruPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VuTruPhim.cs3",
         "name": "VuTruPhim"
