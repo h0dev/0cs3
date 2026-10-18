@@ -329,6 +329,26 @@
         "name": "DHMedia"
     },
     {
+        "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Dramaora.png",
+        "fileHash": "sha256-845dc0daa4e15c0d3231f90bc3917c0de553609f1c475fde706e99d56dd6c6cf",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 20868,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "Dramaora",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Dramaora.cs3",
+        "name": "Dramaora"
+    },
+    {
         "iconUrl": "https://icons.duckduckgo.com/ip3/fsharetv.com.ico",
         "fileHash": "sha256-9126371f96578777ae558e53c4753dbef52e04372d64608659ad9b2daea59d33",
         "apiVersion": 1,
