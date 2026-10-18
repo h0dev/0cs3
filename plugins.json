@@ -703,11 +703,11 @@
         "name": "RidoMovies"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.rophim.soy&sz=256",
-        "fileHash": "sha256-cef0acb968bb8827ceb054cbf5dce92d0208917fbf95d47b8be3b9b64ec3a2a9",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://rophim.bar&sz=256",
+        "fileHash": "sha256-3174f0175496e610fef2acfea5185996638ee3b20dada9b3c991f6418a5cf7b3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24755,
+        "fileSize": 42342,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -718,10 +718,31 @@
             "Movie",
             "Anime"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "RoPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhim.cs3",
         "name": "RoPhim"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.rophim.soy&sz=256",
+        "fileHash": "sha256-a207c6fea9b74d30b587ef11a599f3e51b795ef646bb7ace06642f39e3716d4e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 24757,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "Zetta"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "RoPhimSoy",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhimSoy.cs3",
+        "name": "RoPhimSoy"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.shortflix.net&sz=256",
