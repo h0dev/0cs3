@@ -412,10 +412,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.png",
-        "fileHash": "sha256-6d8fd2a01132ea3e6adddb1f10bab7f4af91f4977f6b5fb30ac55e46e9c8bd5e",
+        "fileHash": "sha256-f36a34d62370bdbcbc5cb8ebdbe9781effe3113e904b540074858bc5b3c3cf5f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42045,
+        "fileSize": 42537,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -425,7 +425,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "HHPanda",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.cs3",
         "name": "HHPanda"
