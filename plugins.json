@@ -411,6 +411,26 @@
         "name": "HDVNN"
     },
     {
+        "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.png",
+        "fileHash": "sha256-b7fb7b9a382e37b8edad6eb9c316a8d65d97b1811eba13f521fad954a3be9c33",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 37621,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "HHPanda",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.cs3",
+        "name": "HHPanda"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
         "fileHash": "sha256-341fa9d1b82356a708ca33472ebd57ee50edff601c0ca8774282e23a60f0f1c5",
         "apiVersion": 1,
