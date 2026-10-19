@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-19T22:52:34.210Z
+ * Generated: 2026-10-19T23:03:00.629Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -56,7 +56,12 @@ function withTimeout(promise, ms, fallback) {
     return promise;
   let timer;
   const guard = new Promise((resolve) => {
-    timer = setTimeout(() => resolve(fallback), ms);
+    timer = setTimeout(() => {
+      try {
+        resolve(fallback);
+      } catch (error) {
+      }
+    }, ms);
   });
   return Promise.race([promise, guard]).finally(() => {
     if (timer)
@@ -216,15 +221,16 @@ var HEADERS = {
   Referer: `${ORIGIN}/`,
   "User-Agent": BROWSER_UA
 };
-var BINGR_DEADLINE_MS = 2500;
+var BINGR_DEADLINE_MS = 1800;
 var SERVERS = [
   { id: "s70", name: "Polaris", rank: 5 },
   { id: "s62", name: "Bastion", rank: 4 },
   { id: "s61", name: "Corvus", rank: 3 },
-  { id: "s6", name: "Nebula", rank: 3 },
-  { id: "s13", name: "Ariane", rank: 2 },
-  { id: "s12", name: "Quasar", rank: 2 },
-  { id: "s16", name: "Cruzeiro", rank: 2 }
+  { id: "s6", name: "Nebula", rank: 3 }
+  // s12/s13/s16 (Quasar/Ariane/Cruzeiro) are the hakunaymatata triple: they
+  // answer in ~2 s on a desktop but every request from a phone times out, and
+  // their edges were dead in every probe. They only ate the deadline, so they
+  // are out until that CDN gets healthy again.
 ];
 function queryFor(meta, type, season, episode) {
   const query = {};
@@ -281,8 +287,8 @@ function askServer(server, tmdbId, type, season, episode, meta) {
 }
 function settleWithin(tasks, deadlineMs) {
   return __async(this, null, function* () {
-    const deadline = new Promise((resolve) => setTimeout(resolve, deadlineMs));
-    yield Promise.race([Promise.all(tasks), deadline]);
+    const deadline2 = new Promise((resolve) => setTimeout(resolve, deadlineMs));
+    yield Promise.race([Promise.all(tasks), deadline2]);
   });
 }
 function resolveStreams(_0) {
@@ -1145,29 +1151,18 @@ function orderServers(servers) {
 }
 function tryServer(entry, server) {
   return __async(this, null, function* () {
-    for (let attempt = 0; attempt < 2; attempt++) {
-      try {
-        const payload = yield withTimeout(streamForServer(entry, server), 9e3, null);
-        if (payload)
-          return payload;
-      } catch (error) {
-        if (attempt === 1)
-          throw error;
-        console.log(`[FluxTV] vidfast ${server.name} retry: ${error.message}`);
-        yield sleep(350);
-      }
-    }
-    return null;
+    const payload = yield withTimeout(streamForServer(entry, server), 5e3, null);
+    return payload || null;
   });
 }
 function resolveStreams3(_0) {
   return __async(this, arguments, function* ({ tmdbId, type, season, episode }) {
     const started = Date.now();
     const entry = yield loadServers(tmdbId, type, season, episode);
-    const servers = orderServers(entry.servers).slice(0, 4);
+    const servers = orderServers(entry.servers).slice(0, 2);
     const attempts = yield Promise.all(
       servers.map(
-        (server, index) => sleep(index * 150).then(() => tryServer(entry, server)).then((payload) => ({ server, payload })).catch((error) => {
+        (server, index) => sleep(index * 200).then(() => tryServer(entry, server)).then((payload) => ({ server, payload })).catch((error) => {
           console.log(`[FluxTV] vidfast ${server.name}: ${error.message}`);
           return null;
         })
@@ -1203,7 +1198,7 @@ function resolveStreams3(_0) {
 // src/fluxtv/vidlove.js
 var API2 = "https://api.vidlove.cc";
 var REFERER = "https://player.vidlove.cc/";
-var VARIANTS = ["vidapi", "", "moviebox2", "moviebox", "dcloud", "tcloud"];
+var VARIANTS = ["vidapi", ""];
 var HEADERS2 = {
   Referer: REFERER,
   Origin: "https://player.vidlove.cc",
@@ -1336,11 +1331,12 @@ var EMPTY_TTL_MS = 90 * 1e3;
 var CACHE_MAX = 48;
 var cache = /* @__PURE__ */ new Map();
 var MAX_STREAMS = 14;
-var INSPECT_BUDGET_MS = 2500;
-var INSPECT_CANDIDATES = 14;
+var INSPECT_BUDGET_MS = 2e3;
+var INSPECT_CANDIDATES = 6;
 var CINESRC_ENABLED = false;
-var SOURCE_DEADLINE_MS = 6500;
-var TOTAL_BUDGET_MS = 8500;
+var PROBE_CONCURRENCY = 3;
+var SOURCE_DEADLINE_MS = 5500;
+var TOTAL_BUDGET_MS = 7500;
 function debugEnabled() {
   try {
     return typeof process !== "undefined" && process && process.env && process.env.FLUXTV_DEBUG === "1";
@@ -1393,12 +1389,12 @@ function inspect(stream) {
     const started = Date.now();
     const label = `${stream.server || stream.source}/${stream.quality || "?"}`;
     try {
-      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 2500, null);
+      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 2e3, null);
       if (!res)
         return { ok: false, reason: "timeout" };
       if (!res.ok && res.status !== 206)
         return { ok: false, reason: `HTTP ${res.status}` };
-      const buffer = yield withTimeout(res.arrayBuffer(), 5e3, null);
+      const buffer = yield withTimeout(res.arrayBuffer(), 2500, null);
       if (!buffer)
         return { ok: false, reason: "body timeout" };
       const bytes = new Uint8Array(buffer);
@@ -1432,16 +1428,26 @@ function inspectTop(_0) {
       if (stream.assumeLive)
         reports.set(stream.url, { ok: true, height: stream.height || 0 });
     }
-    const budget = new Promise((resolve) => setTimeout(() => resolve("budget"), budgetMs));
-    const work = Promise.all(
-      nominees.filter((stream) => !stream.assumeLive).map(
-        (stream) => inspect(stream).then((report) => {
-          reports.set(stream.url, report);
-        }).catch(() => {
-        })
-      )
-    );
-    yield Promise.race([work, budget]);
+    const queue = nominees.filter((stream) => !stream.assumeLive);
+    if (!queue.length)
+      return reports;
+    let cursor = 0;
+    const worker = () => __async(this, null, function* () {
+      for (; ; ) {
+        const index = cursor++;
+        if (index >= queue.length)
+          return;
+        const stream = queue[index];
+        try {
+          reports.set(stream.url, yield inspect(stream));
+        } catch (error) {
+        }
+      }
+    });
+    const pool = [];
+    for (let i = 0; i < Math.min(PROBE_CONCURRENCY, queue.length); i++)
+      pool.push(worker());
+    yield Promise.race([Promise.all(pool), deadline(budgetMs, "budget")]);
     console.log(`[FluxTV] inspected ${reports.size}/${nominees.length} candidate(s)`);
     return reports;
   });
@@ -1627,8 +1633,27 @@ function safe(name, fn) {
     }
   });
 }
+function deadline(ms, fallback = "deadline") {
+  return new Promise((resolve) => {
+    const fire = () => {
+      try {
+        resolve(fallback);
+      } catch (error) {
+      }
+    };
+    setTimeout(fire, ms);
+    setTimeout(fire, ms + 700);
+  });
+}
 function sleep2(ms) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      try {
+        resolve();
+      } catch (error) {
+      }
+    }, ms);
+  });
 }
 function waitForCandidates(settled, until) {
   return __async(this, null, function* () {
@@ -1671,18 +1696,13 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     const args = { tmdbId: id, type: type === "movie" ? "movie" : "tv", season: s, episode: e, meta };
     console.log(`[FluxTV] id ${id} (${args.type}) resolved at +${Date.now() - started}ms`);
     const settled = {};
-    const tasks = [];
-    const track = (name, budget2, run) => {
-      const task = withTimeout(safe(name, run), budget2, []).then((value) => {
-        settled[name] = value || [];
-        console.log(
-          `[FluxTV] ${name} ready at +${Date.now() - started}ms (${settled[name].length} source(s))`
-        );
-        return settled[name];
-      });
-      tasks.push(task);
-      return task;
-    };
+    const track = (name, budget2, run) => withTimeout(safe(name, run), budget2, []).then((value) => {
+      settled[name] = value || [];
+      console.log(
+        `[FluxTV] ${name} ready at +${Date.now() - started}ms (${settled[name].length} source(s))`
+      );
+      return settled[name];
+    });
     track("bingr", 6e3, () => resolveStreams(args));
     track("vidfast", 6500, () => resolveStreams3(args));
     track("vidlove", 3e3, () => resolveStreams4(args));
@@ -1692,10 +1712,12 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     const earlyProbe = early.length ? inspectTop(nominate(early), Math.max(900, TOTAL_BUDGET_MS - (Date.now() - started) - 1500)) : Promise.resolve(/* @__PURE__ */ new Map());
     earlyProbe.catch(() => {
     });
-    const remaining = Math.max(500, SOURCE_DEADLINE_MS - (Date.now() - started));
-    yield Promise.race([Promise.all(tasks), sleep2(remaining)]);
-    const streams = Object.values(settled).flat();
+    const graceUntil = Math.min(SOURCE_DEADLINE_MS, Date.now() - started + 800);
+    for (let i = 0; i < 6 && Date.now() - started < graceUntil; i++)
+      yield sleep2(150);
+    console.log(`[FluxTV] sources settled at +${Date.now() - started}ms`);
     const reports = yield earlyProbe.catch(() => /* @__PURE__ */ new Map());
+    const streams = Object.values(settled).flat();
     const budget = Math.max(600, Math.min(2200, TOTAL_BUDGET_MS - (Date.now() - started)));
     console.log(
       `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed, ${budget}ms left for probes`
