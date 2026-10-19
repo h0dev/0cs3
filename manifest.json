@@ -138,6 +138,30 @@
       "limited": false,
       "disabledPlatforms": [],
       "supportsExternalPlayer": true
+    },
+    {
+      "id": "fluxtv",
+      "name": "FluxTV",
+      "version": "1.0.0",
+      "author": "hung319",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/fluxtv.js",
+      "logo": "https://beta.fluxtv.cc/icon-512.png",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": [
+        "m3u8",
+        "mp4"
+      ],
+      "contentLanguage": [
+        "en"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true
     }
   ]
 }
