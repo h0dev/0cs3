@@ -3,6 +3,29 @@
   "version": "1.0.0",
   "scrapers": [
     {
+      "id": "novahd",
+      "name": "NovaHD",
+      "version": "1.0.0",
+      "author": "hung319",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/novahd.js",
+      "logo": "https://novahd.cc/icons/icon-192.png",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": [
+        "m3u8"
+      ],
+      "contentLanguage": [
+        "en"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true
+    },
+    {
       "id": "megaplay",
       "name": "MegaPlay",
       "version": "1.0.1",
