@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-19T22:28:13.895Z
+ * Generated: 2026-10-19T22:52:34.210Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1132,14 +1132,42 @@ function streamForServer(entry, server) {
     return payload;
   });
 }
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+var PREFERRED = ["vrapid", "vblaze", "cobra"];
+function orderServers(servers) {
+  const rank = (server) => {
+    const index = PREFERRED.indexOf(String(server.name || "").toLowerCase());
+    return index === -1 ? PREFERRED.length : index;
+  };
+  return servers.slice().sort((a, b) => rank(a) - rank(b));
+}
+function tryServer(entry, server) {
+  return __async(this, null, function* () {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const payload = yield withTimeout(streamForServer(entry, server), 9e3, null);
+        if (payload)
+          return payload;
+      } catch (error) {
+        if (attempt === 1)
+          throw error;
+        console.log(`[FluxTV] vidfast ${server.name} retry: ${error.message}`);
+        yield sleep(350);
+      }
+    }
+    return null;
+  });
+}
 function resolveStreams3(_0) {
   return __async(this, arguments, function* ({ tmdbId, type, season, episode }) {
     const started = Date.now();
     const entry = yield loadServers(tmdbId, type, season, episode);
-    const servers = entry.servers.slice(0, 6);
+    const servers = orderServers(entry.servers).slice(0, 4);
     const attempts = yield Promise.all(
       servers.map(
-        (server) => withTimeout(streamForServer(entry, server), 15e3, null).then((payload) => ({ server, payload })).catch((error) => {
+        (server, index) => sleep(index * 150).then(() => tryServer(entry, server)).then((payload) => ({ server, payload })).catch((error) => {
           console.log(`[FluxTV] vidfast ${server.name}: ${error.message}`);
           return null;
         })
@@ -1313,6 +1341,13 @@ var INSPECT_CANDIDATES = 14;
 var CINESRC_ENABLED = false;
 var SOURCE_DEADLINE_MS = 6500;
 var TOTAL_BUDGET_MS = 8500;
+function debugEnabled() {
+  try {
+    return typeof process !== "undefined" && process && process.env && process.env.FLUXTV_DEBUG === "1";
+  } catch (error) {
+    return false;
+  }
+}
 function cacheKey(type, id, season, episode) {
   return type === "show" ? `show:${id}:${season}:${episode}` : `movie:${id}`;
 }
@@ -1503,7 +1538,7 @@ function buildStreams(streams, subtitles, known, budgetMs) {
         `[FluxTV] dead: ${entry.stream.server}/${entry.stream.quality || "?"} (${entry.report.reason})`
       );
     }
-    if (process.env.FLUXTV_DEBUG) {
+    if (debugEnabled()) {
       for (const e of scored) {
         console.log(
           `[FluxTV] score ${e.value} ${e.state} ${e.width}x${e.height} ${e.stream.server}/${e.stream.quality}`
@@ -1592,7 +1627,7 @@ function safe(name, fn) {
     }
   });
 }
-function sleep(ms) {
+function sleep2(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 function waitForCandidates(settled, until) {
@@ -1601,7 +1636,7 @@ function waitForCandidates(settled, until) {
       const all = Object.values(settled).flat();
       if (all.length || Date.now() >= until)
         return all;
-      yield sleep(250);
+      yield sleep2(250);
     }
   });
 }
@@ -1658,7 +1693,7 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     earlyProbe.catch(() => {
     });
     const remaining = Math.max(500, SOURCE_DEADLINE_MS - (Date.now() - started));
-    yield Promise.race([Promise.all(tasks), sleep(remaining)]);
+    yield Promise.race([Promise.all(tasks), sleep2(remaining)]);
     const streams = Object.values(settled).flat();
     const reports = yield earlyProbe.catch(() => /* @__PURE__ */ new Map());
     const budget = Math.max(600, Math.min(2200, TOTAL_BUDGET_MS - (Date.now() - started)));
@@ -1666,8 +1701,37 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
       `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed, ${budget}ms left for probes`
     );
     const ordered = CINESRC_ENABLED ? [...settled.cinesrc || [], ...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []] : [...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []];
-    return buildStreams(ordered, collectSubtitles(ordered), reports, budget);
+    try {
+      return yield buildStreams(ordered, collectSubtitles(ordered), reports, budget);
+    } catch (error) {
+      console.error(
+        `[FluxTV] ranking failed (${error && error.message ? error.message : error}), emitting raw candidates`
+      );
+      return rawStreams(ordered, collectSubtitles(ordered));
+    }
   });
+}
+function rawStreams(streams, subtitles) {
+  const out = [];
+  const seen = /* @__PURE__ */ new Set();
+  for (const stream of nominate(streams)) {
+    if (!stream || !stream.url || seen.has(stream.url))
+      continue;
+    seen.add(stream.url);
+    const item = {
+      name: `${LABEL} \xB7 ${stream.server || stream.source}`,
+      title: titleFor(stream, stream.height || 0, stream.width || 0),
+      quality: widthLabel(stream.width || 0, stream.height || 0),
+      url: stream.url,
+      headers: Object.assign({}, stream.headers || {})
+    };
+    if (subtitles && subtitles.length)
+      item.subtitles = tidySubtitles(subtitles);
+    out.push(item);
+    if (out.length >= MAX_STREAMS)
+      break;
+  }
+  return out;
 }
 function getStreams(tmdbId, mediaType, season, episode) {
   return __async(this, null, function* () {
