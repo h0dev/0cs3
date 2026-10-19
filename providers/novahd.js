@@ -1,6 +1,6 @@
 /**
  * novahd - Built from src/novahd/
- * Generated: 2026-10-19T13:01:39.998Z
+ * Generated: 2026-10-19T13:03:09.636Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -446,7 +446,7 @@ function buildStreams(sources, subtitles, max = 12) {
     const scored = unique.map((s) => {
       const real = heights.get(s.url) || 0;
       const rank = Object.prototype.hasOwnProperty.call(PROVIDER_RANK, s.provider) ? PROVIDER_RANK[s.provider] : 1;
-      const score = (real || UNKNOWN_HEIGHT) * 100 + (s.origAudio ? 20 : 0) + Math.min(rank, 9);
+      const score = (s.origAudio ? 1e3 : 0) + (real || UNKNOWN_HEIGHT) * 10 + Math.min(rank, 9);
       return { source: s, height: real, score };
     });
     scored.sort((a, b) => b.score - a.score);
