@@ -1,6 +1,6 @@
 /**
  * novahd - Built from src/novahd/
- * Generated: 2026-10-19T13:03:09.636Z
+ * Generated: 2026-10-19T13:08:11.812Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -144,7 +144,7 @@ var PROVIDER_RANK = {
 };
 var UNKNOWN_HEIGHT = 720;
 var MAX_PROBES = 4;
-var MAX_VERIFY = 4;
+var MAX_VERIFY = 6;
 var LANGUAGE_NAMES = {
   en: "English",
   es: "Spanish",
@@ -403,14 +403,18 @@ function fetchSources(_0) {
     return { sources, subtitles };
   });
 }
-function dedupe(sources) {
-  const seen = /* @__PURE__ */ new Set();
+function groupKey(s) {
+  return [s.provider, s.quality, s.language, s.origAudio ? "o" : "d"].join("|");
+}
+function dedupe(sources, perGroup = 2) {
+  const counts = /* @__PURE__ */ new Map();
   const out = [];
   for (const s of sources) {
-    const key = [s.provider, s.quality, s.language, s.origAudio ? "o" : "d"].join("|");
-    if (seen.has(key))
+    const key = groupKey(s);
+    const n = counts.get(key) || 0;
+    if (n >= perGroup)
       continue;
-    seen.add(key);
+    counts.set(key, n + 1);
     out.push(s);
   }
   return out;
@@ -463,11 +467,16 @@ function buildStreams(sources, subtitles, max = 12) {
       console.log(`[NovaHD] unverified: ${detail.join(", ")}`);
     }
     const ordered = alive.length >= 3 ? alive.concat(scored.slice(MAX_VERIFY)) : alive.concat(dead, scored.slice(MAX_VERIFY));
+    const emitted = /* @__PURE__ */ new Set();
     const streams = [];
     for (const entry of ordered) {
       if (streams.length >= max)
         break;
       const { source, height } = entry;
+      const key = groupKey(source);
+      if (emitted.has(key))
+        continue;
+      emitted.add(key);
       const stream = {
         name: `${LABEL} \xB7 ${source.provider}`,
         title: streamTitle(source, height),
