@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-19T22:08:15.660Z
+ * Generated: 2026-10-19T22:28:13.895Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -216,6 +216,7 @@ var HEADERS = {
   Referer: `${ORIGIN}/`,
   "User-Agent": BROWSER_UA
 };
+var BINGR_DEADLINE_MS = 2500;
 var SERVERS = [
   { id: "s70", name: "Polaris", rank: 5 },
   { id: "s62", name: "Bastion", rank: 4 },
@@ -278,17 +279,25 @@ function askServer(server, tmdbId, type, season, episode, meta) {
     };
   });
 }
+function settleWithin(tasks, deadlineMs) {
+  return __async(this, null, function* () {
+    const deadline = new Promise((resolve) => setTimeout(resolve, deadlineMs));
+    yield Promise.race([Promise.all(tasks), deadline]);
+  });
+}
 function resolveStreams(_0) {
-  return __async(this, arguments, function* ({ tmdbId, type, season, episode, meta }) {
+  return __async(this, arguments, function* ({ tmdbId, type, season, episode, meta: metaInput }) {
     const started = Date.now();
-    const results = yield Promise.all(
-      SERVERS.map(
-        (server) => withTimeout(askServer(server, tmdbId, type, season, episode, meta), 14e3, null).catch((error) => {
-          console.log(`[FluxTV] bingr ${server.id}: ${error.message}`);
-          return null;
-        })
-      )
+    const meta = metaInput && typeof metaInput.then === "function" ? yield withTimeout(metaInput, 2500, null) : metaInput;
+    const results = new Array(SERVERS.length).fill(null);
+    const tasks = SERVERS.map(
+      (server, index) => withTimeout(askServer(server, tmdbId, type, season, episode, meta), 6e3, null).then((value) => {
+        results[index] = value;
+      }).catch((error) => {
+        console.log(`[FluxTV] bingr ${server.id}: ${error.message}`);
+      })
     );
+    yield settleWithin(tasks, BINGR_DEADLINE_MS);
     const streams = [];
     const subtitleMap = /* @__PURE__ */ new Map();
     let answered = 0;
@@ -1299,8 +1308,11 @@ var EMPTY_TTL_MS = 90 * 1e3;
 var CACHE_MAX = 48;
 var cache = /* @__PURE__ */ new Map();
 var MAX_STREAMS = 14;
-var INSPECT_BUDGET_MS = 6e3;
-var INSPECT_CANDIDATES = 20;
+var INSPECT_BUDGET_MS = 2500;
+var INSPECT_CANDIDATES = 14;
+var CINESRC_ENABLED = false;
+var SOURCE_DEADLINE_MS = 6500;
+var TOTAL_BUDGET_MS = 8500;
 function cacheKey(type, id, season, episode) {
   return type === "show" ? `show:${id}:${season}:${episode}` : `movie:${id}`;
 }
@@ -1346,7 +1358,7 @@ function inspect(stream) {
     const started = Date.now();
     const label = `${stream.server || stream.source}/${stream.quality || "?"}`;
     try {
-      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 3500, null);
+      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 2500, null);
       if (!res)
         return { ok: false, reason: "timeout" };
       if (!res.ok && res.status !== 206)
@@ -1377,15 +1389,15 @@ function inspect(stream) {
     }
   });
 }
-function inspectTop(streams) {
-  return __async(this, null, function* () {
+function inspectTop(_0) {
+  return __async(this, arguments, function* (streams, budgetMs = INSPECT_BUDGET_MS) {
     const reports = /* @__PURE__ */ new Map();
     const nominees = streams.slice(0, INSPECT_CANDIDATES);
     for (const stream of streams) {
       if (stream.assumeLive)
         reports.set(stream.url, { ok: true, height: stream.height || 0 });
     }
-    const budget = new Promise((resolve) => setTimeout(() => resolve("budget"), INSPECT_BUDGET_MS));
+    const budget = new Promise((resolve) => setTimeout(() => resolve("budget"), budgetMs));
     const work = Promise.all(
       nominees.filter((stream) => !stream.assumeLive).map(
         (stream) => inspect(stream).then((report) => {
@@ -1418,7 +1430,9 @@ function score(stream, report) {
     value += 300;
   if (state === "live")
     value += 150;
-  else if (state === "dead")
+  else if (state === "unknown")
+    value -= 200;
+  else
     value -= 1e4;
   value += Math.min(stream.sourceRank || 0, 9);
   return { value, state, height, width };
@@ -1461,13 +1475,22 @@ function dedupe(streams) {
   }
   return [...seen.values()];
 }
-function buildStreams(streams, subtitles) {
+function nominate(streams) {
+  return streams.map((stream) => ({ stream, height: qualityHeight(stream.quality) })).sort((a, b) => b.height - a.height || (b.stream.sourceRank || 0) - (a.stream.sourceRank || 0)).map((entry) => entry.stream);
+}
+function buildStreams(streams, subtitles, known, budgetMs) {
   return __async(this, null, function* () {
     if (!streams.length)
       return [];
     const unique = dedupe(streams);
-    const nominal = unique.map((stream) => ({ stream, height: qualityHeight(stream.quality) })).sort((a, b) => b.height - a.height || (b.stream.sourceRank || 0) - (a.stream.sourceRank || 0)).map((entry) => entry.stream);
-    const reports = yield inspectTop(nominal);
+    const nominal = nominate(unique);
+    const reports = known && known.size ? known : /* @__PURE__ */ new Map();
+    const missing = nominal.slice(0, INSPECT_CANDIDATES).filter((stream) => !reports.has(stream.url));
+    if (missing.length) {
+      const more = yield inspectTop(missing, budgetMs == null ? INSPECT_BUDGET_MS : budgetMs);
+      for (const [url, report] of more)
+        reports.set(url, report);
+    }
     const scored = nominal.map((stream) => {
       const report = reports.get(stream.url);
       const { value, state, height, width } = score(stream, report);
@@ -1569,8 +1592,35 @@ function safe(name, fn) {
     }
   });
 }
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+function waitForCandidates(settled, until) {
+  return __async(this, null, function* () {
+    for (; ; ) {
+      const all = Object.values(settled).flat();
+      if (all.length || Date.now() >= until)
+        return all;
+      yield sleep(250);
+    }
+  });
+}
+function collectSubtitles(lists) {
+  const out = [];
+  const seen = /* @__PURE__ */ new Set();
+  for (const stream of lists) {
+    for (const sub of stream && stream.subtitles || []) {
+      if (!sub || !sub.url || seen.has(sub.url))
+        continue;
+      seen.add(sub.url);
+      out.push(sub);
+    }
+  }
+  return out;
+}
 function resolveStreams5(tmdbId, mediaType, season, episode) {
   return __async(this, null, function* () {
+    const started = Date.now();
     const type = String(mediaType || "tv").toLowerCase() === "movie" ? "movie" : "show";
     const s = Number(season) || 1;
     const e = Number(episode) || 1;
@@ -1582,26 +1632,41 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
       console.warn(`[FluxTV] unsupported id "${tmdbId}" (FluxTV needs a TMDB id)`);
       return [];
     }
-    const meta = yield safe("tmdb meta", () => tmdbMeta(id, type === "movie" ? "movie" : "tv"));
-    const apiType = type === "movie" ? "movie" : "tv";
-    const args = { tmdbId: id, type: apiType, season: s, episode: e, meta };
-    const [bingr, vidfast, cinesrc, vidlove] = yield Promise.all([
-      withTimeout(safe("bingr", () => resolveStreams(args)), 9500, []),
-      withTimeout(safe("vidfast", () => resolveStreams3(args)), 11e3, []),
-      withTimeout(safe("cinesrc", () => resolveStreams2(args)), 13e3, []),
-      withTimeout(safe("vidlove", () => resolveStreams4(args)), 6e3, [])
-    ]);
-    const subtitles = [];
-    const seenSub = /* @__PURE__ */ new Set();
-    for (const stream of [...bingr, ...cinesrc]) {
-      for (const sub of stream.subtitles || []) {
-        if (!sub || !sub.url || seenSub.has(sub.url))
-          continue;
-        seenSub.add(sub.url);
-        subtitles.push(sub);
-      }
-    }
-    return buildStreams([...cinesrc, ...vidfast, ...bingr, ...vidlove], subtitles);
+    const meta = safe("tmdb meta", () => tmdbMeta(id, type === "movie" ? "movie" : "tv"));
+    const args = { tmdbId: id, type: type === "movie" ? "movie" : "tv", season: s, episode: e, meta };
+    console.log(`[FluxTV] id ${id} (${args.type}) resolved at +${Date.now() - started}ms`);
+    const settled = {};
+    const tasks = [];
+    const track = (name, budget2, run) => {
+      const task = withTimeout(safe(name, run), budget2, []).then((value) => {
+        settled[name] = value || [];
+        console.log(
+          `[FluxTV] ${name} ready at +${Date.now() - started}ms (${settled[name].length} source(s))`
+        );
+        return settled[name];
+      });
+      tasks.push(task);
+      return task;
+    };
+    track("bingr", 6e3, () => resolveStreams(args));
+    track("vidfast", 6500, () => resolveStreams3(args));
+    track("vidlove", 3e3, () => resolveStreams4(args));
+    if (CINESRC_ENABLED)
+      track("cinesrc", 9e3, () => resolveStreams2(args));
+    const early = yield waitForCandidates(settled, started + SOURCE_DEADLINE_MS - 1500);
+    const earlyProbe = early.length ? inspectTop(nominate(early), Math.max(900, TOTAL_BUDGET_MS - (Date.now() - started) - 1500)) : Promise.resolve(/* @__PURE__ */ new Map());
+    earlyProbe.catch(() => {
+    });
+    const remaining = Math.max(500, SOURCE_DEADLINE_MS - (Date.now() - started));
+    yield Promise.race([Promise.all(tasks), sleep(remaining)]);
+    const streams = Object.values(settled).flat();
+    const reports = yield earlyProbe.catch(() => /* @__PURE__ */ new Map());
+    const budget = Math.max(600, Math.min(2200, TOTAL_BUDGET_MS - (Date.now() - started)));
+    console.log(
+      `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed, ${budget}ms left for probes`
+    );
+    const ordered = CINESRC_ENABLED ? [...settled.cinesrc || [], ...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []] : [...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []];
+    return buildStreams(ordered, collectSubtitles(ordered), reports, budget);
   });
 }
 function getStreams(tmdbId, mediaType, season, episode) {
