@@ -1,6 +1,6 @@
 /**
  * anistream - Built from src/anistream/
- * Generated: 2026-10-19T13:08:11.801Z
+ * Generated: 2026-10-19T14:35:20.790Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {

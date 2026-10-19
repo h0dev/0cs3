@@ -1,7 +1,26 @@
 /**
  * novahd - Built from src/novahd/
- * Generated: 2026-10-19T13:08:11.812Z
+ * Generated: 2026-10-19T14:35:20.798Z
  */
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
     var fulfilled = (value) => {
@@ -47,6 +66,29 @@ function resetVisitor() {
   visitor = uuid4();
   return visitor;
 }
+function withTimeout(promise, ms, fallback) {
+  if (typeof setTimeout !== "function")
+    return promise;
+  return new Promise((resolve) => {
+    let done = false;
+    const timer = setTimeout(() => {
+      if (done)
+        return;
+      done = true;
+      resolve(fallback);
+    }, ms);
+    const finish = (value) => {
+      if (done)
+        return;
+      done = true;
+      if (typeof clearTimeout === "function")
+        clearTimeout(timer);
+      resolve(value);
+    };
+    promise.then(finish, () => finish(fallback));
+  });
+}
+var API_TIMEOUT_MS = 12e3;
 function apiGet(path) {
   return __async(this, null, function* () {
     const url = /^https?:/i.test(path) ? path : SITE + path;
@@ -67,10 +109,12 @@ function apiGet(path) {
     };
     let res;
     try {
-      res = yield fetch(url, { method: "GET", headers });
+      res = yield withTimeout(fetch(url, { method: "GET", headers }), API_TIMEOUT_MS, null);
     } catch (e) {
       return { ok: false, status: 0, json: null, error: e && e.message ? e.message : String(e) };
     }
+    if (!res)
+      return { ok: false, status: 0, json: null, error: "timeout" };
     if (!res.ok) {
       const out = { ok: false, status: res.status, json: null };
       if (res.status === 429) {
@@ -143,8 +187,11 @@ var PROVIDER_RANK = {
   // the decoy provider; never real content
 };
 var UNKNOWN_HEIGHT = 720;
-var MAX_PROBES = 4;
-var MAX_VERIFY = 6;
+var CANDIDATES = 4;
+var PLAYLIST_BYTES = 16384;
+var INSPECT_TIMEOUT_MS = 2500;
+var INSPECT_BUDGET_MS = 2600;
+var INSPECT_GRACE_MS = 450;
 var LANGUAGE_NAMES = {
   en: "English",
   es: "Spanish",
@@ -190,12 +237,25 @@ function isDecoy(sources) {
   const only = sources[0] || {};
   return String(only.provider || "") === "Falcon" || /\/api\/hls\//.test(String(only.url || ""));
 }
+function cleanLanguage(raw) {
+  let value = String(raw || "").trim();
+  value = value.replace(
+    /^(?:\d{3,4}\s*p|4k|uhd|hdr10?|hd|sd|hls|dash|hevc|avc|h\.?26[45])\b[\s,/·-]*/gi,
+    ""
+  );
+  value = value.replace(/^[\s,/·-]+|[\s,/·-]+$/g, "");
+  if (!value)
+    return "";
+  if (/^(?:hls|dash|hevc|hdr|mp4|ts|aac)$/i.test(value))
+    return "";
+  return value;
+}
 function normalizeSources(list) {
   return (Array.isArray(list) ? list : []).filter((s) => s && typeof s.url === "string" && /^https?:\/\//i.test(s.url)).map((s) => ({
     url: s.url,
     provider: String(s.provider || "Nova"),
     quality: String(s.quality || ""),
-    language: String(s.language || ""),
+    language: cleanLanguage(s.language),
     name: String(s.name || ""),
     origAudio: !!s.origAudio,
     headers: s.headers && typeof s.headers === "object" ? s.headers : null
@@ -221,8 +281,8 @@ function normalizeSubtitles(list) {
   }
   return out;
 }
-function fetchPlaylistHead(url, bytes = 65536) {
-  return __async(this, null, function* () {
+function fetchPlaylistHead(_0) {
+  return __async(this, arguments, function* (url, bytes = PLAYLIST_BYTES) {
     const headers = { "User-Agent": BROWSER_UA, Accept: "*/*", Range: `bytes=0-${bytes - 1}` };
     let res;
     try {
@@ -246,21 +306,16 @@ function fetchPlaylistHead(url, bytes = 65536) {
     return text;
   });
 }
-function probeHeight(url) {
-  return __async(this, null, function* () {
-    const text = yield fetchPlaylistHead(url);
-    if (!text || text.indexOf("#EXTM3U") < 0)
-      return 0;
-    let best = 0;
-    const re = /RESOLUTION=\d+x(\d+)/g;
-    let m;
-    while ((m = re.exec(text)) !== null) {
-      const h = parseInt(m[1], 10);
-      if (h > best)
-        best = h;
-    }
-    return best;
-  });
+function maxResolution(text) {
+  let best = 0;
+  const re = /RESOLUTION=\d+x(\d+)/g;
+  let m;
+  while ((m = re.exec(text)) !== null) {
+    const h = parseInt(m[1], 10);
+    if (h > best)
+      best = h;
+  }
+  return best;
 }
 function resolveUrl(base, rel) {
   if (/^https?:\/\//i.test(rel))
@@ -308,56 +363,94 @@ function rangeFetch(url, headers, bytes) {
   const h = Object.assign({}, headers, { Range: "bytes=0-" + (bytes - 1) });
   return fetch(url, { method: "GET", headers: h });
 }
-function verifySource(url) {
+function inspectSource(url) {
   return __async(this, null, function* () {
     const headers = { "User-Agent": BROWSER_UA, Accept: "*/*" };
-    let reason = "unknown";
-    for (let attempt = 0; attempt < 2; attempt++) {
-      try {
-        const text = yield fetchPlaylistHead(url);
-        if (text.indexOf("#EXTM3U") !== 0) {
-          reason = "master not an m3u8";
+    const work = (() => __async(this, null, function* () {
+      const master = yield fetchPlaylistHead(url);
+      if (master.indexOf("#EXTM3U") !== 0) {
+        return { height: 0, ok: false, reason: "master not an m3u8" };
+      }
+      const height = maxResolution(master);
+      const variants = variantUris(master);
+      const playlists = variants.length ? variants.slice(0, 2).map((v) => resolveUrl(url, v)) : [null];
+      let reason = "no segment";
+      for (const playlistUrl of playlists) {
+        if (playlistUrl && url.indexOf("?") > -1 && playlistUrl.indexOf("?") === -1) {
+          reason = "variant without token";
           continue;
         }
-        const variants = variantUris(text);
-        const playlistUrls = variants.length ? variants.slice(0, 2).map((v) => resolveUrl(url, v)) : [null];
-        let passed = false;
-        for (const playlistUrl of playlistUrls) {
-          let base = url;
-          let playlistText = text;
-          if (playlistUrl) {
-            base = playlistUrl;
-            playlistText = yield fetchPlaylistHead(playlistUrl);
-            if (playlistText.indexOf("#EXTM3U") !== 0) {
-              reason = "variant not an m3u8";
-              continue;
-            }
-          }
-          const seg = playlistUris(playlistText)[0];
-          if (!seg) {
-            reason = "no segment";
+        let base = url;
+        let text = master;
+        if (playlistUrl) {
+          base = playlistUrl;
+          text = yield fetchPlaylistHead(playlistUrl);
+          if (text.indexOf("#EXTM3U") !== 0) {
+            reason = "variant not an m3u8";
             continue;
           }
-          const segUrl = resolveUrl(base, seg);
-          const sres = yield rangeFetch(segUrl, headers, 1024);
-          if (!sres.ok) {
-            reason = `segment http ${sres.status}`;
-            continue;
-          }
-          const magic = segmentMagic(new Uint8Array(yield sres.arrayBuffer()));
-          if (magic === "ts" || magic === "mp4" || magic === "m3u8") {
-            passed = true;
-            break;
-          }
-          reason = `segment body ${magic || "unknown"}`;
         }
-        if (passed)
-          return "";
-      } catch (e) {
-        reason = e && e.message ? e.message : "error";
+        const seg = playlistUris(text)[0];
+        if (!seg)
+          continue;
+        const segUrl = resolveUrl(base, seg);
+        const res = yield rangeFetch(segUrl, headers, 1024);
+        if (!res.ok) {
+          reason = `segment http ${res.status}`;
+          continue;
+        }
+        const magic = segmentMagic(new Uint8Array(yield res.arrayBuffer()));
+        if (magic === "ts" || magic === "mp4" || magic === "m3u8") {
+          return { height, ok: true };
+        }
+        reason = `segment body ${magic || "unknown"}`;
       }
+      return { height, ok: false, reason };
+    }))();
+    return withTimeout(work, INSPECT_TIMEOUT_MS, {
+      height: 0,
+      ok: false,
+      reason: "timeout"
+    });
+  });
+}
+function inspectRanked(urls, budgetMs) {
+  return new Promise((resolve) => {
+    const results = /* @__PURE__ */ new Map();
+    let finished = false;
+    let victory = false;
+    let pending = urls.length;
+    const done = () => {
+      if (finished)
+        return;
+      finished = true;
+      resolve(results);
+    };
+    const settleSoon = () => {
+      if (victory)
+        return;
+      victory = true;
+      if (typeof setTimeout === "function")
+        setTimeout(done, INSPECT_GRACE_MS);
+      else
+        done();
+    };
+    if (urls.length === 0) {
+      done();
+      return;
     }
-    return reason;
+    urls.forEach((url) => {
+      inspectSource(url).then((report) => {
+        results.set(url, report);
+        pending--;
+        if (report.ok)
+          settleSoon();
+        if (pending === 0)
+          done();
+      });
+    });
+    if (typeof setTimeout === "function")
+      setTimeout(done, budgetMs);
   });
 }
 function fetchSources(_0) {
@@ -366,7 +459,9 @@ function fetchSources(_0) {
       tmdbId
     )}`;
     const path = type === "show" ? `${base}&season=${Number(season) || 1}&episode=${Number(episode) || 1}` : base;
+    const apiStarted = Date.now();
     let payload = yield apiGet(path);
+    const apiMs = Date.now() - apiStarted;
     if (payload.ok && payload.json && isDecoy(payload.json.sources || [])) {
       console.log("[NovaHD] decoy answer (visitor not accepted) - retrying with a fresh visitor");
       resetVisitor();
@@ -380,10 +475,13 @@ function fetchSources(_0) {
       } else {
         console.warn(`[NovaHD] ${path} failed: status=${payload.status} ${payload.error || ""}`);
       }
-      return null;
+      return { sources: [], subtitles: [], failed: true };
     }
     const json = payload.json || {};
     const sources = normalizeSources(json.sources);
+    console.log(
+      `[NovaHD] /api/sources ${apiMs}ms -> ${sources.length} source(s), ${(json.subtitles || []).length} sub(s)`
+    );
     let subtitles = normalizeSubtitles(json.subtitles);
     if (isDecoy(sources)) {
       console.warn("[NovaHD] resolver kept answering with the decoy stream - giving up");
@@ -429,47 +527,40 @@ function streamQuality(source, height) {
 }
 function buildStreams(sources, subtitles, max = 12) {
   return __async(this, null, function* () {
+    const started = Date.now();
     const unique = dedupe(sources);
     if (unique.length === 0)
       return [];
-    const heights = /* @__PURE__ */ new Map();
-    for (const s of unique) {
-      heights.set(s.url, qualityHeight(s.quality));
-    }
-    const unknown = unique.filter((s) => heights.get(s.url) === 0).slice(0, MAX_PROBES);
-    if (unknown.length) {
-      const probed = yield Promise.all(unknown.map((s) => probeHeight(s.url)));
-      unknown.forEach((s, i) => {
-        if (probed[i] > 0)
-          heights.set(s.url, probed[i]);
-      });
-      const resolved = unknown.map((s, i) => probed[i] > 0 ? `${s.name}=${probed[i]}p` : null).filter(Boolean);
-      if (resolved.length)
-        console.log(`[NovaHD] probed auto masters: ${resolved.join(", ")}`);
-    }
-    const scored = unique.map((s) => {
-      const real = heights.get(s.url) || 0;
-      const rank = Object.prototype.hasOwnProperty.call(PROVIDER_RANK, s.provider) ? PROVIDER_RANK[s.provider] : 1;
-      const score = (s.origAudio ? 1e3 : 0) + (real || UNKNOWN_HEIGHT) * 10 + Math.min(rank, 9);
-      return { source: s, height: real, score };
+    const rankOf = (s) => Object.prototype.hasOwnProperty.call(PROVIDER_RANK, s.provider) ? PROVIDER_RANK[s.provider] : 1;
+    const nominal = unique.map((s) => ({ source: s, height: qualityHeight(s.quality) })).map((e) => __spreadProps(__spreadValues({}, e), {
+      score: (e.source.origAudio ? 1e3 : 0) + (e.height || UNKNOWN_HEIGHT) * 10 + Math.min(rankOf(e.source), 9)
+    })).sort((a, b) => b.score - a.score);
+    const nominees = nominal.slice(0, CANDIDATES);
+    const seen = yield inspectRanked(
+      nominees.map((entry) => entry.source.url),
+      INSPECT_BUDGET_MS
+    );
+    const unverified = [];
+    const merged = nominal.map((entry) => {
+      const report = seen.get(entry.source.url);
+      const state = !report ? "unknown" : report.ok ? "live" : "dead";
+      if (state === "dead") {
+        unverified.push(`${entry.source.provider}/${entry.source.quality} (${report.reason})`);
+      }
+      return {
+        source: entry.source,
+        height: report && report.height ? report.height : entry.height,
+        state
+      };
     });
-    scored.sort((a, b) => b.score - a.score);
-    const checked = scored.slice(0, MAX_VERIFY);
-    const reports = yield Promise.all(checked.map((entry) => verifySource(entry.source.url)));
-    const alive = [];
-    const dead = [];
-    checked.forEach((entry, i) => (reports[i] === "" ? alive : dead).push(entry));
-    if (dead.length) {
-      const detail = dead.map((d, i) => {
-        const idx = checked.indexOf(d);
-        return `${d.source.provider}/${d.source.quality} (${reports[idx]})`;
-      });
-      console.log(`[NovaHD] unverified: ${detail.join(", ")}`);
-    }
-    const ordered = alive.length >= 3 ? alive.concat(scored.slice(MAX_VERIFY)) : alive.concat(dead, scored.slice(MAX_VERIFY));
+    const scored = merged.map((e) => __spreadProps(__spreadValues({}, e), {
+      score: (e.source.origAudio ? 4e3 : 0) + (e.state === "live" ? 1e3 : e.state === "dead" ? -1e3 : 0) + (e.height || UNKNOWN_HEIGHT) * 10 + Math.min(rankOf(e.source), 9)
+    })).sort((a, b) => b.score - a.score);
+    if (unverified.length)
+      console.log(`[NovaHD] unverified: ${unverified.join(", ")}`);
     const emitted = /* @__PURE__ */ new Set();
     const streams = [];
-    for (const entry of ordered) {
+    for (const entry of scored) {
       if (streams.length >= max)
         break;
       const { source, height } = entry;
@@ -489,7 +580,7 @@ function buildStreams(sources, subtitles, max = 12) {
       streams.push(stream);
     }
     console.log(
-      `[NovaHD] ${streams.length} stream(s) from ${sources.length} source(s)` + (subtitles.length ? `, ${subtitles.length} subtitle track(s)` : "")
+      `[NovaHD] ${streams.length} stream(s) from ${sources.length} source(s)` + (subtitles.length ? `, ${subtitles.length} subtitle track(s)` : "") + ` \u2014 ${Date.now() - started}ms`
     );
     for (const st of streams) {
       console.log(`[NovaHD]   ${st.name} | ${st.title} | ${st.url.slice(0, 80)}`);
@@ -499,6 +590,13 @@ function buildStreams(sources, subtitles, max = 12) {
 }
 
 // src/novahd/index.js
+var CACHE_TTL_MS = 10 * 60 * 1e3;
+var EMPTY_TTL_MS = 60 * 1e3;
+var CACHE_MAX = 48;
+var cache = /* @__PURE__ */ new Map();
+function cacheKey(type, id, season, episode) {
+  return type === "show" ? `${type}:${id}:${season}:${episode}` : `${type}:${id}`;
+}
 function parseTmdbId(raw) {
   const s = String(raw == null ? "" : raw).trim();
   if (!s)
@@ -510,13 +608,8 @@ function parseTmdbId(raw) {
     return s;
   return null;
 }
-function getStreams(tmdbId, mediaType, season, episode) {
+function resolveStreams(tmdbId, mediaType, season, episode) {
   return __async(this, null, function* () {
-    console.log(
-      `[${LABEL}] getStreams id=${JSON.stringify(tmdbId)} mediaType=${JSON.stringify(
-        mediaType
-      )} season=${season} episode=${episode}`
-    );
     const type = String(mediaType || "tv").toLowerCase() === "movie" ? "movie" : "show";
     let id = parseTmdbId(tmdbId);
     if (!id && /^tt\d+$/i.test(String(tmdbId || "").trim())) {
@@ -528,20 +621,67 @@ function getStreams(tmdbId, mediaType, season, episode) {
     }
     const s = Number(season) || 1;
     const e = Number(episode) || 1;
-    try {
-      const payload = yield fetchSources({ type, tmdbId: id, season: s, episode: e });
-      if (!payload || payload.sources.length === 0) {
-        console.log(`[${LABEL}] nothing playable for ${type} ${id}`);
+    const key = cacheKey(type, id, s, e);
+    const hit = cache.get(key);
+    if (hit && Date.now() - hit.ts < hit.ttl) {
+      console.log(`[${LABEL}] cache hit ${key}`);
+      return hit.value;
+    }
+    if (hit)
+      cache.delete(key);
+    let failed = false;
+    const value = (() => __async(this, null, function* () {
+      try {
+        const payload = yield fetchSources({ type, tmdbId: id, season: s, episode: e });
+        if (!payload || payload.failed) {
+          failed = true;
+          return [];
+        }
+        if (payload.sources.length === 0) {
+          console.log(`[${LABEL}] nothing playable for ${type} ${id}`);
+          return [];
+        }
+        return yield buildStreams(payload.sources, payload.subtitles);
+      } catch (error) {
+        failed = true;
+        console.error(
+          `[${LABEL}] error: ${error && error.message ? error.message : error}`,
+          error && error.stack ? error.stack : ""
+        );
         return [];
       }
-      return yield buildStreams(payload.sources, payload.subtitles);
-    } catch (error) {
-      console.error(
-        `[${LABEL}] error: ${error && error.message ? error.message : error}`,
-        error && error.stack ? error.stack : ""
-      );
-      return [];
+    }))();
+    const entry = { ts: Date.now(), ttl: CACHE_TTL_MS, value };
+    cache.set(key, entry);
+    if (cache.size > CACHE_MAX) {
+      const oldest = cache.keys().next();
+      if (!oldest.done)
+        cache.delete(oldest.value);
     }
+    value.then((streams) => {
+      if (cache.get(key) !== entry)
+        return;
+      if (failed)
+        entry.ttl = 0;
+      else if (!streams || streams.length === 0)
+        entry.ttl = EMPTY_TTL_MS;
+    });
+    return value;
+  });
+}
+function getStreams(tmdbId, mediaType, season, episode) {
+  return __async(this, null, function* () {
+    const started = Date.now();
+    console.log(
+      `[${LABEL}] getStreams id=${JSON.stringify(tmdbId)} mediaType=${JSON.stringify(
+        mediaType
+      )} season=${season} episode=${episode}`
+    );
+    const streams = yield resolveStreams(tmdbId, mediaType, season, episode);
+    console.log(
+      `[${LABEL}] ${streams.length} stream(s) for ${JSON.stringify(tmdbId)} in ${Date.now() - started}ms`
+    );
+    return streams;
   });
 }
 module.exports = { getStreams };
