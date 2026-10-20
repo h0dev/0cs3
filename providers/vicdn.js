@@ -1,6 +1,6 @@
 /**
  * vicdn - Built from src/vicdn/
- * Generated: 2026-10-20T11:52:26.483Z
+ * Generated: 2026-10-20T13:47:33.299Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
