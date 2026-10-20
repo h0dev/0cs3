@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-20T11:39:59.350Z
+ * Generated: 2026-10-20T11:45:14.074Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -1337,8 +1337,10 @@ var INSPECT_BUDGET_MS = 1600;
 var INSPECT_CANDIDATES = 6;
 var CINESRC_ENABLED = false;
 var PROBE_CONCURRENCY = 6;
-var SOURCE_DEADLINE_MS = 5500;
-var TOTAL_BUDGET_MS = 7500;
+var FIRST_WAIT_MS = 3e3;
+var FALLBACK_WAIT_MS = 5200;
+var PROBE_BUDGET_MS = 1200;
+var LATE_PROBE_BUDGET_MS = 500;
 function debugEnabled() {
   try {
     return typeof process !== "undefined" && process && process.env && process.env.FLUXTV_DEBUG === "1";
@@ -1707,7 +1709,7 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     const args = { tmdbId: id, type: type === "movie" ? "movie" : "tv", season: s, episode: e, meta };
     console.log(`[FluxTV] id ${id} (${args.type}) resolved at +${Date.now() - started}ms`);
     const settled = {};
-    const track = (name, budget2, run) => withTimeout(safe(name, run), budget2, []).then((value) => {
+    const track = (name, budget, run) => withTimeout(safe(name, run), budget, []).then((value) => {
       settled[name] = value || [];
       console.log(
         `[FluxTV] ${name} ready at +${Date.now() - started}ms (${settled[name].length} source(s))`
@@ -1719,28 +1721,25 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     track("vidlove", 3e3, () => resolveStreams4(args));
     if (CINESRC_ENABLED)
       track("cinesrc", 9e3, () => resolveStreams2(args));
-    const early = yield waitForCandidates(settled, started + SOURCE_DEADLINE_MS - 1500);
-    const earlyProbe = early.length ? inspectTop(nominate(early), Math.max(900, TOTAL_BUDGET_MS - (Date.now() - started) - 1500)) : Promise.resolve(/* @__PURE__ */ new Map());
-    earlyProbe.catch(() => {
-    });
-    const graceUntil = Math.min(SOURCE_DEADLINE_MS, Date.now() - started + 600);
-    for (let i = 0; i < 6 && Date.now() - started < graceUntil; i++)
-      yield sleep2(120);
-    console.log(`[FluxTV] sources settled at +${Date.now() - started}ms`);
-    const reports = yield earlyProbe.catch(() => /* @__PURE__ */ new Map());
-    const streams = Object.values(settled).flat();
-    const budget = Math.max(500, Math.min(1200, TOTAL_BUDGET_MS - (Date.now() - started)));
+    let early = yield waitForCandidates(settled, started + FIRST_WAIT_MS);
+    if (!early.length) {
+      early = yield waitForCandidates(settled, started + FALLBACK_WAIT_MS);
+    }
     console.log(
-      `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed, ${budget}ms left for probes`
+      `[FluxTV] first candidates at +${Date.now() - started}ms (${early.length}), probing`
     );
-    const ordered = CINESRC_ENABLED ? [...settled.cinesrc || [], ...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []] : [...settled.vidfast || [], ...settled.bingr || [], ...settled.vidlove || []];
+    const reports = early.length ? yield inspectTop(nominate(early), PROBE_BUDGET_MS).catch(() => /* @__PURE__ */ new Map()) : /* @__PURE__ */ new Map();
+    const streams = Object.values(settled).flat();
+    console.log(
+      `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed`
+    );
     try {
-      return yield buildStreams(ordered, collectSubtitles(ordered), reports, budget);
+      return yield buildStreams(streams, collectSubtitles(streams), reports, LATE_PROBE_BUDGET_MS);
     } catch (error) {
       console.error(
         `[FluxTV] ranking failed (${error && error.message ? error.message : error}), emitting raw candidates`
       );
-      return rawStreams(ordered, collectSubtitles(ordered));
+      return rawStreams(streams, collectSubtitles(streams));
     }
   });
 }
