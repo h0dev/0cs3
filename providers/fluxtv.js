@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-20T11:45:14.074Z
+ * Generated: 2026-10-20T11:52:26.461Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -292,7 +292,7 @@ function settleWithin(tasks, deadlineMs) {
   });
 }
 function resolveStreams(_0) {
-  return __async(this, arguments, function* ({ tmdbId, type, season, episode, meta: metaInput }) {
+  return __async(this, arguments, function* ({ tmdbId, type, season, episode, meta: metaInput, sink }) {
     const started = Date.now();
     const metaStarted = Date.now();
     const meta = metaInput && typeof metaInput.then === "function" ? yield withTimeout(metaInput, 2500, null) : metaInput;
@@ -1333,14 +1333,14 @@ var EMPTY_TTL_MS = 90 * 1e3;
 var CACHE_MAX = 48;
 var cache = /* @__PURE__ */ new Map();
 var MAX_STREAMS = 14;
-var INSPECT_BUDGET_MS = 1600;
-var INSPECT_CANDIDATES = 6;
+var INSPECT_BUDGET_MS = 900;
+var INSPECT_CANDIDATES = 4;
 var CINESRC_ENABLED = false;
-var PROBE_CONCURRENCY = 6;
+var PROBE_CONCURRENCY = 4;
 var FIRST_WAIT_MS = 3e3;
 var FALLBACK_WAIT_MS = 5200;
-var PROBE_BUDGET_MS = 1200;
-var LATE_PROBE_BUDGET_MS = 500;
+var PROBE_BUDGET_MS = 900;
+var LATE_PROBE_BUDGET_MS = 250;
 function debugEnabled() {
   try {
     return typeof process !== "undefined" && process && process.env && process.env.FLUXTV_DEBUG === "1";
@@ -1393,12 +1393,12 @@ function inspect(stream) {
     const started = Date.now();
     const label = `${stream.server || stream.source}/${stream.quality || "?"}`;
     try {
-      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 1500, null);
+      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 900, null);
       if (!res)
         return { ok: false, reason: "timeout" };
       if (!res.ok && res.status !== 206)
         return { ok: false, reason: `HTTP ${res.status}` };
-      const buffer = yield withTimeout(res.arrayBuffer(), 2500, null);
+      const buffer = yield withTimeout(res.arrayBuffer(), 900, null);
       if (!buffer)
         return { ok: false, reason: "body timeout" };
       const bytes = new Uint8Array(buffer);
@@ -1445,6 +1445,11 @@ function inspectTop(_0) {
     if (!queue.length)
       return reports;
     let cursor = 0;
+    let live = 0;
+    let enough;
+    const enoughVerdicts = new Promise((resolve) => {
+      enough = resolve;
+    });
     const worker = () => __async(this, null, function* () {
       for (; ; ) {
         const index = cursor++;
@@ -1452,7 +1457,10 @@ function inspectTop(_0) {
           return;
         const stream = queue[index];
         try {
-          reports.set(stream.url, yield inspect(stream));
+          const report = yield inspect(stream);
+          reports.set(stream.url, report);
+          if (report && report.ok && ++live >= 3)
+            enough("enough");
         } catch (error) {
         }
       }
@@ -1460,7 +1468,7 @@ function inspectTop(_0) {
     const pool = [];
     for (let i = 0; i < Math.min(PROBE_CONCURRENCY, queue.length); i++)
       pool.push(worker());
-    yield Promise.race([Promise.all(pool), deadline(budgetMs, "budget")]);
+    yield Promise.race([Promise.all(pool), deadline(budgetMs, "budget"), enoughVerdicts]);
     console.log(`[FluxTV] inspected ${reports.size}/${nominees.length} candidate(s)`);
     return reports;
   });
@@ -1668,10 +1676,10 @@ function sleep2(ms) {
     }, ms);
   });
 }
-function waitForCandidates(settled, until) {
+function waitForCandidates(settled, partial, until) {
   return __async(this, null, function* () {
     for (; ; ) {
-      const all = Object.values(settled).flat();
+      const all = Object.values(settled).flat().concat(partial || []);
       if (all.length || Date.now() >= until)
         return all;
       yield sleep2(120);
@@ -1716,20 +1724,21 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
       );
       return settled[name];
     });
-    track("bingr", 6e3, () => resolveStreams(args));
+    const partial = [];
+    track("bingr", 6e3, () => resolveStreams(Object.assign({}, args, { sink: partial })));
     track("vidfast", 6500, () => resolveStreams3(args));
     track("vidlove", 3e3, () => resolveStreams4(args));
     if (CINESRC_ENABLED)
       track("cinesrc", 9e3, () => resolveStreams2(args));
-    let early = yield waitForCandidates(settled, started + FIRST_WAIT_MS);
+    let early = yield waitForCandidates(settled, partial, started + FIRST_WAIT_MS);
     if (!early.length) {
-      early = yield waitForCandidates(settled, started + FALLBACK_WAIT_MS);
+      early = yield waitForCandidates(settled, partial, started + FALLBACK_WAIT_MS);
     }
     console.log(
       `[FluxTV] first candidates at +${Date.now() - started}ms (${early.length}), probing`
     );
     const reports = early.length ? yield inspectTop(nominate(early), PROBE_BUDGET_MS).catch(() => /* @__PURE__ */ new Map()) : /* @__PURE__ */ new Map();
-    const streams = Object.values(settled).flat();
+    const streams = Object.values(settled).flat().concat(partial);
     console.log(
       `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed`
     );
