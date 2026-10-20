@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-19T23:03:00.629Z
+ * Generated: 2026-10-20T11:39:59.350Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -221,7 +221,7 @@ var HEADERS = {
   Referer: `${ORIGIN}/`,
   "User-Agent": BROWSER_UA
 };
-var BINGR_DEADLINE_MS = 1800;
+var BINGR_DEADLINE_MS = 2e3;
 var SERVERS = [
   { id: "s70", name: "Polaris", rank: 5 },
   { id: "s62", name: "Bastion", rank: 4 },
@@ -294,7 +294,9 @@ function settleWithin(tasks, deadlineMs) {
 function resolveStreams(_0) {
   return __async(this, arguments, function* ({ tmdbId, type, season, episode, meta: metaInput }) {
     const started = Date.now();
+    const metaStarted = Date.now();
     const meta = metaInput && typeof metaInput.then === "function" ? yield withTimeout(metaInput, 2500, null) : metaInput;
+    const metaMs = Date.now() - metaStarted;
     const results = new Array(SERVERS.length).fill(null);
     const tasks = SERVERS.map(
       (server, index) => withTimeout(askServer(server, tmdbId, type, season, episode, meta), 6e3, null).then((value) => {
@@ -325,7 +327,7 @@ function resolveStreams(_0) {
       headers: { "User-Agent": BROWSER_UA }
     }));
     console.log(
-      `[FluxTV] bingr: ${streams.length} source(s) from ${answered}/${SERVERS.length} scraper(s), ${subtitles.length} subtitle(s) in ${Date.now() - started}ms`
+      `[FluxTV] bingr: ${streams.length} source(s) from ${answered}/${SERVERS.length} scraper(s), ${subtitles.length} subtitle(s) in ${Date.now() - started}ms (meta ${metaMs}ms)`
     );
     for (const stream of streams)
       stream.subtitles = subtitles;
@@ -1331,10 +1333,10 @@ var EMPTY_TTL_MS = 90 * 1e3;
 var CACHE_MAX = 48;
 var cache = /* @__PURE__ */ new Map();
 var MAX_STREAMS = 14;
-var INSPECT_BUDGET_MS = 2e3;
+var INSPECT_BUDGET_MS = 1600;
 var INSPECT_CANDIDATES = 6;
 var CINESRC_ENABLED = false;
-var PROBE_CONCURRENCY = 3;
+var PROBE_CONCURRENCY = 6;
 var SOURCE_DEADLINE_MS = 5500;
 var TOTAL_BUDGET_MS = 7500;
 function debugEnabled() {
@@ -1389,7 +1391,7 @@ function inspect(stream) {
     const started = Date.now();
     const label = `${stream.server || stream.source}/${stream.quality || "?"}`;
     try {
-      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 2e3, null);
+      const res = yield withTimeout(rangeGet(stream.url, stream.headers, INSPECT_BYTES), 1500, null);
       if (!res)
         return { ok: false, reason: "timeout" };
       if (!res.ok && res.status !== 206)
@@ -1404,10 +1406,9 @@ function inspect(stream) {
         const resolution = resolutionOf2(trimmed);
         const height = resolution ? resolution.height : 0;
         const width = resolution ? resolution.width : 0;
-        console.log(
-          `[FluxTV] probe ${label} live${width ? ` ${width}x${height}` : ""} ${Date.now() - started}ms`
-        );
-        return { ok: true, height, width };
+        const ms = Date.now() - started;
+        console.log(`[FluxTV] probe ${label} live${width ? ` ${width}x${height}` : ""} ${ms}ms`);
+        return { ok: true, height, width, ms };
       }
       const magic = String.fromCharCode(bytes[4], bytes[5], bytes[6], bytes[7]);
       if (magic === "ftyp" || magic === "styp" || bytes[0] === 71) {
@@ -1428,7 +1429,17 @@ function inspectTop(_0) {
       if (stream.assumeLive)
         reports.set(stream.url, { ok: true, height: stream.height || 0 });
     }
-    const queue = nominees.filter((stream) => !stream.assumeLive);
+    const perGroup = /* @__PURE__ */ new Map();
+    const queue = nominees.filter((stream) => {
+      if (stream.assumeLive)
+        return false;
+      const key = `${stream.server}|${stream.quality}`;
+      const seen = perGroup.get(key) || 0;
+      if (seen >= 2)
+        return false;
+      perGroup.set(key, seen + 1);
+      return true;
+    });
     if (!queue.length)
       return reports;
     let cursor = 0;
@@ -1469,9 +1480,9 @@ function score(stream, report) {
   value += Math.min(height, 2160) * 10;
   if (isOriginalAudio(stream))
     value += 300;
-  if (state === "live")
-    value += 150;
-  else if (state === "unknown")
+  if (state === "live") {
+    value += 150 - Math.min(120, Math.round((report && report.ms || 0) / 20));
+  } else if (state === "unknown")
     value -= 200;
   else
     value -= 1e4;
@@ -1617,7 +1628,7 @@ function tidySubtitles(list) {
     if (!seen.has(key))
       seen.set(key, sub);
   }
-  return [...seen.values()].sort((a, b) => priority(a) - priority(b)).slice(0, 24);
+  return [...seen.values()].sort((a, b) => priority(a) - priority(b)).slice(0, 12);
 }
 function safe(name, fn) {
   return __async(this, null, function* () {
@@ -1661,7 +1672,7 @@ function waitForCandidates(settled, until) {
       const all = Object.values(settled).flat();
       if (all.length || Date.now() >= until)
         return all;
-      yield sleep2(250);
+      yield sleep2(120);
     }
   });
 }
@@ -1712,13 +1723,13 @@ function resolveStreams5(tmdbId, mediaType, season, episode) {
     const earlyProbe = early.length ? inspectTop(nominate(early), Math.max(900, TOTAL_BUDGET_MS - (Date.now() - started) - 1500)) : Promise.resolve(/* @__PURE__ */ new Map());
     earlyProbe.catch(() => {
     });
-    const graceUntil = Math.min(SOURCE_DEADLINE_MS, Date.now() - started + 800);
+    const graceUntil = Math.min(SOURCE_DEADLINE_MS, Date.now() - started + 600);
     for (let i = 0; i < 6 && Date.now() - started < graceUntil; i++)
-      yield sleep2(150);
+      yield sleep2(120);
     console.log(`[FluxTV] sources settled at +${Date.now() - started}ms`);
     const reports = yield earlyProbe.catch(() => /* @__PURE__ */ new Map());
     const streams = Object.values(settled).flat();
-    const budget = Math.max(600, Math.min(2200, TOTAL_BUDGET_MS - (Date.now() - started)));
+    const budget = Math.max(500, Math.min(1200, TOTAL_BUDGET_MS - (Date.now() - started)));
     console.log(
       `[FluxTV] merging ${streams.length} candidate(s) at +${Date.now() - started}ms, ${reports.size} pre-probed, ${budget}ms left for probes`
     );
