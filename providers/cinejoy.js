@@ -1,6 +1,6 @@
 /**
  * cinejoy - Built from src/cinejoy/
- * Generated: 2026-10-20T13:47:33.267Z
+ * Generated: 2026-10-20T13:52:15.797Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -624,6 +624,15 @@ function ecdh(privateBytes, peerPublic) {
   const [x] = toAffine(shared);
   return bigToBytes(x, 32);
 }
+function isOnCurve(bytes) {
+  if (!bytes || bytes.length !== 65 || bytes[0] !== 4)
+    return false;
+  const x = bytesToBig(bytes.subarray(1, 33));
+  const y = bytesToBig(bytes.subarray(33, 65));
+  if (x >= P || y >= P)
+    return false;
+  return mod(y * y - (x * x * x - B3 * x + B)) === B0;
+}
 var CURVE_ORDER = N;
 
 // src/cinejoy/gate.js
@@ -632,7 +641,7 @@ var EPHEMERAL_LABEL = "lumen-gate-v2|ephemeral|";
 var INFO_REQUEST = "lumen-gate-v2|c2s";
 var INFO_RESPONSE = "lumen-gate-v2|s2c";
 var KEY_ID = 2;
-var SERVER_PUB = new Uint8Array([
+var BAKED_SERVER_KEY = new Uint8Array([
   4,
   92,
   136,
@@ -701,6 +710,8 @@ var SERVER_PUB = new Uint8Array([
 ]);
 var SESSION_TTL_MS = 10 * 60 * 1e3;
 var session = null;
+var serverKey = BAKED_SERVER_KEY;
+var lastKeyRefresh = 0;
 function be32(n) {
   return new Uint8Array([n >>> 24 & 255, n >>> 16 & 255, n >>> 8 & 255, n & 255]);
 }
@@ -717,7 +728,7 @@ function openSession() {
   if (!priv)
     throw new Error("no usable ephemeral scalar");
   const pub = publicKey(priv);
-  const shared = ecdh(priv, SERVER_PUB);
+  const shared = ecdh(priv, serverKey);
   const prk = hmacSha256(pub, shared);
   return {
     at: Date.now(),
@@ -762,6 +773,52 @@ function unsealWith(s, bytes) {
   const plain = aesGcmDecrypt(s.kResponse, iv, s.aadBaseResponse, bytes.subarray(12));
   return JSON.parse(fromUtf8(plain));
 }
+function learnServerKey(url = "https://api.wing.st/crush.wasm") {
+  return __async(this, null, function* () {
+    if (Date.now() - lastKeyRefresh < 60 * 1e3)
+      return false;
+    lastKeyRefresh = Date.now();
+    try {
+      const res = yield fetch(url, { headers: { referer: "https://cinejoy.pk/" } });
+      if (!res.ok)
+        return false;
+      const wasm = new Uint8Array(yield res.arrayBuffer());
+      const needle = utf8(EPHEMERAL_LABEL);
+      const at = indexOfBytes(wasm, needle);
+      if (at < 0)
+        return false;
+      const from = Math.max(0, at - 2048);
+      for (let off = at - 65; off >= from; off--) {
+        if (wasm[off] !== 4)
+          continue;
+        const candidate = wasm.subarray(off, off + 65);
+        if (!isOnCurve(candidate))
+          continue;
+        console.log("[Cinejoy] gate: learned a new server key from crush.wasm");
+        serverKey = new Uint8Array(candidate);
+        session = null;
+        return true;
+      }
+      return false;
+    } catch (e) {
+      console.log(`[Cinejoy] gate: key refresh failed (${e.message})`);
+      return false;
+    }
+  });
+}
+function indexOfBytes(haystack, needle) {
+  const limit = haystack.length - needle.length;
+  for (let i = 0; i <= limit; i++) {
+    if (haystack[i] !== needle[0])
+      continue;
+    let j = 1;
+    while (j < needle.length && haystack[i + j] === needle[j])
+      j++;
+    if (j === needle.length)
+      return i;
+  }
+  return -1;
+}
 
 // src/cinejoy/api.js
 var BASE = "https://cinejoy.pk";
@@ -804,6 +861,19 @@ function withTimeout(promise, ms, tag) {
 }
 function gateCall(path, payload, timeoutMs = 9e3) {
   return __async(this, null, function* () {
+    try {
+      return yield gateCallOnce(path, payload, timeoutMs);
+    } catch (e) {
+      if (!/bad tag|too short/i.test(e.message || ""))
+        throw e;
+      if (!(yield learnServerKey()))
+        throw e;
+      return gateCallOnce(path, payload, timeoutMs);
+    }
+  });
+}
+function gateCallOnce(path, payload, timeoutMs) {
+  return __async(this, null, function* () {
     const body = seal(path, payload);
     const res = yield withTimeout(
       fetch(GATE_URL, {
@@ -819,8 +889,11 @@ function gateCall(path, payload, timeoutMs = 9e3) {
       timeoutMs,
       `gate ${path}`
     );
-    if (!res.ok)
-      throw new Error(`gate ${path} HTTP ${res.status}`);
+    if (!res.ok) {
+      const err = new Error(`gate ${path} HTTP ${res.status}`);
+      err.status = res.status;
+      throw err;
+    }
     const buf = new Uint8Array(yield res.arrayBuffer());
     return unseal(buf);
   });
@@ -1176,14 +1249,25 @@ function resolveStreams(tmdbId, mediaType, season, episode) {
     const params = isMovie ? { tmdb: id } : { tmdb: id, season: String(s), episode: String(e) };
     const serversPromise = fetchServers();
     const subtitlesPromise = fetchSubtitleTracks(kind, id, s, e, 4e3);
-    const answers = yield Promise.all(
+    let answers = yield Promise.all(
       DEFAULT_SERVERS.slice(0, MAX_SERVERS).map(
         (server) => fetchServerStream(server, kind, params, GATE_TIMEOUT_MS).then((entries) => ({ server, entries })).catch((err) => {
           console.log(`[${LABEL}] ${err.message}`);
-          return { server, entries: null };
+          return { server, entries: null, status: err.status || 0 };
         })
       )
     );
+    if (answers.every((a) => !a.entries) && answers.some((a) => a.status === 404)) {
+      if (yield learnServerKey()) {
+        console.log(`[${LABEL}] retrying mirrors with the refreshed key`);
+        const retried = yield Promise.all(
+          DEFAULT_SERVERS.slice(0, MAX_SERVERS).map(
+            (server) => fetchServerStream(server, kind, params, GATE_TIMEOUT_MS).then((entries) => ({ server, entries })).catch((err) => ({ server, entries: null, status: err.status || 0 }))
+          )
+        );
+        answers = retried;
+      }
+    }
     const probes = [];
     for (const answer of answers) {
       if (!answer.entries)

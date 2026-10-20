@@ -1,6 +1,6 @@
 /**
  * novahd - Built from src/novahd/
- * Generated: 2026-10-20T13:47:33.290Z
+ * Generated: 2026-10-20T13:52:15.814Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
