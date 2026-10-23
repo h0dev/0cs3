@@ -827,6 +827,27 @@
         "name": "Sieutamphim"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.topcartoons.tv&sz=256",
+        "fileHash": "sha256-7845cd53648987532db0833e967a33638af603ac6656062a2020dca343812a3e",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 18458,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Cartoon",
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "TopCartoons",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TopCartoons.cs3",
+        "name": "TopCartoons"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://truyenhh3d.com&sz=256",
         "fileHash": "sha256-8bb1cf3dc9f21f8dbb704574caf4baac5307b4137d055f54a06689f96dae6882",
         "apiVersion": 1,
