@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-88c3bcb9f633fa66094c8861f18f025143a6ceb577049743e8b1fc9f168faa41",
+        "fileHash": "sha256-611cb2f994678c6932c5710a929b6471762cec43a614cf0cf3024dd6945d5ad8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 217578,
+        "fileSize": 217482,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -14,9 +14,9 @@
         "tvTypes": [
             "Others"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "1DPI",
-        "description": "1DPI (ByeDPI) \u2014 v\u01b0\u1ee3t DPI: ciadpi + c\u1ea7u HTTP cho baseClient/Cronet + ph\u00e2n gi\u1ea3i DNS ri\u00eang (h\u1ec7 th\u1ed1ng \u2192 DoH 1.1.1.1/8.8.8.8) n\u00ean kh\u00f4ng c\u00f2n l\u1ed7i SOCKS: Host unreachable. C\u00e0i l\u00e0 t\u1ef1 B\u1eacT; b\u1ea5m n\u00fat c\u00e0i \u0111\u1eb7t c\u1ee7a plugin \u0111\u1ec3 B\u1eacT/T\u1eaeT.",
+        "description": "V\u01b0\u1ee3t ch\u1eb7n DPI cho c\u1ea3 app. C\u00f3 DNS ri\u00eang n\u00ean kh\u00f4ng b\u1ecb l\u1ed7i t\u00ean mi\u1ec1n. C\u00e0i xong t\u1ef1 b\u1eadt; b\u1ea5m n\u00fat c\u00e0i \u0111\u1eb7t c\u1ee7a plugin \u0111\u1ec3 b\u1eadt/t\u1eaft.",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/1DPI.cs3",
         "name": "1DPI"
     },
