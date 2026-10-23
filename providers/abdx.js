@@ -1,6 +1,6 @@
 /**
  * abdx - Built from src/abdx/
- * Generated: 2026-10-23T10:40:00.125Z
+ * Generated: 2026-10-23T12:54:56.683Z
  */
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
@@ -1046,6 +1046,18 @@ var require_api = __commonJS({
     var STREAM_URL = BASE + "movies/stream";
     var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
     var sessionCache = null;
+    var legacyDownUntil = 0;
+    function legacyAvailable2() {
+      return Date.now() >= legacyDownUntil;
+    }
+    function markLegacyFailure2(message) {
+      const m = String(message || "");
+      if (/\b404\b/.test(m) && /pow\/challenge/.test(m))
+        legacyDownUntil = Date.now() + 60 * 60 * 1e3;
+      else if (/HTTP 5\d\d|network|fetch failed|aborted|ECONN|ETIMEDOUT/i.test(m)) {
+        legacyDownUntil = Date.now() + 5 * 60 * 1e3;
+      }
+    }
     function getJson(url, headers) {
       return __async(this, null, function* () {
         let lastErr;
@@ -1068,7 +1080,13 @@ var require_api = __commonJS({
         const now = Date.now();
         if (sessionCache && sessionCache.expMs - now > 12e4)
           return sessionCache;
-        const ch = yield getJson(CHALLENGE_URL, { "User-Agent": BROWSER_UA, Accept: "application/json" });
+        let ch;
+        try {
+          ch = yield getJson(CHALLENGE_URL, { "User-Agent": BROWSER_UA, Accept: "application/json" });
+        } catch (e) {
+          markLegacyFailure2(e.message);
+          throw e;
+        }
         if (!ch || !ch.challenge || !ch.difficulty)
           throw new Error("abdx: unexpected /pow/challenge reply");
         const nonce = solvePow(ch.challenge, ch.difficulty);
@@ -1226,7 +1244,7 @@ var require_api = __commonJS({
         return out;
       });
     }
-    module2.exports = { getSession: getSession2, fetchStream: fetchStream2, fetchSubtitles: fetchSubtitles2, STREAM_URL, BROWSER_UA, base64UrlToBytes };
+    module2.exports = { getSession: getSession2, fetchStream: fetchStream2, fetchSubtitles: fetchSubtitles2, legacyAvailable: legacyAvailable2, markLegacyFailure: markLegacyFailure2, STREAM_URL, BROWSER_UA, base64UrlToBytes };
   }
 });
 
@@ -1282,9 +1300,179 @@ var require_resolve = __commonJS({
   }
 });
 
+// src/abdx/platform.js
+var require_platform = __commonJS({
+  "src/abdx/platform.js"(exports2, module2) {
+    var { BROWSER_UA } = require_resolve();
+    var BASES = ["https://abdx.tv", "https://cinemaos.live"];
+    var SERVER_COUNT = 17;
+    var PROBE_TIMEOUT_MS = 6e3;
+    var RACE_DEADLINE_MS = 9e3;
+    var BATCH = 4;
+    var NEGATIVE_TTL_MS = 10 * 60 * 1e3;
+    var negative = /* @__PURE__ */ new Map();
+    var DOWN_TTL_MS = 10 * 60 * 1e3;
+    var downUntil = 0;
+    function cacheKey(base, params) {
+      return [
+        base,
+        params.mediaType,
+        params.tmdbId,
+        params.season || "",
+        params.episode || ""
+      ].join("|");
+    }
+    function hitNegative(key) {
+      const ts = negative.get(key);
+      if (!ts)
+        return false;
+      if (Date.now() - ts > NEGATIVE_TTL_MS) {
+        negative.delete(key);
+        return false;
+      }
+      return true;
+    }
+    function queryFor(params, sr) {
+      const q = new URLSearchParams();
+      q.set("mediaType", params.mediaType);
+      q.set("tmdbId", String(params.tmdbId));
+      if (params.imdbId)
+        q.set("imdbId", params.imdbId);
+      if (params.title)
+        q.set("title", params.title);
+      if (params.year)
+        q.set("year", String(params.year));
+      if (params.mediaType === "tv") {
+        q.set("seasonId", String(params.season || 1));
+        q.set("episodeId", String(params.episode || 1));
+      }
+      q.set("sr", String(sr));
+      return q.toString();
+    }
+    function parseReply(json, sr) {
+      if (!json || json.success !== true)
+        return null;
+      const d = json.decryptedData || json.data || {};
+      const rows = [];
+      const seen = /* @__PURE__ */ new Set();
+      const push = (url, quality, headers) => {
+        if (!url || typeof url !== "string")
+          return;
+        if (seen.has(url))
+          return;
+        seen.add(url);
+        rows.push({
+          url,
+          quality: quality ? String(quality) : "",
+          headers: headers && typeof headers === "object" ? headers : {},
+          server: sr
+        });
+      };
+      if (Array.isArray(d.quality)) {
+        for (const q of d.quality) {
+          if (q && typeof q === "object")
+            push(q.url, q.quality || q.label, q.headers);
+          else if (typeof q === "string")
+            push(q, "", null);
+        }
+      }
+      if (!rows.length && Array.isArray(d.sources)) {
+        for (const s of d.sources) {
+          if (s && typeof s === "object")
+            push(s.url, s.quality || s.label, s.headers);
+        }
+      }
+      if (!rows.length && typeof d.url === "string") {
+        push(d.url, d.quality, d.headers);
+      }
+      if (!rows.length)
+        return null;
+      const captions = Array.isArray(json.captions) ? json.captions : Array.isArray(d.subtitles) ? d.subtitles : [];
+      return { sr, rows, captions };
+    }
+    function probe(base, params, sr, budgetMs) {
+      return __async(this, null, function* () {
+        const url = `${base}/api/fuckit/scraper?${queryFor(params, sr)}`;
+        const ctrl = typeof AbortController !== "undefined" ? new AbortController() : null;
+        const timer = setTimeout(
+          () => {
+            try {
+              ctrl && ctrl.abort();
+            } catch (e) {
+            }
+          },
+          Math.max(1200, Math.min(PROBE_TIMEOUT_MS, budgetMs))
+        );
+        try {
+          const res = yield fetch(url, {
+            method: "GET",
+            headers: {
+              "User-Agent": BROWSER_UA,
+              Accept: "application/json",
+              Referer: base + "/",
+              "X-Requested-With": "XMLHttpRequest"
+            },
+            signal: ctrl ? ctrl.signal : void 0
+          });
+          if (!res.ok)
+            return null;
+          const txt = yield res.text();
+          let json;
+          try {
+            json = JSON.parse(txt);
+          } catch (e) {
+            return null;
+          }
+          return parseReply(json, sr);
+        } catch (e) {
+          return null;
+        } finally {
+          clearTimeout(timer);
+        }
+      });
+    }
+    function fetchPlatformStreams2(params) {
+      return __async(this, null, function* () {
+        if (Date.now() < downUntil) {
+          console.log("[ABDX] platform circuit open (upstreams were down) \u2014 skipping");
+          return null;
+        }
+        const started = Date.now();
+        for (const base of BASES) {
+          const key = cacheKey(base, params);
+          if (hitNegative(key))
+            continue;
+          let found = null;
+          for (let first = 1; first <= SERVER_COUNT && !found; first += BATCH) {
+            const budget = RACE_DEADLINE_MS - (Date.now() - started);
+            if (budget <= 800)
+              break;
+            const slots = [];
+            for (let sr = first; sr < first + BATCH && sr <= SERVER_COUNT; sr++)
+              slots.push(sr);
+            const replies = yield Promise.all(slots.map((sr) => probe(base, params, sr, budget)));
+            found = replies.find(Boolean) || null;
+          }
+          if (found) {
+            console.log(`[ABDX] platform ${base}: server ${found.sr} returned ${found.rows.length} stream(s)`);
+            return { base, rows: found.rows, captions: found.captions || [] };
+          }
+          console.log(`[ABDX] platform ${base}: no server answered (${Date.now() - started}ms)`);
+          negative.set(key, Date.now());
+        }
+        downUntil = Date.now() + DOWN_TTL_MS;
+        console.log("[ABDX] platform circuit opened for 10 min (no server answered)");
+        return null;
+      });
+    }
+    module2.exports = { fetchPlatformStreams: fetchPlatformStreams2, BASES, SERVER_COUNT };
+  }
+});
+
 // src/abdx/index.js
-var { getSession, fetchStream, fetchSubtitles } = require_api();
+var { getSession, fetchStream, fetchSubtitles, legacyAvailable, markLegacyFailure } = require_api();
 var { imdbToTmdb, resolveNumericId, siteHeaders } = require_resolve();
+var { fetchPlatformStreams } = require_platform();
 var LABEL = "ABDX";
 var CINEMAOS_WATCH = "https://cinemaos.live/watch";
 function watchUrlFor(tmdbId, mediaType, season, episode) {
@@ -1294,6 +1482,55 @@ function watchUrlFor(tmdbId, mediaType, season, episode) {
   const s = Number(season) || 1;
   const e = Number(episode) || 1;
   return `${CINEMAOS_WATCH}/${tmdbId}/${s}/${e}`;
+}
+function makeRow(url, quality, headers, index, isMovie, seasonNo, episodeNo) {
+  const base = index === 0 ? LABEL : `${LABEL} \u2022 Server ${index + 1}`;
+  return {
+    name: isMovie ? base : `${base} \u2022 S${seasonNo}E${episodeNo}`,
+    url,
+    headers,
+    quality: quality || ""
+  };
+}
+function legacyStreams(payload, isMovie, seasonNo, episodeNo) {
+  return __async(this, null, function* () {
+    if (!legacyAvailable()) {
+      console.log("[ABDX] legacy POW generation unavailable (404/5xx earlier) \u2014 skipping");
+      return { rows: [], session: null, result: null };
+    }
+    let result;
+    try {
+      result = yield fetchStream(payload);
+    } catch (e) {
+      console.warn(`[ABDX] legacy POW failed: ${e.message}`);
+      markLegacyFailure(e.message);
+      return { rows: [], session: null, result: null };
+    }
+    if (!result || typeof result !== "object")
+      return { rows: [], session: null, result: null };
+    const mirrors = Array.isArray(result.stream_urls) ? result.stream_urls : [];
+    const main = result.hls_url || mirrors[0];
+    const urls = [];
+    const seen = /* @__PURE__ */ new Set();
+    if (main) {
+      seen.add(main);
+      urls.push(main);
+    }
+    for (const u of mirrors) {
+      if (u && !seen.has(u)) {
+        seen.add(u);
+        urls.push(u);
+      }
+    }
+    if (!urls.length) {
+      console.log(`[ABDX] legacy POW: ${payload.watch_url} not in their catalogue`);
+      return { rows: [], session: null, result };
+    }
+    const hdrs = result.headers && typeof result.headers === "object" && result.headers.Referer ? result.headers : siteHeaders();
+    const rows = urls.map((u, i) => makeRow(u, "", hdrs, i, isMovie, seasonNo, episodeNo));
+    console.log(`[ABDX] legacy POW: ${rows.length} master(s)`);
+    return { rows, session: yield getSession().catch(() => null), result };
+  });
 }
 function getStreams(tmdbId, mediaType, season, episode) {
   return __async(this, null, function* () {
@@ -1305,13 +1542,14 @@ function getStreams(tmdbId, mediaType, season, episode) {
     const inId = String(tmdbId == null ? "" : tmdbId).trim();
     let num = resolveNumericId(inId);
     let idOrigin = "tmdb-id";
-    if (!num && /^tt/i.test(inId)) {
-      const mapped = yield imdbToTmdb(inId, mt);
+    const imdbId = /^tt\d+$/i.test(inId) ? inId.toLowerCase() : "";
+    if (!num && imdbId) {
+      const mapped = yield imdbToTmdb(imdbId, mt);
       if (mapped) {
         num = mapped;
-        idOrigin = `imdb[${inId}]->cinemeta->tmdb[${mapped}]`;
+        idOrigin = `imdb[${imdbId}]->cinemeta->tmdb[${mapped}]`;
       } else {
-        console.log(`[ABDX] imdb ${inId} unmapped (no moviedb_id in cinemeta). No streams.`);
+        console.log(`[ABDX] imdb ${imdbId} unmapped (no moviedb_id in cinemeta). No streams.`);
         return [];
       }
     }
@@ -1322,7 +1560,7 @@ function getStreams(tmdbId, mediaType, season, episode) {
     const episodeNo = isMovie ? null : Number(episode) || 1;
     const payload = {
       watch_url: watchUrlFor(num, mt, seasonNo, episodeNo),
-      imdb_id: "",
+      imdb_id: imdbId,
       tmdb_id: String(num),
       media_type: isMovie ? "movie" : "tv",
       season: seasonNo,
@@ -1330,53 +1568,39 @@ function getStreams(tmdbId, mediaType, season, episode) {
       title: "",
       year: ""
     };
-    let result;
-    try {
-      result = yield fetchStream(payload);
-    } catch (e) {
-      console.warn(`[ABDX] stream exchange failed: ${e.message}`);
-      return [];
-    }
-    if (!result || typeof result !== "object") {
-      console.log("[ABDX] empty/odd stream reply");
-      return [];
-    }
-    const mirrors = Array.isArray(result.stream_urls) ? result.stream_urls : [];
-    const main = result.hls_url || mirrors[0];
-    if (!main) {
-      console.log(`[ABDX] title not found on abdx (${payload.watch_url}) -> no streams`);
-      return [];
-    }
-    const seen = /* @__PURE__ */ new Set();
-    const urls = [];
-    if (main) {
-      seen.add(main);
-      urls.push(main);
-    }
-    for (const u of mirrors) {
-      if (u && !seen.has(u)) {
-        seen.add(u);
-        urls.push(u);
+    const legacy = yield legacyStreams(payload, isMovie, seasonNo, episodeNo);
+    let rows = legacy.rows;
+    if (!rows.length) {
+      const platform = yield fetchPlatformStreams({
+        mediaType: isMovie ? "movie" : "tv",
+        tmdbId: num,
+        imdbId,
+        season: seasonNo,
+        episode: episodeNo
+      });
+      if (platform) {
+        rows = platform.rows.map((r, i) => makeRow(
+          r.url,
+          r.quality,
+          Object.assign({ "User-Agent": siteHeaders()["User-Agent"] }, r.headers),
+          i,
+          isMovie,
+          seasonNo,
+          episodeNo
+        ));
+        console.log(`[ABDX] platform ${platform.base}: ${rows.length} stream(s)`);
       }
     }
-    const hdrs = result.headers && typeof result.headers === "object" && result.headers.Referer ? result.headers : siteHeaders();
-    console.log(`[ABDX] resolved ${urls.length} master(s) for ${payload.watch_url}`);
-    const rows = urls.map((u, i) => {
-      const base = i === 0 ? LABEL : `${LABEL} \u2022 Server ${i + 1}`;
-      return {
-        name: isMovie ? base : `${base} \u2022 S${seasonNo}E${episodeNo}`,
-        url: u,
-        headers: hdrs,
-        quality: ""
-      };
-    });
-    if (rows.length) {
+    if (!rows.length) {
+      console.log("[ABDX] no strategy produced a stream (site may be down or title absent)");
+      return [];
+    }
+    if (legacy.session) {
       try {
-        const sess = yield getSession();
         for (const r of rows) {
-          r.headers = Object.assign({}, r.headers, { "X-ABDX-PoW": sess.token });
+          r.headers = Object.assign({}, r.headers, { "X-ABDX-PoW": legacy.session.token });
         }
-        const subs = yield fetchSubtitles(sess, {
+        const subs = yield fetchSubtitles(legacy.session, {
           tmdbId: num,
           mediaType: isMovie ? "movie" : "tv",
           season: seasonNo,
