@@ -1,6 +1,6 @@
 /**
  * anistream - Built from src/anistream/
- * Generated: 2026-10-23T10:31:23.123Z
+ * Generated: 2026-10-23T10:40:00.140Z
  */
 var __async = (__this, __arguments, generator) => {
   return new Promise((resolve, reject) => {
@@ -26,7 +26,7 @@ var __async = (__this, __arguments, generator) => {
 // src/anistream/http.js
 var GRAPHQL = "https://graphql.animex.one/graphql";
 var REST = "https://api.anistream.one/rest/api";
-var BROWSER_UA = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36";
+var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
 var SITE_REFERER = "https://anistream.one/home";
 function getJson(_0) {
   return __async(this, arguments, function* (url, headers = {}) {

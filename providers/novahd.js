@@ -1,6 +1,6 @@
 /**
  * novahd - Built from src/novahd/
- * Generated: 2026-10-23T10:31:23.155Z
+ * Generated: 2026-10-23T10:40:00.171Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -45,7 +45,7 @@ var __async = (__this, __arguments, generator) => {
 // src/novahd/http.js
 var SITE = "https://novahd.cc";
 var LABEL = "NovaHD";
-var BROWSER_UA = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36";
+var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
 function uuid4() {
   let out = "";
   for (let i = 0; i < 36; i++) {

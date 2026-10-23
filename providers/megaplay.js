@@ -1,6 +1,6 @@
 /**
  * megaplay - Built from src/megaplay/
- * Generated: 2026-10-23T10:31:23.150Z
+ * Generated: 2026-10-23T10:40:00.164Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -526,7 +526,7 @@ var BASE = "https://animextv.tech";
 var MEGA = "https://megaplay.buzz";
 var ENC_KEY = "i?LMTAx0Q6,:}50U";
 var ENC_IV = "W0;27ToaUpl_P%'c";
-var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
 var PLAYBACK_HEADERS = {
   "User-Agent": BROWSER_UA,
   Referer: MEGA + "/",

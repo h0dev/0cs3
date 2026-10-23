@@ -1,6 +1,6 @@
 /**
  * fluxtv - Built from src/fluxtv/
- * Generated: 2026-10-23T10:31:23.137Z
+ * Generated: 2026-10-23T10:40:00.153Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -50,7 +50,7 @@ module.exports = __toCommonJS(fluxtv_exports);
 
 // src/fluxtv/http.js
 var LABEL = "FluxTV";
-var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36";
+var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
 function withTimeout(promise, ms, fallback) {
   if (typeof setTimeout !== "function")
     return promise;
@@ -1356,7 +1356,7 @@ function rangeGet(url, headers, bytes) {
   return fetch(url, {
     headers: Object.assign(
       {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36",
         Accept: "*/*",
         Range: `bytes=0-${bytes - 1}`
       },

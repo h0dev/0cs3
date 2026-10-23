@@ -1,6 +1,6 @@
 /**
  * abdx - Built from src/abdx/
- * Generated: 2026-10-23T10:31:23.104Z
+ * Generated: 2026-10-23T10:40:00.125Z
  */
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __commonJS = (cb, mod) => function __require() {
@@ -1044,7 +1044,7 @@ var require_api = __commonJS({
     var CHALLENGE_URL = BASE + "pow/challenge";
     var REDEEM_URL = BASE + "pow/redeem";
     var STREAM_URL = BASE + "movies/stream";
-    var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+    var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
     var sessionCache = null;
     function getJson(url, headers) {
       return __async(this, null, function* () {
@@ -1233,7 +1233,7 @@ var require_api = __commonJS({
 // src/abdx/resolve.js
 var require_resolve = __commonJS({
   "src/abdx/resolve.js"(exports2, module2) {
-    var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+    var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
     var CDN_REFERER = "https://nextgencloudfabric.com/";
     function siteHeaders2() {
       return {

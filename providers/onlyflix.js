@@ -1,6 +1,6 @@
 /**
  * onlyflix - Built from src/onlyflix/
- * Generated: 2026-10-23T10:31:23.163Z
+ * Generated: 2026-10-23T10:40:00.175Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropNames = Object.getOwnPropertyNames;
@@ -49,7 +49,7 @@ var require_http = __commonJS({
     var SITE = "https://onlyflix.to";
     var VIDAPI = "https://vidapi.xyz";
     var VSCDN = "https://vscdn.xyz";
-    var BROWSER_UA = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Mobile Safari/537.36";
+    var BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36";
     var EMBED_HEADERS = {
       "User-Agent": BROWSER_UA,
       Referer: SITE + "/",
@@ -141,7 +141,7 @@ var require_ids = __commonJS({
   "src/onlyflix/ids.js"(exports2, module2) {
     var { BROWSER_UA } = require_http();
     var WD_ENDPOINT = "https://query.wikidata.org/sparql";
-    var WD_UA = `${BROWSER_UA} OnlyFlixNuvio/1.0 (+https://github.com/hung319/nuvix)`;
+    var WD_UA = BROWSER_UA;
     var TMDB_PROP = { tv: "P4983", movie: "P4947" };
     function sparql(query) {
       return __async(this, null, function* () {
