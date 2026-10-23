@@ -827,6 +827,25 @@
         "name": "Sieutamphim"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://theshortfilmshow.com&sz=256",
+        "fileHash": "sha256-c9071f07b14a65e5195ad6f0b349302b88c41fca06f4e26b5af4279e7dfb7154",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 22265,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "TheShortFilmShow",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/TheShortFilmShow.cs3",
+        "name": "TheShortFilmShow"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.topcartoons.tv&sz=256",
         "fileHash": "sha256-801f787c3876bea8a32f3d401a7ef27dbe0f9d13af52fecfb83a0826f24b32d0",
         "apiVersion": 1,
