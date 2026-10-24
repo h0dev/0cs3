@@ -185,6 +185,32 @@
       "limited": false,
       "disabledPlatforms": [],
       "supportsExternalPlayer": true
+    },
+    {
+      "id": "framextv",
+      "name": "FrameXTV",
+      "version": "1.0.0",
+      "author": "SIX",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/framextv.js",
+      "logo": "https://framextv.cc/favicon.ico",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": [
+        "m3u8"
+      ],
+      "contentLanguage": [
+        "en",
+        "es",
+        "hi",
+        "vi"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true
     }
   ]
 }
