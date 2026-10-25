@@ -211,6 +211,32 @@
       "limited": false,
       "disabledPlatforms": [],
       "supportsExternalPlayer": true
+    },
+    {
+      "id": "mzfi",
+      "name": "MovieBox",
+      "version": "1.0.0",
+      "author": "SIX",
+      "supportedTypes": [
+        "tv",
+        "movie"
+      ],
+      "filename": "providers/mzfi.js",
+      "logo": "https://h5-static.aoneroom.com/ssrStatic/mbOfficial/public/favicon.ico",
+      "enabled": true,
+      "hasSettings": false,
+      "formats": [
+        "mp4",
+        "m3u8"
+      ],
+      "contentLanguage": [
+        "vi",
+        "en"
+      ],
+      "limited": false,
+      "disabledPlatforms": [],
+      "supportsExternalPlayer": true,
+      "description": "MovieBox web (mzfi.me) — MP4 + HEVC DASH, phụ đề .srt nhiều ngôn ngữ. Mở được bằng link phim dán trực tiếp."
     }
   ]
 }
