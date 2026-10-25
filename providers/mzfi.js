@@ -1,6 +1,6 @@
 /**
  * mzfi - Built from src/mzfi/
- * Generated: 2026-10-25T05:10:30.701Z
+ * Generated: 2026-10-25T05:22:16.588Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -65,7 +65,11 @@ function apiHeaders(referer) {
     Origin: "https://movieboxhd.net",
     Referer: referer || "https://movieboxhd.net/",
     "X-Client-Info": JSON.stringify({ timezone: "Asia/Saigon" }),
-    "X-Vip-Restrict": "1",
+    // '0' is what the site's own player sends for a normal session, and it
+    // matters: with '1' the API blanks the url of every MP4 the catalogue
+    // marks premium (vipLocked:true) even though the DASH ladder stays
+    // playable - which silently costs you the 1080p MP4 row.
+    "X-Vip-Restrict": "0",
     "X-No-High-Risk-Restrict": "0"
   };
 }
@@ -185,6 +189,13 @@ function getGuestToken(force = false) {
     return guestToken;
   });
 }
+function parseImdbId(raw) {
+  const s = String(raw == null ? "" : raw).trim();
+  const prefixed = /^(?:imdb):(tt\d+)$/i.exec(s);
+  if (prefixed)
+    return prefixed[1].toLowerCase();
+  return /^tt\d{5,}$/i.test(s) ? s.toLowerCase() : null;
+}
 function parseTmdbId(raw) {
   const s = String(raw == null ? "" : raw).trim();
   if (!s)
@@ -219,6 +230,33 @@ function parseSiteRef(raw) {
     return { detailPath: s, subjectId: null, shareId: tail ? tail[1] : null };
   }
   return null;
+}
+function imdbToTmdb(imdbId, mediaType) {
+  return __async(this, null, function* () {
+    const imdb = parseImdbId(imdbId);
+    if (!imdb)
+      return null;
+    const type = String(mediaType || "").toLowerCase() === "movie" ? "movie" : "tv";
+    const kind = type === "movie" ? "movie" : "series";
+    const cinemeta = yield request(`https://v3-cinemeta.strem.io/meta/${kind}/${imdb}.json`, { timeout: 12e3 });
+    const meta = cinemeta && cinemeta.json && cinemeta.json.meta;
+    if (meta && meta.moviedb_id) {
+      console.log(`[${LABEL}] ${imdb} -> tmdb ${meta.moviedb_id} (cinemeta: ${meta.name || "?"})`);
+      return String(meta.moviedb_id);
+    }
+    const found = yield request(
+      `${TMDB_BASE}/find/${imdb}?external_source=imdb_id&api_key=${TMDB_KEY}`,
+      { timeout: 12e3 }
+    );
+    const json = found && found.json;
+    const bucket = json ? type === "movie" ? json.movie_results : json.tv_results : null;
+    if (bucket && bucket.length && bucket[0].id) {
+      console.log(`[${LABEL}] ${imdb} -> tmdb ${bucket[0].id} (tmdb find)`);
+      return String(bucket[0].id);
+    }
+    console.log(`[${LABEL}] ${imdb} not mapped to a TMDB id`);
+    return null;
+  });
 }
 var TMDB_KEY = "3d421899d5ce93db8ad4ae4591ccc130";
 var TMDB_BASE = "https://api.themoviedb.org/3";
@@ -633,12 +671,20 @@ function resolveTarget(id, mediaType) {
         inferred: true
       };
     }
-    const tmdbId = parseTmdbId(id);
-    if (!tmdbId) {
-      console.warn(`[${LABEL}] unsupported id "${id}" (needs a TMDB id or a pasted mzfi URL)`);
-      return null;
-    }
     const type = String(mediaType || "tv").toLowerCase() === "movie" ? "movie" : "tv";
+    let tmdbId = parseTmdbId(id);
+    if (!tmdbId) {
+      const imdb = parseImdbId(id);
+      if (!imdb) {
+        console.warn(`[${LABEL}] unsupported id "${id}" (needs a TMDB id, an IMDb id or a pasted mzfi URL)`);
+        return null;
+      }
+      tmdbId = yield imdbToTmdb(imdb, type);
+      if (!tmdbId) {
+        console.warn(`[${LABEL}] ${imdb} could not be mapped to TMDB`);
+        return null;
+      }
+    }
     const info = yield tmdbInfo2(tmdbId, type);
     if (!info) {
       console.warn(`[${LABEL}] tmdb ${tmdbId} not resolved`);

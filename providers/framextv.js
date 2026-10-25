@@ -1,6 +1,6 @@
 /**
  * framextv - Built from src/framextv/
- * Generated: 2026-10-25T05:10:30.671Z
+ * Generated: 2026-10-25T05:22:16.572Z
  */
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;

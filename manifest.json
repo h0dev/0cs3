@@ -235,8 +235,7 @@
       ],
       "limited": false,
       "disabledPlatforms": [],
-      "supportsExternalPlayer": true,
-      "description": "MovieBox web (mzfi.me) — MP4 + HEVC DASH, phụ đề .srt nhiều ngôn ngữ. Mở được bằng link phim dán trực tiếp."
+      "supportsExternalPlayer": true
     }
   ]
 }
