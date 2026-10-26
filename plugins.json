@@ -290,10 +290,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.coigiday.xyz&sz=256",
-        "fileHash": "sha256-0d79cbca40f2e5ac5ae7e59be7ac46ea50a1ee442d14550b44a9b6071dbd5895",
+        "fileHash": "sha256-2f903415dbe3959cda22b7caf5be91f26e9262bbd2e3fc9cb51da5b180a86bf8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42310,
+        "fileSize": 45599,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -303,7 +303,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "CoigiDay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CoigiDay.cs3",
         "name": "CoigiDay"
@@ -494,10 +494,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://langlangson.xyz&sz=256",
-        "fileHash": "sha256-ab800c9dd2fa580dc166fa196d7e4c2bb87b87375120b375823cbbba67b951fe",
+        "fileHash": "sha256-3cc7942e6932abe5329caa3b1ea281e685ae15eb31c08bf8d410ecad451e75cd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 36720,
+        "fileSize": 41409,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -507,7 +507,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "LangLangSon",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LangLangSon.cs3",
         "name": "LangLangSon"
