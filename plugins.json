@@ -473,10 +473,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
-        "fileHash": "sha256-0fc888c56128de3c5c5777550dd7879136cb753c5549c07d88bedc0feb92bda7",
+        "fileHash": "sha256-793da5439115aa661a46814e0d296ac3ce46d852c7aa279a7751d2e34dae0bdd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38708,
+        "fileSize": 39214,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -487,7 +487,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 15,
+        "version": 16,
         "internalName": "KKPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KKPhim.cs3",
         "name": "KKPhim"
