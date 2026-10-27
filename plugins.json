@@ -473,10 +473,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
-        "fileHash": "sha256-fd1c9bce55700b0e587efe8507c061d6a25112dc7c4ff726519da2de118b1be8",
+        "fileHash": "sha256-bce693e12a9908ecbf7d0a016e94eccc1387ba7ca6ffb549e2bf2a11e3f6a06f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42514,
+        "fileSize": 45334,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -487,7 +487,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 21,
+        "version": 22,
         "internalName": "KKPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KKPhim.cs3",
         "name": "KKPhim"
@@ -576,10 +576,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-47e98cc384468af20117e1ed0168f653192b312ff5eff1d583a29be99067636e",
+        "fileHash": "sha256-f132f7782dfaf7dfce5a1c95a8e7da769a9aa3c2caf8066a31b2ff71e46a01e6",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 56315,
+        "fileSize": 55674,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -590,17 +590,17 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 27,
+        "version": 28,
         "internalName": "NguonC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NguonC.cs3",
         "name": "NguonC"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.lat&sz=256",
-        "fileHash": "sha256-6052d94d5950a3d05d5854f16a54b2a962e2f10981f06adc3bc1c192d82be59d",
+        "fileHash": "sha256-02c12d991752b6199e95770d6a2486d82ea065453a1b07905057e97779fb3159",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 48330,
+        "fileSize": 48803,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -611,7 +611,7 @@
             "TvSeries",
             "Anime"
         ],
-        "version": 7,
+        "version": 8,
         "internalName": "Onflix",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Onflix.cs3",
         "name": "Onflix"
