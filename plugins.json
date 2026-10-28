@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-611cb2f994678c6932c5710a929b6471762cec43a614cf0cf3024dd6945d5ad8",
+        "fileHash": "sha256-3bb678892264af32d1a121305190e085a99df9ca89de5d40964f9145eb470868",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -63,10 +63,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-105f3c27de57d8a44670f4d3f893110b3a782e02b805d9ee1739b7623af9af41",
+        "fileHash": "sha256-8a34005da71ad85ecebe5f7b47a0a846ee013651774114500017aaf7ac0de43b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 53031,
+        "fileSize": 53308,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -75,7 +75,7 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 17,
+        "version": 18,
         "internalName": "Anime47",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anime47.cs3",
         "name": "Anime47"
@@ -103,10 +103,10 @@
     },
     {
         "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-d6d4f71b16681165a5cc9025eba235e5e6c94ef176e8e6b265d1a8eb9fd7aaa1",
+        "fileHash": "sha256-022c4a451cf975674886edd29571980655c068f1f3f5c8bf426ef302fa7c793f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 50324,
+        "fileSize": 50981,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -119,7 +119,7 @@
             "Cartoons",
             "TvSeries"
         ],
-        "version": 12,
+        "version": 13,
         "internalName": "Animet",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
         "name": "Animet"
@@ -931,10 +931,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-d4dd8cd21abb7bbbe2aa3a85dee68b8564be86c8e8c2c0a9b42f500c94d99810",
+        "fileHash": "sha256-168118c564a74236752cfb10a7ba33f4fc0ea11d34cabc12c8beb60dcf318747",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 46800,
+        "fileSize": 45441,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -945,7 +945,7 @@
             "Anime",
             "TvSeries"
         ],
-        "version": 13,
+        "version": 14,
         "internalName": "VSMOV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VSMOV.cs3",
         "name": "VSMOV"
@@ -993,10 +993,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "fileHash": "sha256-f9640501b4f4799a23e7240651c7ee886bbc3f2b265c79b0ba035a8592eded44",
+        "fileHash": "sha256-6c0605ec7811cba0eeae8e35bf5d93810d02f1d289a8b7d56f34a5e91d6fa2d4",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 68281,
+        "fileSize": 69504,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1005,7 +1005,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 28,
+        "version": 29,
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
