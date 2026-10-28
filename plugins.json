@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-611cb2f994678c6932c5710a929b6471762cec43a614cf0cf3024dd6945d5ad8",
+        "fileHash": "sha256-3bb678892264af32d1a121305190e085a99df9ca89de5d40964f9145eb470868",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -911,10 +911,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vn2c.my.ico",
-        "fileHash": "sha256-5883f514741bd4481435c03256463665c5546c32881e01e7dbc85ced7cf1d38c",
+        "fileHash": "sha256-8fe5a4548c85d658a540f45f56446d8538d6a004656772580cb57182a7c18630",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 29913,
+        "fileSize": 30373,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -924,7 +924,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "Vn2c",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Vn2c.cs3",
         "name": "Vn2c"
