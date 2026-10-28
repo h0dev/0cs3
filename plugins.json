@@ -911,10 +911,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vn2c.my.ico",
-        "fileHash": "sha256-8fe5a4548c85d658a540f45f56446d8538d6a004656772580cb57182a7c18630",
+        "fileHash": "sha256-cad35ebd0d5b22ecf7bef3b80dff3482f83e3118ce19852e6a53e4bdda7832ec",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 30373,
+        "fileSize": 30350,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -924,7 +924,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 5,
+        "version": 6,
         "internalName": "Vn2c",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Vn2c.cs3",
         "name": "Vn2c"
