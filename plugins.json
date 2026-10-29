@@ -765,10 +765,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.rophim.at&sz=256",
-        "fileHash": "sha256-65d874a57e23d21fd6719bd6a2fc726950825cc3e2e88f61237e970672504501",
+        "fileHash": "sha256-19e6cc0d323b78f16e200501b279a5873e6e8e5f71031f2fa18ecb45382f158e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 36883,
+        "fileSize": 40573,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -779,7 +779,7 @@
             "Movie",
             "Anime"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "RoPhimSoy",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhimSoy.cs3",
         "name": "RoPhimSoy"
