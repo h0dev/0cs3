@@ -744,10 +744,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://rophim.bar&sz=256",
-        "fileHash": "sha256-3174f0175496e610fef2acfea5185996638ee3b20dada9b3c991f6418a5cf7b3",
+        "fileHash": "sha256-2ae7e08ce43da4349189966ed524661c431f6ee5bd7ad7d1fe32ccd854562f1b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 42342,
+        "fileSize": 56642,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -758,7 +758,7 @@
             "Movie",
             "Anime"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "RoPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhim.cs3",
         "name": "RoPhim"
