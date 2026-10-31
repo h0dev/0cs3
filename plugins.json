@@ -102,11 +102,11 @@
         "name": "Animehay"
     },
     {
-        "iconUrl": "https://anime14.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-d6d4f71b16681165a5cc9025eba235e5e6c94ef176e8e6b265d1a8eb9fd7aaa1",
+        "iconUrl": "https://animesub.site/Theme_Anime/img/favicon-32x32.png",
+        "fileHash": "sha256-61306eae00c03ebcf9f6db0d5083cf196f09996430cabe9bc355e3a093003ca5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 50324,
+        "fileSize": 52568,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -119,7 +119,7 @@
             "Cartoons",
             "TvSeries"
         ],
-        "version": 12,
+        "version": 13,
         "internalName": "Animet",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
         "name": "Animet"
