@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikototv.to&sz=256",
-        "fileHash": "sha256-2d5610a7309f3f3cac5904b81565ea3f1fece957f984f585fbfde307b1f5bf76",
+        "fileHash": "sha256-863ad836baffb4667968d6d0d765f3cdf2e82137b6e06e5aa671c6ee63589fed",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38801,
+        "fileSize": 42343,
         "status": 1,
         "language": "en",
         "authors": [
@@ -56,7 +56,7 @@
             "Movie",
             "OVA"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "Anikoto",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Anikoto.cs3",
         "name": "Anikoto"
@@ -147,10 +147,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/animex.one.ico",
-        "fileHash": "sha256-76f515e3492c83abf4f3974ed4c4b7625f38291c57b4c4a96e16896a97c3b6f3",
+        "fileHash": "sha256-d15ce56baa7a357676e00f542681e921190290a1927cc36f34ca3fa404553789",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 38732,
+        "fileSize": 40343,
         "status": 1,
         "language": "en",
         "authors": [
@@ -159,7 +159,7 @@
         "tvTypes": [
             "Anime"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "AnimeX",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnimeX.cs3",
         "name": "AnimeX"
