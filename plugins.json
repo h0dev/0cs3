@@ -993,10 +993,10 @@
     },
     {
         "iconUrl": "https://xiaofilm.online/images/favicon.png",
-        "fileHash": "sha256-da1348e876d3f5238e50d6158cd9c0a9c978ce54b79f95027555465173f36d28",
+        "fileHash": "sha256-167d6b7163cf58e451a23c55d98e9c579dc0c8885d2c5547f79f33f1be67f3a3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41924,
+        "fileSize": 44634,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1008,7 +1008,7 @@
             "Anime",
             "Cartoons"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "XiaoFilm",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/XiaoFilm.cs3",
         "name": "XiaoFilm"
