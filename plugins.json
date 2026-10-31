@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-91c5e2299f262edda4528e9470a1734abe7e8523cc26792e68903fde005d294a",
+        "fileHash": "sha256-3bb678892264af32d1a121305190e085a99df9ca89de5d40964f9145eb470868",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -556,10 +556,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://netshort.com&sz=256",
-        "fileHash": "sha256-7c780d7ba797ad78e5e891bf90833cb7fdfee6e0403cf0fa65887c7bf8c56d6a",
+        "fileHash": "sha256-c001d121bd0d0d1fffebe10f5d8ca88a8ad5abb3dcdf7ff7d3d2de4cb32f5415",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40236,
+        "fileSize": 40504,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -569,7 +569,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "NetShort",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/NetShort.cs3",
         "name": "NetShort"
