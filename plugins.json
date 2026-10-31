@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-3bb678892264af32d1a121305190e085a99df9ca89de5d40964f9145eb470868",
+        "fileHash": "sha256-91c5e2299f262edda4528e9470a1734abe7e8523cc26792e68903fde005d294a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -972,10 +972,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-7d8901b8e7ffe54085dab9c42d36c81d044720eeaf730543c86fce809dd8d2e9",
+        "fileHash": "sha256-37dcbd00569c6380ae67d0980c161ce3204e86e0730121f524c40790b11a5b1c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 49006,
+        "fileSize": 50469,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -986,7 +986,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 23,
+        "version": 24,
         "internalName": "Xem20",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
         "name": "Xem20"
