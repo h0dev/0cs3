@@ -1035,10 +1035,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "fileHash": "sha256-6c0605ec7811cba0eeae8e35bf5d93810d02f1d289a8b7d56f34a5e91d6fa2d4",
+        "fileHash": "sha256-c9b3d4b13d4080877acf71da8e9ecdbd0f1c878a8993e0510bb75fec50b04b17",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 69504,
+        "fileSize": 69082,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1047,7 +1047,7 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 29,
+        "version": 30,
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
