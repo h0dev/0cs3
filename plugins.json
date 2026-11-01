@@ -451,10 +451,10 @@
     },
     {
         "iconUrl": "https://keodeotv.com/icon-192.png",
-        "fileHash": "sha256-ae2661da852a0a14ec7f0fa1b0cb93b014124cbe7a164af376735ea452c6527c",
+        "fileHash": "sha256-6df42ed34ba0df11801281cd4d65a353899edfc997f84fe74e22b8a03e7dab94",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 28908,
+        "fileSize": 35482,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -464,7 +464,7 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "KeoDeoTV",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KeoDeoTV.cs3",
         "name": "KeoDeoTV"
