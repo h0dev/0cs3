@@ -268,6 +268,27 @@
         "name": "ChanChanLuuPhim"
     },
     {
+        "iconUrl": "https://chill.phim.city/favicon/favicon-32x32.png",
+        "fileHash": "sha256-a6a8051b233f221354987cfcd06725f77f17d46c9ef4254c2d99cdbafbbf1210",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 39843,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "dmin"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 5,
+        "internalName": "ChillPhimCity",
+        "description": "Chill.Phim.City Provider",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ChillPhimCity.cs3",
+        "name": "ChillPhimCity"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
         "fileHash": "sha256-e962a25307c0248c74bf9f843a492ad243c4495fed41ba7d7663b0814349670f",
         "apiVersion": 1,
