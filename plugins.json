@@ -514,10 +514,10 @@
     },
     {
         "iconUrl": "https://lauphimhay.com/favicon/icon-256.png?v=1",
-        "fileHash": "sha256-f5cd72a463803d02228de41d91ab86be0e8837357004bd13f26316bd92720f5f",
+        "fileHash": "sha256-379baa7a4fac027443f778f42fec71c6f2ce16c3b376e326206188ad7e785c99",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 65103,
+        "fileSize": 69824,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -529,7 +529,7 @@
             "AsianDrama",
             "Anime"
         ],
-        "version": 6,
+        "version": 7,
         "internalName": "LauPhimHay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LauPhimHay.cs3",
         "name": "LauPhimHay"
