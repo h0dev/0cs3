@@ -269,10 +269,10 @@
     },
     {
         "iconUrl": "https://chill.phim.city/favicon/favicon-32x32.png",
-        "fileHash": "sha256-a6a8051b233f221354987cfcd06725f77f17d46c9ef4254c2d99cdbafbbf1210",
+        "fileHash": "sha256-87dceff20bf3353a93a21d47e610c2286127bf8ad500bf4e3bcbfd4179ff8c07",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 39843,
+        "fileSize": 40846,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -282,9 +282,8 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 5,
+        "version": 6,
         "internalName": "ChillPhimCity",
-        "description": "Chill.Phim.City Provider",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ChillPhimCity.cs3",
         "name": "ChillPhimCity"
     },
