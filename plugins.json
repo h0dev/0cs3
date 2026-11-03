@@ -992,10 +992,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-37dcbd00569c6380ae67d0980c161ce3204e86e0730121f524c40790b11a5b1c",
+        "fileHash": "sha256-eaacd54535bd4cab3f6c8227ee26f7d43d5987c598eeb99cbc9ac2c51e7e80a2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 50469,
+        "fileSize": 56036,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1006,7 +1006,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 24,
+        "version": 25,
         "internalName": "Xem20",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Xem20.cs3",
         "name": "Xem20"
