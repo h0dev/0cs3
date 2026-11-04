@@ -166,10 +166,10 @@
     },
     {
         "iconUrl": "https://www.asu.baby/favicon.ico",
-        "fileHash": "sha256-b60dd2985467dcf6e4b97f2c599e986ff34279ac3ff035d4d82162191e663d1b",
+        "fileHash": "sha256-9de8d06b858b6131cdbac1543ef68abbd9a0aa75871c02fd92052a544d8a50b2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 55283,
+        "fileSize": 55603,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -180,7 +180,7 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 12,
+        "version": 13,
         "internalName": "ASUPNIMER",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
         "name": "ASUPNIMER"
