@@ -165,6 +165,26 @@
         "name": "AnimeX"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://anyshort.net&sz=256",
+        "fileHash": "sha256-3f719d2c9281820e90ce9e6e57ab9b19ca5d947411c788bdbf7c40a8511b78c9",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 32747,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "hung319"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "AnyShort",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnyShort.cs3",
+        "name": "AnyShort"
+    },
+    {
         "iconUrl": "https://www.asu.baby/favicon.ico",
         "fileHash": "sha256-9de8d06b858b6131cdbac1543ef68abbd9a0aa75871c02fd92052a544d8a50b2",
         "apiVersion": 1,
