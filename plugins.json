@@ -166,10 +166,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://anyshort.net&sz=256",
-        "fileHash": "sha256-3f719d2c9281820e90ce9e6e57ab9b19ca5d947411c788bdbf7c40a8511b78c9",
+        "fileHash": "sha256-a5b3c39edd75ddff3371793462341e4ddb59113b9839912e3b19e7a4e3228d3c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 32747,
+        "fileSize": 39336,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -179,7 +179,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 1,
+        "version": 2,
         "internalName": "AnyShort",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AnyShort.cs3",
         "name": "AnyShort"
