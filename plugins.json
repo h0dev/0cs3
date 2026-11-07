@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-3bb678892264af32d1a121305190e085a99df9ca89de5d40964f9145eb470868",
+        "fileHash": "sha256-76b900c851601d3ba08d02fa6db8bbc6aa927e6928bfa9d076a96ede9ca54904",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -699,11 +699,11 @@
         "name": "PhimDinhCao"
     },
     {
-        "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdcss.com&sz=256",
-        "fileHash": "sha256-27d663595f1a62863c96a3f12dcba18eef6a825d85de1efa1a4e8c0e3aaf2539",
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimhdc.com&sz=256",
+        "fileHash": "sha256-0489e5e2505b86dbbb716419a35ec226efcd525cf9cab381eba9853d24870c0f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 86539,
+        "fileSize": 94763,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -715,7 +715,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 10,
+        "version": 11,
         "internalName": "PhimHDCS",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDCS.cs3",
         "name": "PhimHDCS"
