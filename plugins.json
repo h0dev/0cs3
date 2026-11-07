@@ -700,10 +700,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=filmhdc.com&sz=256",
-        "fileHash": "sha256-60f86c30b2c75e9fa6088573fb5be491a910ec00c2738df1cfa04fc0464c8c47",
+        "fileHash": "sha256-6e14fc6bc67fe5d7630cf812117832ed9f72f04a6ae5960203089479f7de043e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 108109,
+        "fileSize": 110854,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -715,7 +715,7 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 14,
+        "version": 15,
         "internalName": "PhimHDC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDC.cs3",
         "name": "PhimHDC"
