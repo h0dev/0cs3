@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-76b900c851601d3ba08d02fa6db8bbc6aa927e6928bfa9d076a96ede9ca54904",
+        "fileHash": "sha256-4fbcf42421e3e72b3526d5acb05906e3c0f29b826ad1dfadeace3c924301902e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 217482,
@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://allshorts.net&sz=256",
-        "fileHash": "sha256-7e420a222c91b4525236d358267bb2d1a307eceed2fd2d3fb90eb72a111adbe3",
+        "fileHash": "sha256-b59b0ec153f5f916b0dd1091698fa5d8adc5d0a65975e12c76424a44b0561891",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59423,
+        "fileSize": 75180,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -55,7 +55,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "AllShorts",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AllShorts.cs3",
         "name": "AllShorts"
