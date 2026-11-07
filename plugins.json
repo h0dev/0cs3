@@ -700,10 +700,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=filmhdc.com&sz=256",
-        "fileHash": "sha256-60998aec18d3417847159abd48afb38907c07d434fb16bd92f255cdb37d32220",
+        "fileHash": "sha256-a5647f12d25c11e27d83231e1fa1ca846eea10a3528fb92cdd053ff7bdc82002",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 96435,
+        "fileSize": 102182,
         "status": 1,
         "language": "vi",
         "authors": [
