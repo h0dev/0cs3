@@ -41,6 +41,26 @@
         "name": "1Sync"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://allshorts.net&sz=256",
+        "fileHash": "sha256-89667003a13d8acc4aa1b197964c60538c2d5e44ec0c404927fc5a135394d21a",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 32682,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "hung319"
+        ],
+        "tvTypes": [
+            "TvSeries",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "AllShorts",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AllShorts.cs3",
+        "name": "AllShorts"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikototv.to&sz=256",
         "fileHash": "sha256-863ad836baffb4667968d6d0d765f3cdf2e82137b6e06e5aa671c6ee63589fed",
         "apiVersion": 1,
