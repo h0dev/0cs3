@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://allshorts.net&sz=256",
-        "fileHash": "sha256-d644e7a16bad868e7c21c21b611639e676109434a8b83a8c8f768bdf3d8f62c5",
+        "fileHash": "sha256-1d305fa6dd981b73206ab9c690a674bec8ceec5ecd9d3d7738ce686523a8997f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 40856,
+        "fileSize": 50919,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -55,7 +55,7 @@
             "TvSeries",
             "Movie"
         ],
-        "version": 3,
+        "version": 4,
         "internalName": "AllShorts",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/AllShorts.cs3",
         "name": "AllShorts"
