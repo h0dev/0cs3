@@ -511,10 +511,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=rophim.net&sz=256",
-        "fileHash": "sha256-d0e107b6203272ba1aade46462f715c862d40104d5172f3051aa9eb88290bc4e",
+        "fileHash": "sha256-e18a2744db5d32cd5189fba1e675bece82f3f1925efc84b5c3fda84c24c17aac",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 24190,
+        "fileSize": 24179,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -524,9 +524,10 @@
             "Movie",
             "TvSeries",
             "AsianDrama",
-            "Anime"
+            "Anime",
+            "Cartoon"
         ],
-        "version": 2,
+        "version": 3,
         "internalName": "KhoPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/KhoPhim.cs3",
         "name": "KhoPhim"
