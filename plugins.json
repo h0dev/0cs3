@@ -678,6 +678,27 @@
         "name": "Onflix"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=500phim.net&sz=256",
+        "fileHash": "sha256-f00a8b730ec599bf05d539770695a744e8e98d9106bda53f8d3aa68200caf6f3",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 24813,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "AsianDrama"
+        ],
+        "version": 1,
+        "internalName": "Phim500",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Phim500.cs3",
+        "name": "Phim500"
+    },
+    {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimbom.us&sz=256",
         "fileHash": "sha256-a448ee35dbe12a92bdc383875710e4e71589fcb3db602d498cbea2e71d78aad3",
         "apiVersion": 1,
