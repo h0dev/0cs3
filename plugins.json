@@ -679,10 +679,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=500phim.net&sz=256",
-        "fileHash": "sha256-b5ff68b08e53954091c22359122362701ec9652e6441058b0a17ec44bbbc1467",
+        "fileHash": "sha256-0c3b816f6a07087c8622fc2238da6a9cd463dff8316ad2422f593a94355314a1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 41261,
+        "fileSize": 38750,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -693,7 +693,7 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 4,
+        "version": 5,
         "internalName": "Phim500",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Phim500.cs3",
         "name": "Phim500"
