@@ -658,10 +658,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.lat&sz=256",
-        "fileHash": "sha256-aea32b515e7cb745bd0ae95b082f478414655101f5955892954469536222e0be",
+        "fileHash": "sha256-e84e7a3c62013d364adf49d090d235d37a511688ecaaec2a95d1a894a3826cb8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 83769,
+        "fileSize": 88613,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -672,7 +672,7 @@
             "TvSeries",
             "Anime"
         ],
-        "version": 15,
+        "version": 16,
         "internalName": "Onflix",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Onflix.cs3",
         "name": "Onflix"
