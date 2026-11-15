@@ -1,10 +1,10 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-53dbbe508836bbe3f3cef0333adf32d3dd3cd8646906fe19ea41f8fac2d4af33",
+        "fileHash": "sha256-c80c847ae40043747d7fbaa3debc89cfe3be8f1bf82217a0fc7d4fdba84723b8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 250827,
+        "fileSize": 252098,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -22,10 +22,10 @@
     },
     {
         "iconUrl": "https://clouding.vn/wp-content/uploads/2022/10/cropped-Cloud-Services-192x192.png",
-        "fileHash": "sha256-58652d98d511653a61d182c600c55f38a4deb89303bf6af3c89b4f79dbe5d8c6",
+        "fileHash": "sha256-f7f517cc395dcae1df4c51bf14f1132eda2bd4017c45b3017e785522460cd03a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 105433,
+        "fileSize": 106740,
         "status": 1,
         "authors": [
             "anhdaden",
@@ -42,10 +42,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://allshorts.net&sz=256",
-        "fileHash": "sha256-93d65f6bfd8012bb52aff7cc115496b4a5038c3865c627d1247541616d1ae718",
+        "fileHash": "sha256-5cab73c49077e3e28ce4ca782ccc8090a5139db5b817c2047730bb9be7d339e0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 131222,
+        "fileSize": 132263,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -62,10 +62,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Anikototv.to&sz=256",
-        "fileHash": "sha256-2eac39175aa4fa411919333b76a4eb3d2b2ce118525dc9ff09bd1a8558bf0ecc",
+        "fileHash": "sha256-9c03264245bb93ab9f2f5427aac6397dcf453b73cbea4e70b0542b58a58de7b6",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 71592,
+        "fileSize": 72805,
         "status": 1,
         "language": "en",
         "authors": [
@@ -83,10 +83,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/Anime47.best.ico",
-        "fileHash": "sha256-2cf197fb786bf4c6437c9ef89d6dc4fada5872f3c61ec57e96d5dde7fda949a9",
+        "fileHash": "sha256-1b9ecad4e9ffc6ddc8f1aa163d62acca50049c07c33acd1e3f6c13b876daea58",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 81834,
+        "fileSize": 83024,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -102,10 +102,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animehay.tv&sz=256",
-        "fileHash": "sha256-ea9372404e9e00f65b5109f346ed8242fce9919536abb4979aa9bfe38e05480d",
+        "fileHash": "sha256-b299cf9a9f3b083f972c646c48493c7c6e53913f25a19a208ea0a8bfebb33439",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 66069,
+        "fileSize": 67208,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -123,10 +123,10 @@
     },
     {
         "iconUrl": "https://animesub.site/Theme_Anime/img/favicon-32x32.png",
-        "fileHash": "sha256-2438bd42de49cd927fc4facc04c5a913be36f08db3417ccf6d87749f5bea5746",
+        "fileHash": "sha256-05c69f779439d43e12b552098342701abd88bbb788726bf0a6b0330ff8614414",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 74143,
+        "fileSize": 75326,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -139,17 +139,17 @@
             "Cartoons",
             "TvSeries"
         ],
-        "version": 17,
+        "version": 18,
         "internalName": "Animet",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Animet.cs3",
         "name": "Animet"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://animevietsub.vc&sz=256",
-        "fileHash": "sha256-860bec1729b5a48fe8e41eb243ce8b09101c36497b112593edd1a91c1d0112f5",
+        "fileHash": "sha256-58348655c4a45ae94f12bdcbfdb507a45fa263c906ce6df043c695d9d5c2b62a",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 90868,
+        "fileSize": 91997,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -167,10 +167,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/animex.one.ico",
-        "fileHash": "sha256-9cae93c96acafc6224a4441990f76181f3b9ca78668596fdea72b3f93b2e44bf",
+        "fileHash": "sha256-89e67ceda078b2139f9d83c27d95b36006fe742711a68138d5458ea50efa09de",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 70194,
+        "fileSize": 71300,
         "status": 1,
         "language": "en",
         "authors": [
@@ -186,10 +186,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://anyshort.net&sz=256",
-        "fileHash": "sha256-53cd5ea8eb784920596bc3edb35a01d41ca4eed10086e609cc466b0d9bbbcbd7",
+        "fileHash": "sha256-408c71a9f508a7051ff704995cdc02037dc7a6405e5f200178ef28dfe42e677e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 72281,
+        "fileSize": 73585,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -206,10 +206,10 @@
     },
     {
         "iconUrl": "https://www.asu.baby/favicon.ico",
-        "fileHash": "sha256-68ff2c90e6a22a98b318a24650a91758b4e52fbb7fc999345c9d74770eb70363",
+        "fileHash": "sha256-88fbcf8cf9242776411d987e85db53e26bc43550b21b0e6b5b6f4972bb01a6ff",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 76577,
+        "fileSize": 77701,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -220,17 +220,17 @@
             "Cartoon",
             "AsianDrama"
         ],
-        "version": 17,
+        "version": 18,
         "internalName": "ASUPNIMER",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ASUPNIMER.cs3",
         "name": "ASUPNIMER"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/freetube.com.mx.ico",
-        "fileHash": "sha256-59cff5de231b0f1fed8351e669395318be6430dd5f8f1eb2fa00b3820777e04c",
+        "fileHash": "sha256-717085e49b5512c2ccc1148c2e77125a1a193f23792ee5b44fbe770b4501f9c1",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 61776,
+        "fileSize": 62889,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -248,10 +248,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://camuoivietsub.com&sz=256",
-        "fileHash": "sha256-e776429fc03f744481e447eb03c4104dbda9507bac0d7f6a25f5fd52e4ce6447",
+        "fileHash": "sha256-0f64f219606f0d3c11471bb197c73a0218cd5396cab0c718e9e46c49099d349f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 68818,
+        "fileSize": 69974,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -269,10 +269,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ChanChan.png",
-        "fileHash": "sha256-50dad8d6f36dde91c49e02ce7401c6b88f4a183cb6a6f385e2334a6ec325afaf",
+        "fileHash": "sha256-d61f0002dc7a3b7c7ecc2874445367a2dde6891b532ced2dcee5c2ab93a13d4b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 72155,
+        "fileSize": 73511,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -289,10 +289,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/ChanChanLuuPhim.png",
-        "fileHash": "sha256-a5d8791ca85a8b299748f351a5a9eb04c9bec794409d1d6bf352cb5a9f1fe9df",
+        "fileHash": "sha256-d1f72c4e0b0015eba3ad2ace408c4734f4c4b81a6730e8c0d889be1931b2050c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 72203,
+        "fileSize": 73595,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -309,10 +309,10 @@
     },
     {
         "iconUrl": "https://chill.phim.city/favicon/favicon-32x32.png",
-        "fileHash": "sha256-e148f7bf9cf5ade64a1cf0fa874bf1f9a71450be87b67a6867ea307ef40e79d1",
+        "fileHash": "sha256-abb174502b6d3646b6bc09375c5b516f13045d128f7fc8eaa81437896ea40e07",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 73644,
+        "fileSize": 74974,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -329,10 +329,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://clbphimxua.com&sz=256",
-        "fileHash": "sha256-fb87c01abddc6ad32915e43eb7073aaa39c5101b9dae73d44f6b4d6668339071",
+        "fileHash": "sha256-196f17763ea634ad6f89a5ee9a6d697f6abc4ecd30fb9a3237d987b8f3255bb8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59994,
+        "fileSize": 61233,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -343,17 +343,17 @@
             "TvSeries",
             "AsianDrama"
         ],
-        "version": 8,
+        "version": 9,
         "internalName": "CLBPhimXua",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/CLBPhimXua.cs3",
         "name": "CLBPhimXua"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.coigiday.xyz&sz=256",
-        "fileHash": "sha256-d0f1a2a4ca99475bb9488e1152a6c76fc05fc0b2f21164474bc865d8770b5c00",
+        "fileHash": "sha256-f161e3b748efabae992373406bcc75e48ca1d073fea7946e1f3078f58d3ec885",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 80608,
+        "fileSize": 81744,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -370,10 +370,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://dhmedia.top&sz=256",
-        "fileHash": "sha256-a4a17a0932fb1f60826d916c26daf4caca427c2a7663e5b2f0da5c9f9170f5bd",
+        "fileHash": "sha256-3e59147ef2f414785b6c712832e4bc2966eb73d4913afd7c4603bf3ff25b73d7",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 70789,
+        "fileSize": 71954,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -390,10 +390,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Dramaora.png",
-        "fileHash": "sha256-943bd78c6dcc27473ae811e1ee2d170b49ccc436356bf7a9c2679bb90150e5b6",
+        "fileHash": "sha256-588d70cb790849210f5e809cd3b9beaf7ed007f7c6a748e6f0e180c5acd57131",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 62935,
+        "fileSize": 64089,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -410,10 +410,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/fsharetv.com.ico",
-        "fileHash": "sha256-ff428368165b7d24c0ecfb860e38b58f8b411eb487577220fd944964fdc2abae",
+        "fileHash": "sha256-d4542f4d86d8deed54fb1e123a44530f073660921e74e14f88a3930620079183",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 67767,
+        "fileSize": 68902,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -429,10 +429,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://gamomephim.com&sz=256",
-        "fileHash": "sha256-eb032709c187b435668799dca4127337d361846a5b1bbaabac966d36996e1a99",
+        "fileHash": "sha256-a737d36dd621cc7a9822e511c7504d72a747645f5b01116b92b10dbf3ef40765",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 57165,
+        "fileSize": 58339,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -450,10 +450,10 @@
     },
     {
         "iconUrl": "https://hdvnn.xyz/assets/favico.png",
-        "fileHash": "sha256-23245cbe8e78f1c947d2db92c9d5aec15eb72052a6527e5fe4aed680aa61609f",
+        "fileHash": "sha256-b3899b784581883c4cafdbd1d9b94b0fb851e6c8647bd836c10d7d8bad7373a3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 71859,
+        "fileSize": 73133,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -465,17 +465,17 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 9,
+        "version": 10,
         "internalName": "HDVNN",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HDVNN.cs3",
         "name": "HDVNN"
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.png",
-        "fileHash": "sha256-df24b5ef4d350b13d19ae59da87503f042865fe55c0ab2da167bb6b77d80a624",
+        "fileHash": "sha256-f738e32dd7d3a62582346dd527ea9ccc764871dbe9c4f1a524fc364c5595d92b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 80534,
+        "fileSize": 81744,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -492,10 +492,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hoathinh3d.ad&sz=256",
-        "fileHash": "sha256-81329f0bf97e5badf8eab86a2f8738138ca24e428f01299b9a780e7613adedfa",
+        "fileHash": "sha256-3999d2d928f86614ad5b0cb30979015f175aec9fe80186da02968d1c51124b9c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 75062,
+        "fileSize": 76174,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -511,10 +511,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=rophim.net&sz=256",
-        "fileHash": "sha256-b5a321872f1324dc76f18a063ab5b23f4e1cd76ed940d5065216698ee2e3070f",
+        "fileHash": "sha256-fb485a8e8eeaa5d485f9c8eb5a906ef613ff29e0799dbe2d802e3c4c289d452f",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59194,
+        "fileSize": 60324,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -534,10 +534,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://kkphim.com&sz=256",
-        "fileHash": "sha256-302e347a11f71ebd2092ff593eda173a55c4cd9695ff2937d84a92b33820612b",
+        "fileHash": "sha256-5f5a6be42dc44e2f8f29483c89b260257944500e184c86f2f8354346d2bbe015",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 75105,
+        "fileSize": 76407,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -555,10 +555,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://langlangson.xyz&sz=256",
-        "fileHash": "sha256-fc34df871056b652e2be335c6c6e7d54e0e52e3f57cd4185076ca1edab3c30e2",
+        "fileHash": "sha256-ae0703691dd871460fc694eb8097abbf1ecb726f248afb241aab25a6bb6de3d2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 74020,
+        "fileSize": 75381,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -575,10 +575,10 @@
     },
     {
         "iconUrl": "https://lauphimhay.com/favicon/icon-256.png?v=1",
-        "fileHash": "sha256-7c6afc3605bbdc5e89617b1725d9cd4403d8605bc37d114c636bdf2a7f235f46",
+        "fileHash": "sha256-d6731f1fa935679f62fa316f00e6c9f6651f0c21bc3c059d1275595d62ced1a3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 84451,
+        "fileSize": 85669,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -590,17 +590,17 @@
             "AsianDrama",
             "Anime"
         ],
-        "version": 11,
+        "version": 12,
         "internalName": "LauPhimHay",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/LauPhimHay.cs3",
         "name": "LauPhimHay"
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/narto-drama.com.ico",
-        "fileHash": "sha256-ebe092f7eeb8079ffa51eda8abe7c6319819d2259f320da800327d72f86936ad",
+        "fileHash": "sha256-cbe746360896942848f52b1b93f62fb0e7599ac188562338b3aa1c8ef009bc1d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 81177,
+        "fileSize": 82342,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -617,10 +617,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://netshort.com&sz=256",
-        "fileHash": "sha256-927c54cf2d7b58f31af0c565d53ecba3405c580b51cd78ae2c45e26dd71e5ffe",
+        "fileHash": "sha256-1f9639fa4f82630c10b392fe8bd2b8ce8bf5469ad8c817b32ad1bd50077896c8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 72789,
+        "fileSize": 74066,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -637,10 +637,10 @@
     },
     {
         "iconUrl": "https://phim.nguonc.com/public/images/Logo/logonc.png",
-        "fileHash": "sha256-4183f7409776f4f012b426af4ac60ddd2c595584df6866f6e0d54200017a91dc",
+        "fileHash": "sha256-d7fb6cf24142d27693f216126b41de80daf7651ed6c6a0aaf907cd4bc9c318cc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 85464,
+        "fileSize": 86637,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -658,10 +658,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://onflix.lat&sz=256",
-        "fileHash": "sha256-e84e7a3c62013d364adf49d090d235d37a511688ecaaec2a95d1a894a3826cb8",
+        "fileHash": "sha256-83641a670da7d5cff56a4b34cbf234b6d6acf9e79c7d15e369969f748111ee3c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 88613,
+        "fileSize": 89519,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -679,10 +679,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=500phim.net&sz=256",
-        "fileHash": "sha256-d227c61394b92537380b4cd293ad53eb57e63e4116ea4677a368fdd735c3c47f",
+        "fileHash": "sha256-2943e52ea8fb5200e77726e7dcf68939a1ea15111ea8d7bcc58183d0f9037a22",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 71412,
+        "fileSize": 72673,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -700,10 +700,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimbom.us&sz=256",
-        "fileHash": "sha256-6be000ea3fc420f3002c5c6c6a6cea153f9bc45907c715f105c6c00124e9fd39",
+        "fileHash": "sha256-d6c8e4f3bd932e42bb751dd35b168973eecda15cfa854bdf35bd70231535fc28",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 60535,
+        "fileSize": 61721,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -722,10 +722,10 @@
     },
     {
         "iconUrl": "https://www.1phim22.com/favicon.ico",
-        "fileHash": "sha256-6216252742dbb166cfdcfe8f0c4d8498e29232dfc8e78c69ed48cb13edd81fdc",
+        "fileHash": "sha256-0f3194d3a3df0b3673b157b470f8540c411d5f7ad6de6d3d7a08e843c105dcc6",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 71796,
+        "fileSize": 73055,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -735,17 +735,17 @@
             "Movie",
             "TvSeries"
         ],
-        "version": 19,
+        "version": 20,
         "internalName": "PhimDinhCao",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimDinhCao.cs3",
         "name": "PhimDinhCao"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=filmhdc.com&sz=256",
-        "fileHash": "sha256-681393ada324c01fb44c7fc6c170930806bf4e953be90eae66d34301cd61e606",
+        "fileHash": "sha256-419f3d6fbebfd210a3eafe3db9f2b2d9bb934ac46a4061e7c49500af6b2efebc",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 119548,
+        "fileSize": 120423,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -757,17 +757,17 @@
             "Anime",
             "AsianDrama"
         ],
-        "version": 20,
+        "version": 21,
         "internalName": "PhimHDC",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/PhimHDC.cs3",
         "name": "PhimHDC"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://phimngan.net&sz=256",
-        "fileHash": "sha256-e01ceefd188190f34ddf0107fc600dc24fb73929fa55d2859afd01517a18da83",
+        "fileHash": "sha256-3b6d7567eb29d911b18cf64fe0b1172414d8b63d252ddda327f4f0caaab0aedd",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 71600,
+        "fileSize": 72899,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -785,10 +785,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/PhimSea.com.ico",
-        "fileHash": "sha256-34b78bf809cc7ed02981ba47a6b637e1d8666b82d1de7eceae7611ec4be8a723",
+        "fileHash": "sha256-b2f77c30a191bc8462a41b7858d671dda36be3f21061c7a3d2eac7bd17c231b3",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 67920,
+        "fileSize": 69054,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -806,10 +806,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/ridomovies.su.ico",
-        "fileHash": "sha256-112beb196574b169d5b12a1b27782df33ae49f269a3b68f0304ad762bb0e88a3",
+        "fileHash": "sha256-2a400772f1ca5868fcdc17f03603c0da837548c20219d2a3a0632372ec63e83c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 115435,
+        "fileSize": 116396,
         "status": 1,
         "language": "en",
         "authors": [
@@ -826,10 +826,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://rophim.bar&sz=256",
-        "fileHash": "sha256-568589c8d466cf42a5d3eade58b2cb16e7f43771c0490d0b71dfe2ad27ef99bb",
+        "fileHash": "sha256-8f14e41465d194ac12de18507fa5c8ce77fab906437ef83fdc4208405d8ed5a0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 70058,
+        "fileSize": 71243,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -840,17 +840,17 @@
             "Movie",
             "Anime"
         ],
-        "version": 10,
+        "version": 11,
         "internalName": "RoPhim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/RoPhim.cs3",
         "name": "RoPhim"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.rophim.at&sz=256",
-        "fileHash": "sha256-0998e611ade0705ce4cc7fe6b663fdbf17d4d94b87f6d1271931bd28ae945b8c",
+        "fileHash": "sha256-079e7e5fcba859e03e368ca3949e8c101f6127d9808f7f518503ef3c4cb113f5",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 73080,
+        "fileSize": 74250,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -868,10 +868,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.shortflix.net&sz=256",
-        "fileHash": "sha256-8de89a74ecbb8040eb3491c02734baae82c6ba345ae8292e6010348cb1684e0d",
+        "fileHash": "sha256-360becccc5aedcd7161ba279a396688a5b496760470eda2711ce9f9422d9f6f8",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59566,
+        "fileSize": 60678,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -888,10 +888,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.sieutamphim.fun&sz=256",
-        "fileHash": "sha256-cb6c45191b71e199d1356d2b0ca401df43657b9a4ddc0d486577ba4b8889b936",
+        "fileHash": "sha256-1fdc15eed0d92adf0a565dd12385a752e18bc2cee2746633cbbb06b58174e906",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 74333,
+        "fileSize": 75495,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -903,17 +903,17 @@
             "AsianDrama",
             "Cartoon"
         ],
-        "version": 10,
+        "version": 11,
         "internalName": "Sieutamphim",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Sieutamphim.cs3",
         "name": "Sieutamphim"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://theshortfilmshow.com&sz=256",
-        "fileHash": "sha256-3c57e24b99240631ac7a14db0adef790c34829f319a3d40254c73d1ff02924d8",
+        "fileHash": "sha256-15b4b2bdf58c394ef7d9ed85396e4d837ffd2b6832dc57a102bc68b11369502c",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59235,
+        "fileSize": 60382,
         "status": 1,
         "language": "en",
         "authors": [
@@ -929,10 +929,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://www.topcartoons.tv&sz=256",
-        "fileHash": "sha256-922425fc433cd64b050368c2b4f0bd6fcd3ba78be9bd51145e79288285a055e8",
+        "fileHash": "sha256-4ff5eda11ea1b87256c6c92aeb9531fca5d064e8bfa594423858a280d27a3eef",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 56005,
+        "fileSize": 57196,
         "status": 1,
         "language": "en",
         "authors": [
@@ -950,10 +950,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://truyenhh3d.com&sz=256",
-        "fileHash": "sha256-cd67d553e93c6cde231941001004236432d43b7fa690496cee661ab449de3f80",
+        "fileHash": "sha256-17202256a694fd7e7c67dd4547b49921f4985ff464229bb3fadfa01458fa5959",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 62380,
+        "fileSize": 63501,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -972,10 +972,10 @@
     },
     {
         "iconUrl": "https://vicdn.cc/vicdn.png",
-        "fileHash": "sha256-6f765fab880af7b4e1a413bd30856db0aa98d427fd83d677b871a0aace238c86",
+        "fileHash": "sha256-f3e36aa858644ac40ec8a986e5767505ea93fb877fd51ba5a783b67c32ebbc1d",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 59185,
+        "fileSize": 60344,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -993,10 +993,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vn2c.my.ico",
-        "fileHash": "sha256-d6ff7e0b3e9b46b7f1edf1d4121b2c1c552276f1c0b01af6cd81b2c5fc1ebaa6",
+        "fileHash": "sha256-8151d4459420b1bfb2568c0499f9f9ef825d505556746ff6149b8153a9cba86b",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 67009,
+        "fileSize": 68132,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1013,10 +1013,10 @@
     },
     {
         "iconUrl": "https://icons.duckduckgo.com/ip3/vsmov.com.ico",
-        "fileHash": "sha256-60f6e84b3de3d53d89374701c755443ffd69f7e589708bcd4771dd9a2ebe2a41",
+        "fileHash": "sha256-12ded9d513a342e5cec722d6518174d34a9e4681c80f0ebc93c24de8ea9ca188",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 74796,
+        "fileSize": 76030,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1034,10 +1034,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/VuTruPhim.png",
-        "fileHash": "sha256-1d4efbfd92e4808533ce638e0f27a5f48016311e04338bd6a575d751586fbb9c",
+        "fileHash": "sha256-d6d3b66b8ee3c9f232b3edb9873e8f856e1523f72eb53ae76ccfa01a2d533c69",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 75734,
+        "fileSize": 76879,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1054,10 +1054,10 @@
     },
     {
         "iconUrl": "https://xem20.net/storage/poster1/download.jpg",
-        "fileHash": "sha256-7b94acd045a70b3ac20f083e99c631f318f8a4bd2adbb729621cbee5a3e364b0",
+        "fileHash": "sha256-2732988b5c00d17dfbe57b2faff9ca995f9f19da8adf51ec797d7a7717aaf4c2",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 92785,
+        "fileSize": 93874,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1075,10 +1075,10 @@
     },
     {
         "iconUrl": "https://xiaofilm.online/images/favicon.png",
-        "fileHash": "sha256-59a266734ebbf659c180271927615318f4a303bda37eb8da6545050c50652ac7",
+        "fileHash": "sha256-5ab965dd5e80a619151a0523d8c141c3f32cc7dd2edb3e414aaeb66db66a7fd9",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 81821,
+        "fileSize": 83032,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1097,10 +1097,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://Yanhh3d.vip&sz=256",
-        "fileHash": "sha256-799eeab9f1adcab365ca4253b42b4ab45afdc5a06ccff4f4b6a87086cc7a6b8a",
+        "fileHash": "sha256-634e9670dc5b09180dff02d8fbb4f05afe412012ed52f985ba453f838cd5dd73",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 79989,
+        "fileSize": 81169,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1109,17 +1109,17 @@
         "tvTypes": [
             "Cartoon"
         ],
-        "version": 34,
+        "version": 35,
         "internalName": "Yanhh3d",
         "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Yanhh3d.cs3",
         "name": "Yanhh3d"
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://yini.tv&sz=256",
-        "fileHash": "sha256-8445d4a331d567e3eeb7b1661274b100c24542e11d04ec633ee261f445e2cb49",
+        "fileHash": "sha256-157bf5dc70927eb76c1624fa311701e1b0dde01b980a0309dcb82c585512b3e0",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 65745,
+        "fileSize": 66807,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1136,10 +1136,10 @@
     },
     {
         "iconUrl": "https://yumei-anime.com/favicon.ico",
-        "fileHash": "sha256-36ea791c26eb30d3db17ec2414e4cd083ae617c01920026227f5a75c1d8e8779",
+        "fileHash": "sha256-a35d562187aaaa06c5f35ac01914157a5ec4458a286669e2b6d702be74129866",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 63250,
+        "fileSize": 64436,
         "status": 1,
         "language": "vi",
         "authors": [
@@ -1159,10 +1159,10 @@
     },
     {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/Zophim.png",
-        "fileHash": "sha256-4d219a257d464344a6eac17fbb99df83016b2d043ae877c57d7c341805b68c6d",
+        "fileHash": "sha256-8cbe28fab123be785ad17d2d4628f76bcc087d737b172eadff918b0ee03bb25e",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 67263,
+        "fileSize": 68391,
         "status": 1,
         "language": "vi",
         "authors": [
