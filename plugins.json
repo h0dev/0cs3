@@ -471,6 +471,28 @@
         "name": "HDVNN"
     },
     {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=https://hhhtq.team&sz=256",
+        "fileHash": "sha256-b6c3ebecd9b56b7e4908f8aa0814b5e9800992b123bb1da23ec5fbc93cb7057f",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/h0dev/0cs3",
+        "fileSize": 70037,
+        "status": 1,
+        "language": "vi",
+        "authors": [
+            "SIX"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime",
+            "Cartoon"
+        ],
+        "version": 1,
+        "internalName": "HHHTQ",
+        "url": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHHTQ.cs3",
+        "name": "HHHTQ"
+    },
+    {
         "iconUrl": "https://raw.githubusercontent.com/h0dev/0cs3/movie/HHPanda.png",
         "fileHash": "sha256-f738e32dd7d3a62582346dd527ea9ccc764871dbe9c4f1a524fc364c5595d92b",
         "apiVersion": 1,
