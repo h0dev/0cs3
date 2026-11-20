@@ -1,7 +1,7 @@
 [
     {
         "iconUrl": "https://raw.githubusercontent.com/google/material-design-icons/master/png/toggle/toggle_on/materialicons/24dp/2x/baseline_toggle_on_black_24dp.png",
-        "fileHash": "sha256-c80c847ae40043747d7fbaa3debc89cfe3be8f1bf82217a0fc7d4fdba84723b8",
+        "fileHash": "sha256-9035edfdf5cf93cbb4d0c57ef5c2fd81f02bc33e0a55db7f1e0a80274c7e9336",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
         "fileSize": 252098,
@@ -472,10 +472,10 @@
     },
     {
         "iconUrl": "https://www.google.com/s2/favicons?domain=https://hhhtq.team&sz=256",
-        "fileHash": "sha256-2e8a53cf775220e7965039459c6fa53f1088a792f123e1c4245f55305bce8fb7",
+        "fileHash": "sha256-00cddcb13f26259513f319b9d90619ac6c58eba488936d532a92f9f28c360553",
         "apiVersion": 1,
         "repositoryUrl": "https://github.com/h0dev/0cs3",
-        "fileSize": 76407,
+        "fileSize": 80093,
         "status": 1,
         "language": "vi",
         "authors": [
